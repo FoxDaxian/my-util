@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="page_index.js"></script>
+	<link rel="stylesheet" href="page_index.css">
+</head>
+<body>
+	<button>点击</button>
+	<script>
+		window.onload = function() {
+			var btn = document.querySelector('button');
+			var a = pageSet(10,1);
+			var i = 10;
+			btn.onclick = function() {
+				document.body.removeChild(a);
+				i++;
+				a = pageSet(i,1);
+			};
+		};
+	</script>
+</body>
+</html>

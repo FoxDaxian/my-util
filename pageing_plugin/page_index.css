@@ -1,0 +1,83 @@
+#fsy_page_plugin{
+	display:flex;
+	-webkit-display:flex;
+	-moz-display:flex;
+	-ms-display:flex;
+	justify-content:center;
+	-webkit-justify-content:center;
+	-moz-justify-content:center;
+	-ms-justify-content:center;
+}
+#fsy_page_plugin *{
+	-webkit-user-select:none;
+}
+#fsy_page_plugin:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+#fsy_page_plugin span{
+	float:left;
+}
+#fsy_page_plugin div{
+	float:left;
+	/*background-color: #fff;*/
+}
+#fsy_page_plugin span{
+	height: 38px;
+	width: 72px;
+	border:1px solid #eeeeee;
+	text-align: center;
+	line-height: 38px;
+	font-size:14px;
+	color:#3d3d3d;
+}
+#fsy_page_plugin span:nth-of-type(1){
+	margin-right: 5px;
+}
+#fsy_page_plugin span:nth-of-type(2){
+	margin-left: 5px;
+	background-color: #fff;
+}
+#fsy_page_plugin a{
+	background-color: #fff;
+	margin-right: -1px;
+	display: block;
+	float: left;
+	height: 38px;
+	width: 38px;
+	border:1px solid #eeeeee;
+	text-align: center;
+	line-height: 38px;
+	font-size:17px;
+	color:#3d3d3d;
+}
+#fsy_page_plugin a:not(.page){
+	background-color: transparent;
+	position: relative;
+	top: 1px;
+	border:none!important;
+	width: 22px!important;
+	/*margin-top: 5px;*/
+}
+#fsy_page_plugin .page:hover{
+	cursor:pointer;
+	background-color:#ff6000;
+	color:#fff!important;
+}
+.pageNow{
+	background-color: #ff6000!important;
+	color:#fff!important;
+}
+.btn_hover{
+	background-color:#ff6000!important;
+	color:#fff!important;
+}
+.btn_hover:hover{
+	cursor:pointer;
+
+}
+.btn_font_color{
+	color:#cccccc!important;
+	background-color: #fff;
+}
