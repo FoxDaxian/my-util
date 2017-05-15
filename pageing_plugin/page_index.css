@@ -1,83 +1,134 @@
-#fsy_page_plugin{
-	display:flex;
-	-webkit-display:flex;
-	-moz-display:flex;
-	-ms-display:flex;
-	justify-content:center;
-	-webkit-justify-content:center;
-	-moz-justify-content:center;
-	-ms-justify-content:center;
+#fsy_page_plugin {
+    display: flex;
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
 }
-#fsy_page_plugin *{
-	-webkit-user-select:none;
-}
-#fsy_page_plugin:after{
-	content: "";
-	display: block;
-	clear: both;
-}
-#fsy_page_plugin span{
-	float:left;
-}
-#fsy_page_plugin div{
-	float:left;
-	/*background-color: #fff;*/
-}
-#fsy_page_plugin span{
-	height: 38px;
-	width: 72px;
-	border:1px solid #eeeeee;
-	text-align: center;
-	line-height: 38px;
-	font-size:14px;
-	color:#3d3d3d;
-}
-#fsy_page_plugin span:nth-of-type(1){
-	margin-right: 5px;
-}
-#fsy_page_plugin span:nth-of-type(2){
-	margin-left: 5px;
-	background-color: #fff;
-}
-#fsy_page_plugin a{
-	background-color: #fff;
-	margin-right: -1px;
-	display: block;
-	float: left;
-	height: 38px;
-	width: 38px;
-	border:1px solid #eeeeee;
-	text-align: center;
-	line-height: 38px;
-	font-size:17px;
-	color:#3d3d3d;
-}
-#fsy_page_plugin a:not(.page){
-	background-color: transparent;
-	position: relative;
-	top: 1px;
-	border:none!important;
-	width: 22px!important;
-	/*margin-top: 5px;*/
-}
-#fsy_page_plugin .page:hover{
-	cursor:pointer;
-	background-color:#ff6000;
-	color:#fff!important;
-}
-.pageNow{
-	background-color: #ff6000!important;
-	color:#fff!important;
-}
-.btn_hover{
-	background-color:#ff6000!important;
-	color:#fff!important;
-}
-.btn_hover:hover{
-	cursor:pointer;
 
+#fsy_page_plugin * {
+    font-size: 0;
+    -webkit-user-select: none;
 }
-.btn_font_color{
-	color:#cccccc!important;
-	background-color: #fff;
+
+#fsy_page_plugin:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#fsy_page_plugin span {
+    float: left;
+}
+
+#fsy_page_plugin div {
+    float: left;
+}
+
+#fsy_page_plugin span {
+    margin: 0 8px;
+    border-radius: 6px;
+    height: 40px;
+    width: 100px;
+    line-height: 40px;
+    font-size: 14px;
+    color: #3d3d3d;
+    background-color: #fff;
+    position: relative;
+}
+
+#fsy_page_plugin span:after {
+    position: absolute;
+    top: 15px;
+    content: "";
+    width: 6px;
+    height: 11px;
+    background-position: 0 11px;
+}
+
+#fsy_page_plugin span:nth-of-type(1) {
+    padding-left: 37px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-right: 5px;
+}
+
+#fsy_page_plugin span:nth-of-type(1):after {
+    left: 21px;
+    background-image: url(./pageLicon.png);
+}
+
+#fsy_page_plugin span:nth-of-type(2) {
+    padding-left: 21px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-left: 5px;
+    background-color: #fff;
+}
+
+#fsy_page_plugin span:nth-of-type(2):after {
+    right: 21px;
+    background-image: url(./pageRicon.png);
+}
+
+#fsy_page_plugin a {
+    background-color: #fff;
+    margin-right: -1px;
+    display: block;
+    float: left;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    color: #626262;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 6px;
+    margin-right: 4px;
+}
+
+#fsy_page_plugin a:last-of-type {
+    margin-right: 0;
+}
+
+#fsy_page_plugin a:not(.page) {
+    background-color: transparent;
+    position: relative;
+    top: 2px;
+    border: none!important;
+    width: 22px!important;
+}
+
+#fsy_page_plugin .page:hover {
+    cursor: pointer;
+    background-color: #2c92f4;
+    color: #fff!important;
+}
+
+.pageNow {
+    background-color: #2c92f4!important;
+    color: #fff!important;
+}
+
+.btn_hover {
+    background-color: #2c92f4!important;
+    color: #fff!important;
+}
+
+.btn_hover:after {
+    background-position: 0 0;
+}
+
+.btn_hover:hover {
+    cursor: pointer;
+}
+
+.btn_font_color {
+    color: #cccccc!important;
+    background-color: #fff;
+    cursor: default;
 }

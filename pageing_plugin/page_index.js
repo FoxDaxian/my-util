@@ -1,6 +1,6 @@
 var pageSet = function(sum, now) {
     var pageSum = sum,
-        pageNow = now;
+    pageNow = now;
     if (pageSum < pageNow) {
         console.log("%c总页数应该比当前页数大!", "color:red");
         return false;
@@ -83,7 +83,6 @@ var pageSet = function(sum, now) {
                     main(0, pageSum);
                 }
             } else if (pageNow == pageSum) {
-				console.log(pageSum);
                 pages.appendChild(first_page);
                 if (pageSum > 9) {
                     pages.appendChild(points);
@@ -93,9 +92,9 @@ var pageSet = function(sum, now) {
         } else {
             alert('不能为负数');
         }
-        fsy_page_plugin.appendChild(prev_page);
+        ( sum !== 1 ) && fsy_page_plugin.appendChild(prev_page);
         fsy_page_plugin.appendChild(pages);
-        fsy_page_plugin.appendChild(next_page);
+        ( sum !== 1 ) && fsy_page_plugin.appendChild(next_page);
         var page = pages.children;
         for (var i = 0; i < page.length; i++) {
             (function(index) {
@@ -121,22 +120,21 @@ var pageSet = function(sum, now) {
         }
     }
     page_init();
-    document.body.appendChild(fsy_page_plugin);
     //切换按钮
     var l_btn = prev_page,
-        r_btn = next_page;
+    r_btn = next_page;
     l_btn.classList.add("btn_font_color");
     r_btn.onclick = function() {
-        if (pageNow + 1 == pageSum) {
-            this.classList.remove("btn_hover");
-            this.classList.add("btn_font_color");
-        } else {
-            l_btn.classList.remove("btn_font_color");
-        }
-        if (pageNow == pageSum) {
+        if( pageNow === pageSum ){
             return false;
         }
         pageNow++;
+        if( pageNow >= pageSum ){
+            pageNow = pageSum;
+            this.classList.remove("btn_hover");
+            this.classList.add("btn_font_color"); 
+        }
+        l_btn.classList.contains("btn_font_color") &&  l_btn.classList.remove("btn_font_color");
         page_init();
         console.log(pageNow);
     };
@@ -147,16 +145,16 @@ var pageSet = function(sum, now) {
         this.classList.remove("btn_hover");
     };
     l_btn.onclick = function() {
-        if (pageNow - 1 == 1) {
-            this.classList.remove("btn_hover");
-            this.classList.add("btn_font_color");
-        } else {
-            r_btn.classList.remove("btn_font_color");
-        }
-        if (pageNow == 1) {
+        if( pageNow === 1 ){
             return false;
         }
         pageNow--;
+        if( pageNow <= 1 ){
+            pageNow = 1;
+            this.classList.remove("btn_hover");
+            this.classList.add("btn_font_color");
+        }
+        r_btn.classList.contains("btn_font_color") &&  r_btn.classList.remove("btn_font_color");
         page_init();
         console.log(pageNow);
     };
@@ -168,4 +166,3 @@ var pageSet = function(sum, now) {
     };
     return fsy_page_plugin;
 };
-export default pageSet;
