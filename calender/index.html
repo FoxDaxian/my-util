@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="index.js"></script>
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+	<div class="calenderBox"></div>
+	<script>
+		var calenderBox =document.querySelector('.calenderBox');
+		calenderBox.innerHTML = calender.render().el.outerHTML;
+
+		calenderBox.onclick = function( e ) {
+			var ev = e || window.event;
+			var clickObj;
+			if( ev.target.classList.contains("l_btn")){
+				var arg = {
+					year : (calender.month - 1) < 0 ? (calender.year - 1) : calender.year,
+					month : (calender.month - 1) < 0 ? 11 : calender.month - 1,
+				}
+				clickObj = calender.render(arg);
+				calenderBox.innerHTML = clickObj.el.outerHTML;
+			}
+			if( ev.target.classList.contains("r_btn")){
+				var arg = {
+					year : (calender.month + 1) > 11 ? (calender.year + 1) : calender.year,
+					month : (calender.month + 1) > 11 ? 0 : calender.month + 1,
+				}
+				clickObj = calender.render(arg);
+				calenderBox.innerHTML = clickObj.el.outerHTML;
+			}
+			if( ev.target.tagName.toLowerCase() === "li" && ev.target.classList.contains('selectable') ){
+				var date = {
+					year:calender.year,
+					month:calender.month + 1,
+					day:ev.target.innerHTML
+				};
+				console.log(date);
+			}
+
+			if( ev.target.classList.contains("closeBtn")){
+				calenderBox.style.display = "none";
+			}
+
+			// console.log(clickObj.data);
+		}
+	</script>
+</body>
+</html>
