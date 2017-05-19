@@ -1,0 +1,138 @@
+.hollow_arrow {
+  position: relative;
+}
+.hollow_arrow:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 1px solid red;
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
+  top: 10px;
+  left: 20px;
+  border-left: none;
+  border-top: none;
+}
+
+.solid_arrow {
+  position: relative;
+}
+.solid_arrow:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-bottom-width: 40px;
+  border-bottom-color: red;
+  top: 50px;
+  left: 50px;
+}
+
+.icon_wrap {
+  margin-left: 100px;
+  margin-top: 100px;
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+.icon_wrap .close_icon {
+  -webkit-transition: 2s;
+          transition: 2s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  background-color: green;
+  font-size: 0;
+  line-height: 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.icon_wrap .close_icon:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: green;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.add {
+  margin-top: 200px;
+  margin-left: 500px;
+}
+.add {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid red;
+  position: relative;
+}
+.add:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 90%;
+  height: 5px;
+  background-color: red;
+}
+.add:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 5px;
+  height: 90%;
+  background-color: red;
+}
+.add:hover {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid blue;
+  position: relative;
+}
+.add:hover:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 90%;
+  height: 5px;
+  background-color: blue;
+}
+.add:hover:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 5px;
+  height: 90%;
+  background-color: blue;
+}
+
+/*# sourceMappingURL=index.css.map */
