@@ -7,16 +7,19 @@ body {
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around; }
+  /* line 4, index.scss */
+  body > div {
+    margin: 0 50px; }
 
-/* line 8, index.scss */
+/* line 11, index.scss */
 .hollow_arrow {
   position: relative; }
-/* line 11, index.scss */
+/* line 14, index.scss */
 .hollow_arrow:before {
   content: "";
   position: absolute;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   border: 1px solid black;
   -webkit-transform: rotate(135deg);
       -ms-transform: rotate(135deg);
@@ -26,10 +29,10 @@ body {
   border-left: none;
   border-top: none; }
 
-/* line 32, index.scss */
+/* line 35, index.scss */
 .solid_arrow {
   position: relative; }
-/* line 35, index.scss */
+/* line 38, index.scss */
 .solid_arrow:before {
   content: "";
   position: absolute;
@@ -41,11 +44,11 @@ body {
   top: 0;
   left: 0; }
 
-/* line 87, index.scss */
+/* line 90, index.scss */
 .close_icon {
   width: 50px;
   height: 50px; }
-  /* line 54, index.scss */
+  /* line 57, index.scss */
   .close_icon {
     position: relative;
     -webkit-transform: rotate(45deg);
@@ -53,7 +56,7 @@ body {
             transform: rotate(45deg);
     top: 0;
     left: 0; }
-  /* line 60, index.scss */
+  /* line 63, index.scss */
   .close_icon:after {
     content: "";
     position: absolute;
@@ -64,10 +67,10 @@ body {
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
-    width: 200%;
+    width: 100%;
     height: 2px;
     background-color: green; }
-  /* line 72, index.scss */
+  /* line 75, index.scss */
   .close_icon:before {
     content: "";
     position: absolute;
@@ -80,17 +83,17 @@ body {
             transform: translateY(-50%);
     margin: auto;
     width: 2px;
-    height: 200%;
+    height: 100%;
     background-color: green; }
 
-/* line 96, index.scss */
+/* line 99, index.scss */
 .add {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   border: 5px solid red;
   position: relative; }
-/* line 103, index.scss */
+/* line 106, index.scss */
 .add:after {
   content: "";
   position: absolute;
@@ -102,7 +105,7 @@ body {
   width: 90%;
   height: 5px;
   background-color: red; }
-/* line 116, index.scss */
+/* line 119, index.scss */
 .add:before {
   content: "";
   position: absolute;
@@ -114,5 +117,162 @@ body {
   width: 5px;
   height: 90%;
   background-color: red; }
+
+/* line 140, index.scss */
+.forbid_icon {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid red;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg); }
+/* line 150, index.scss */
+.forbid_icon:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  height: 5px;
+  background-color: red; }
+
+/* line 170, index.scss */
+.personInfo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #3E3E3F;
+  position: relative; }
+/* line 177, index.scss */
+.personInfo:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 15%;
+  width: 11%;
+  height: 11%;
+  background-color: #fff;
+  border-radius: 50%; }
+/* line 189, index.scss */
+.personInfo:after {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 47%;
+  background-color: #fff;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 35%;
+  border-radius: 100% / 15%; }
+
+/* line 211, index.scss */
+.warning {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #3E3E3F;
+  position: relative;
+  box-sizing: border-box;
+  border: 3px solid #fff;
+  box-shadow: 0 0 2px #000; }
+/* line 221, index.scss */
+.warning:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 15%;
+  width: 10%;
+  height: 47%;
+  background-color: #fff;
+  border-bottom-left-radius: 70% 100%;
+  border-bottom-right-radius: 70% 100%;
+  border-top-right-radius: 70% 15%;
+  border-top-left-radius: 70% 15%; }
+/* line 237, index.scss */
+.warning:after {
+  content: "";
+  position: absolute;
+  width: 8%;
+  height: 8%;
+  background-color: #fff;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 70%;
+  border-radius: 50%; }
+
+/* line 275, index.scss */
+.correct {
+  margin-top: 50px; }
+  /* line 257, index.scss */
+  .correct {
+    width: 20px;
+    height: 4px;
+    position: relative;
+    background-color: #66BB6A;
+    -webkit-transform: rotate(-130deg);
+        -ms-transform: rotate(-130deg);
+            transform: rotate(-130deg);
+    -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+            transform-origin: 0 0; }
+  /* line 265, index.scss */
+  .correct:after {
+    content: "";
+    position: absolute;
+    width: 250%;
+    height: 100%;
+    background-color: #66BB6A;
+    -webkit-transform: rotate(90deg) translateY(-1px);
+        -ms-transform: rotate(90deg) translateY(-1px);
+            transform: rotate(90deg) translateY(-1px);
+    -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+            transform-origin: 0 0; }
+
+/* line 283, index.scss */
+.switchSilder {
+  margin-top: 20px;
+  cursor: pointer;
+  position: relative;
+  width: 50px;
+  height: 39px;
+  box-sizing: border-box;
+  border-top: 3px solid #0E0E0E;
+  border-bottom: 3px solid #0E0E0E; }
+/* line 301, index.scss */
+.switchSilder:after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: 0.2s;
+          transition: 0.2s; }
+/* line 311, index.scss */
+.switchSilder:before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: 0.2s;
+          transition: 0.2s; }
 
 /*# sourceMappingURL=index.css.map */
