@@ -1,6 +1,10 @@
-//空心箭头
-//垂直方向 垂直方向数值 水平方向 水平方向数值 颜色 大小 旋转角度 线条宽度
-@mixin hollow_arrow( $vertival:top, $vertivalNum: 0px, $level:left, $levelNum: 0px, $color:red, $size:8px, $rotate:135deg, $borderWidth:1px) {
+body{
+	display: flex;
+	justify-content:space-around;
+}
+// 空心箭头
+// 垂直方向 垂直方向数值 水平方向 水平方向数值 颜色 大小 旋转角度 线条宽度
+@mixin hollow_arrow( $vertival:top, $vertivalNum: 0px, $level:left, $levelNum: 0px, $color:red, $size:50px, $rotate:135deg, $borderWidth:1px) {
 	& {
 		position: relative;
 	}
@@ -18,7 +22,7 @@
 	}
 }
 .hollow_arrow {
-	@include hollow_arrow( top, 10px, left, 20px);
+	@include hollow_arrow( top, 0, left, 0,black);
 }
 
 
@@ -41,46 +45,49 @@
 	}
 }
 .solid_arrow {
-	@include solid_arrow( top, 50px, left, 50px);
+	@include solid_arrow( top, 0, left, 0, blue, right, 20px, 30px);
 }
 
 // X 关闭按钮
 // 颜色 大小 线条粗细 可控的旋转角度 动画时间
-@mixin close_icon( $color:blue, $size:20px, $borderWidth:2px, $rotate:45deg, $timeing:1s) {
-	& {
-		transition:$timeing;
+@mixin close_icon( $vertival:top, $vertivalNum: 0px, $level:left, $levelNum: 0px, $color:blue, $size:100%, $borderWidth:2px, $rotate:45deg) {
+	&{
+		position: relative;
+		transform:rotate($rotate);
+		#{$vertival}: $vertivalNum;
+		#{$level}: $levelNum;
+	}
+	&:after{
+		content:"";
 		position: absolute;
 		top: 0;
+		bottom: 0;
+		left: 50%;
+		margin:auto;
+		transform:translateX(-50%);
+		width: $size;
+		height: $borderWidth;
+		background-color: $color;
+	}
+	&:before{
+		content:"";
+		position: absolute;
 		left: 0;
 		right: 0;
-		bottom: 0;
+		top: 50%;
 		margin:auto;
-		display: inline-block;
-		width: $size;
-		height: $borderWidth;
+		transform:translateY(-50%);
+		margin:auto;
+		width: $borderWidth;
+		height: $size;
 		background-color: $color;
-		font-size: 0;
-		line-height: 0;
-		transform: rotate($rotate);
 	}
-	&:after {
-		content: "";
-		display: block;
-		width: $size;
-		height: $borderWidth;
-		background-color: $color;
-		transform: rotate(-90deg);
-	}
+	
 }
-.icon_wrap{
-	margin-left: 100px;
-	margin-top: 100px;
+.close_icon {
 	width: 50px;
 	height: 50px;
-	position: relative;
-	.close_icon {
-		@include close_icon( green, 100%, 2px, 45deg, 2s);
-	}
+	@include close_icon( top, 0, left, 0, green, 200%, 2px, 45deg);
 }
 
 //一个圈中间一个+号的增加图标
@@ -120,10 +127,5 @@
 	}
 }
 .add{
-	margin-top: 200px;
-	margin-left: 500px;
 	@include add_icon( 100px, 90%, 5px, red );
-	&:hover{
-		@include add_icon( 100px, 90%, 5px, blue );
-	}
 }
