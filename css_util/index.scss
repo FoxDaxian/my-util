@@ -1,6 +1,13 @@
-//空心箭头
-//垂直方向 垂直方向数值 水平方向 水平方向数值 颜色 大小 旋转角度 线条宽度
-@mixin hollow_arrow( $vertival:top, $vertivalNum: 0px, $level:left, $levelNum: 0px, $color:red, $size:8px, $rotate:135deg, $borderWidth:1px) {
+body{
+	display: flex;
+	justify-content:space-around;
+	>div{
+		margin:0 50px;
+	}
+}
+// 空心箭头
+// 垂直方向 垂直方向数值 水平方向 水平方向数值 颜色 大小 旋转角度 线条宽度
+@mixin hollow_arrow( $vertival:top, $vertivalNum: 0px, $level:left, $levelNum: 0px, $color:red, $size:30px, $rotate:135deg, $borderWidth:1px) {
 	& {
 		position: relative;
 	}
@@ -18,7 +25,7 @@
 	}
 }
 .hollow_arrow {
-	@include hollow_arrow( top, 10px, left, 20px);
+	@include hollow_arrow( top, 0, left, 0,black);
 }
 
 
@@ -41,46 +48,49 @@
 	}
 }
 .solid_arrow {
-	@include solid_arrow( top, 50px, left, 50px);
+	@include solid_arrow( top, 0, left, 0, blue, right, 20px, 30px);
 }
 
 // X 关闭按钮
 // 颜色 大小 线条粗细 可控的旋转角度 动画时间
-@mixin close_icon( $color:blue, $size:20px, $borderWidth:2px, $rotate:45deg, $timeing:1s) {
-	& {
-		transition:$timeing;
+@mixin close_icon( $vertival:top, $vertivalNum: 0px, $level:left, $levelNum: 0px, $color:blue, $size:100%, $borderWidth:2px, $rotate:45deg) {
+	&{
+		position: relative;
+		transform:rotate($rotate);
+		#{$vertival}: $vertivalNum;
+		#{$level}: $levelNum;
+	}
+	&:after{
+		content:"";
 		position: absolute;
 		top: 0;
+		bottom: 0;
+		left: 50%;
+		margin:auto;
+		transform:translateX(-50%);
+		width: $size;
+		height: $borderWidth;
+		background-color: $color;
+	}
+	&:before{
+		content:"";
+		position: absolute;
 		left: 0;
 		right: 0;
-		bottom: 0;
+		top: 50%;
 		margin:auto;
-		display: inline-block;
-		width: $size;
-		height: $borderWidth;
+		transform:translateY(-50%);
+		margin:auto;
+		width: $borderWidth;
+		height: $size;
 		background-color: $color;
-		font-size: 0;
-		line-height: 0;
-		transform: rotate($rotate);
 	}
-	&:after {
-		content: "";
-		display: block;
-		width: $size;
-		height: $borderWidth;
-		background-color: $color;
-		transform: rotate(-90deg);
-	}
+	
 }
-.icon_wrap{
-	margin-left: 100px;
-	margin-top: 100px;
+.close_icon {
 	width: 50px;
 	height: 50px;
-	position: relative;
-	.close_icon {
-		@include close_icon( green, 100%, 2px, 45deg, 2s);
-	}
+	@include close_icon( top, 0, left, 0, green, 100%, 2px, 45deg);
 }
 
 //一个圈中间一个+号的增加图标
@@ -120,10 +130,195 @@
 	}
 }
 .add{
-	margin-top: 200px;
-	margin-left: 500px;
-	@include add_icon( 100px, 90%, 5px, red );
-	&:hover{
-		@include add_icon( 100px, 90%, 5px, blue );
+	@include add_icon( 50px, 90%, 5px, red );
+}
+
+
+//禁止图标
+//大小 线条粗细 颜色 
+@mixin forbid( $size:50px, $strokeWidth:3px, $color:red ) {
+	&{
+		position: relative;
+		top: 0;
+		left: 0;
+		width: $size;
+		height: $size;
+		border-radius: 50%;
+		border:$strokeWidth solid $color;
+		transform:rotate(45deg);
 	}
+	&:before{
+		content:"";
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		margin:auto;
+		width: 100%;
+		height: $strokeWidth;
+		background-color: $color;
+	}
+}
+.forbid_icon{
+	@include forbid( 50px, 5px );
+}
+
+//个人信息图标
+//大小 整体背景颜色 像字母I的颜色
+@mixin personinfo( $size:50px, $bg:#3E3E3F, $strokeColor:#fff ) {
+	&{
+		width: $size;
+		height: $size;
+		border-radius: 50%;
+		background-color: $bg;
+		position: relative;
+	}
+	&:before{
+		content:"";
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin:0 auto;
+		top: 15%;
+		width: 11%;
+		height: 11%;
+		background-color: $strokeColor;
+		border-radius: 50%;
+	}
+	&:after{
+		content:"";
+		position: absolute;	
+		width: 10%;
+		height: 47%;
+		background-color: $strokeColor;
+		left: 0;
+		right: 0;
+		margin:0 auto;
+		top: 35%;
+		//X轴拉伸  Y轴拉伸 
+		border-radius: 100% / 15%;
+	}
+}
+.personInfo{
+	@include personinfo( 50px );
+}
+
+
+//警告图标
+//大小 整体背景颜色 像字母I的颜色
+@mixin warning( $size:50px, $bg:#3E3E3F, $strokeColor:#fff, $spaceColor:#fff, $spaceStroke:#000 ) {
+	&{
+		width: $size;
+		height: $size;
+		border-radius: 50%;
+		background-color: $bg;
+		position: relative;
+		box-sizing: border-box;
+		border:3px solid $spaceColor;
+		box-shadow:0 0 2px $spaceStroke;
+	}
+	&:before{
+		content:"";
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin:0 auto;
+		top: 15%;
+		width: 10%;
+		height: 47%;
+		background-color: $strokeColor;
+		border-bottom-left-radius: 70% 100%;
+		border-bottom-right-radius: 70% 100%;
+		border-top-right-radius: 70% 15%;
+		border-top-left-radius: 70% 15%;
+
+	}
+	&:after{
+		content:"";
+		position: absolute;	
+		width: 8%;
+		height: 8%;
+		background-color: $strokeColor;
+		left: 0;
+		right: 0;
+		margin:0 auto;
+		top: 70%;
+		border-radius: 50%;
+	}
+}
+.warning{
+	@include warning;
+}
+
+//对勾图标
+//颜色 大小 粗细
+@mixin correct( $color:#66BB6A, $size:20px, $storkeWidth:4px) {
+	&{
+		width: $size;
+		height: $storkeWidth;
+		position: relative;
+		background-color: $color;
+		transform:rotate(-130deg);
+		transform-origin:0 0;
+	}
+	&:after{
+		content:"";
+		position: absolute;
+		width: 250%;
+		height: 100%;
+		background-color: #66BB6A;
+		transform:rotate(90deg) translateY(-1px);
+		transform-origin:0 0;
+	}
+}
+.correct{
+	margin-top: 50px;
+	@include correct;
+}
+
+//切换导航栏按钮
+//
+@mixin switchSilder() {
+	&{
+		margin-top: 20px;
+		cursor: pointer;
+		position: relative;
+		width: 50px;
+		height: 39px;
+		box-sizing: border-box;
+		border-top:3px solid #0E0E0E;
+		border-bottom:3px solid #0E0E0E;
+		// &:hover{
+		// 	&:after{
+		// 		transform:rotate(-45deg);
+		// 	}
+		// 	&:before{
+		// 		transform:rotate(45deg);
+		// 	}
+		// }
+	}
+	&:after{
+		content:"";
+		position: absolute;
+		width: 50px;
+		height: 3px;
+		// background-color: #0E0E0E;
+		// top: 13px;
+		transform:rotate(0deg);
+		transition:0.2s;
+	}
+	&:before{
+		content:"";
+		position: absolute;
+		width: 50px;
+		height: 3px;
+		// background-color: #0E0E0E;
+		// bottom: 13px;
+		transform:rotate(0deg);
+		transition:0.2s;
+	}
+}
+.switchSilder{
+	@include switchSilder;
 }
