@@ -34,7 +34,8 @@ window.onload = function() {
 				day:ev.target.innerHTML
 			};
 			sevenDay.innerHTML = "";
-			sevenDayRender(data);
+			date = new Date(data.year + "-" + data.month + "-" + parseInt(data.day));
+			sevenDayRender();
 			return data;
 		}
 
@@ -56,28 +57,88 @@ window.onload = function() {
 	weekArr = ["周日","周一","周二","周三","周四","周五","周六"],
 	Index = 0,
 	element;
+
+
+	var elementArr = [null,null,null,null,null,null,null];
 	
-	sevenDayRender(Index)
+	sevenDayRender()
+	
+	/**
+	 * generation seven day
+	 * @param  {number} index up or low date
+	 * @return {object}       current time
+	 */
 	function sevenDayRender( index ) {
+		index = index || 0;
 		weekArr.forEach(function( el, i ) {
 			if( el === null ){
 				return false;
 			}
-			var tempDate = (new Date(date.getTime() + i  * 24 * 60 * 60 * 1000 + index * 7  * 24 * 60 * 60 * 1000 - 24 * 60 * 60 * 1000)),
 
+			var tempDate;
+
+			// to change the order of dates, make sure it's always Sunday to Monday
+			( date.getDay() >= 2 ) && ( i === 6 ) && (i = -1);
+			( date.getDay() >= 3 ) && ( i === 5 ) && (i = -2);
+			( date.getDay() >= 4 ) && ( i === 4 ) && (i = -3);
+			( date.getDay() >= 5 ) && ( i === 5 ) && (i = -4);
+			( date.getDay() >= 6 ) && ( i === 6 ) && (i = -5);
+
+			//generation date
+			tempDate = (new Date(date.getTime() + i  * 24 * 60 * 60 * 1000 + index * 7  * 24 * 60 * 60 * 1000 - 24 * 60 * 60 * 1000))
+
+			
+
+			var weeks = tempDate.getDay(),
 			year = tempDate.getFullYear(),
 			month = addZero(tempDate.getMonth() + 1),
 			day = addZero(tempDate.getDate());
 			element = document.createElement("div");
 			element.classList.add("day");
+
+
+
+
+			switch( weeks ){
+				case 0:
+				weeks = "日";
+				break;
+				case 1:
+				weeks = "一";
+				break;
+				case 2:
+				weeks = "二";
+				break;
+				case 3:
+				weeks = "三";
+				break;
+				case 4:
+				weeks = "四";
+				break;
+				case 5:
+				weeks = "五";
+				break;
+				case 6:
+				weeks = "六";
+				break;
+			}
+
+			if( date.getTime() === tempDate.getTime() ){
+				elementArr[tempDate.getDay()] = "<div class='day dayActive'>周" + weeks + " " + month + "/" + day + "</div>";
+			}else{
+				elementArr[tempDate.getDay()] = "<div class='day'>周" + weeks + " " + month + "/" + day + "</div>";
+			}
+			
+
+
+
 			if( date.getTime() === tempDate.getTime() ){
 				element.classList.add("dayActive");
 			}
-			element.innerHTML = el + " " + month + "/" + day;
-			sevenDay.appendChild(element);
-			return {
-				
-			}
+			
+		});
+		elementArr.forEach(function( el, i ) {
+			sevenDay.innerHTML += el;
 		});
 	}
 
@@ -95,15 +156,11 @@ window.onload = function() {
 
 
 
-
-
-
-
-
-
 	// util function
 	function addZero( num ) {
 		return num > 9 ? num : "0" + num;
 	}
+
+
 
 }
