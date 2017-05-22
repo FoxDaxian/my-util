@@ -1,0 +1,162 @@
+@mixin cb{
+	&:after{
+		content:"";
+		display: block;
+		clear: both;
+	}
+}
+@mixin calender {
+	.canenderWrap{
+		*{
+			font-size: 14px;
+		}
+		background-color: #fff;
+		position: absolute;
+		top: -10px;
+		left: -4px;
+		width: 390px;
+		padding-bottom: 14px;
+		border:1px solid #e6e6e6;
+		box-sizing: border-box;
+		&:after{
+			content:"";
+			position: absolute;
+			top: -6px;
+			left: 26px;
+			width: 10px;
+			height: 10px;
+			border:1px solid #e8e8e9;
+			background-color: #fff;
+			border-bottom: none;
+			border-right: none;
+			transform:rotate(45deg);
+		}
+		.closeBtn{
+			height: 12px;
+			width: 12px;
+			cursor: pointer;
+			margin-top: 11px;
+			margin-bottom: 18px;
+			position: relative;
+			box-sizing: border-box;
+			left: 366px;
+			&:after{
+				transform-origin:0 0;
+				top: -1px;
+				left: 1px;
+				content:"";
+				position: absolute;
+				background-color: #d4d4d4;
+				height: 1px;
+				width: 14px;
+				transform:rotate(45deg);
+
+			}
+			&:before{
+				transform-origin:0 0;
+				top: 0;
+				left: 11px;
+				content:"";
+				position: absolute;
+				background-color: #d4d4d4;
+				height: 1px;
+				width: 14px;
+				transform:rotate(135deg);
+			}
+		}
+		.title_btnsBox{
+			width: 344px;
+			margin:0 auto;
+			height: 12px;
+			@include cb;
+			>div{
+				height: 12px;
+				line-height: 12px;
+			}
+			.nowTimeTitle{
+				text-align: center;
+			}
+			.l_btn,.r_btn{
+				width: 48px;
+				height: 12px;
+				cursor: pointer;
+				position: relative;
+				&:after{
+					content:"";
+					width: 8.5px;
+					height: 8.5px;
+					border:1px solid #404040;
+					transform:rotate(45deg);
+					position: absolute;
+					top: 1px;
+				}
+			}
+			.l_btn{
+				float: left;
+				text-align: right;
+				&:after{
+					border-right: none;
+					border-top: none;
+					left: 0;
+				}
+			}
+			.r_btn{
+				float: right;
+				margin-right: 9px;
+				&:after{
+					border-left: none;
+					border-bottom: none;
+					right: 0;
+				}
+			}
+		}
+		.weekBox{
+			width: 362px;
+			margin:0 auto;
+			margin-top: 22px;
+			>div{
+				text-align: center;
+				line-height: 40px;
+				width: 50px;
+				height: 40px;
+				text-align: center;
+			}
+			@include cb;
+			.weekIndex{
+				float: left;
+			}
+		}
+		.cUl{
+			width: 362px;
+			margin:0 auto;
+			@include cb;
+			>li{
+				float: left;
+				width: 50px;
+				height: 40px;
+				text-align: center;
+				line-height: 40px;
+				border:0.5px solid #fff;
+				box-sizing: border-box;
+			}
+			.selectable{
+				cursor: pointer;
+				background-color: #f2f2f2;
+				&:hover{
+					background-color: #0578e6;
+					color:#fff;
+				}
+			}
+			.bothSides{
+				background-color: #dcdcdc;
+			}
+			.today{
+				color:#0578e6;
+			}
+			.otherMonth{
+				background-color: #fff;
+				color:#c6c6c6;
+			}
+		}
+	}
+}
