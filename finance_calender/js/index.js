@@ -38,10 +38,6 @@ window.onload = function() {
 				month : (calender.month - 1) < 0 ? 11 : calender.month - 1,
 			}
 
-			lastDate = {
-				year:arg.year,
-				month:arg.month,
-			};
 			clickObj = calender.render(arg);
 			calenderBox.innerHTML = clickObj.el.outerHTML;
 		}
@@ -50,10 +46,6 @@ window.onload = function() {
 				year : (calender.month + 1) > 11 ? (calender.year + 1) : calender.year,
 				month : (calender.month + 1) > 11 ? 0 : calender.month + 1,
 			}
-			lastDate = {
-				year:arg.year,
-				month:arg.month,
-			};
 			clickObj = calender.render(arg);
 			calenderBox.innerHTML = clickObj.el.outerHTML;
 		}
