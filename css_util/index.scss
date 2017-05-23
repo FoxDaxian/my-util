@@ -1,4 +1,4 @@
-body{
+.flex{
 	display: flex;
 	justify-content:space-around;
 	>div{
@@ -255,6 +255,7 @@ body{
 //颜色 大小 粗细
 @mixin correct( $color:#66BB6A, $size:20px, $storkeWidth:4px) {
 	&{
+		top: 50px;
 		width: $size;
 		height: $storkeWidth;
 		position: relative;
@@ -277,48 +278,97 @@ body{
 	@include correct;
 }
 
-//切换导航栏按钮
-//
-@mixin switchSilder() {
+
+//播放按钮btn
+//不太好使啊
+@mixin play_btn( $size:50px ) {
 	&{
-		margin-top: 20px;
-		cursor: pointer;
-		position: relative;
-		width: 50px;
-		height: 39px;
+		width: $size;
+		height: $size;
+		border-radius: 50%;
+		border:1px solid #090723;
 		box-sizing: border-box;
-		border-top:3px solid #0E0E0E;
-		border-bottom:3px solid #0E0E0E;
-		// &:hover{
-		// 	&:after{
-		// 		transform:rotate(-45deg);
-		// 	}
-		// 	&:before{
-		// 		transform:rotate(45deg);
-		// 	}
-		// }
-	}
-	&:after{
-		content:"";
-		position: absolute;
-		width: 50px;
-		height: 3px;
-		// background-color: #0E0E0E;
-		// top: 13px;
-		transform:rotate(0deg);
-		transition:0.2s;
+		position: relative;
 	}
 	&:before{
 		content:"";
 		position: absolute;
-		width: 50px;
-		height: 3px;
-		// background-color: #0E0E0E;
-		// bottom: 13px;
-		transform:rotate(0deg);
-		transition:0.2s;
+		width: 0;
+		height: 0;
+		border-top: ($size / 4) solid #090723;
+		border-left: (($size / 8)*1.732) solid transparent;
+		border-right: (($size / 8)*1.732) solid transparent;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin:auto;
+		transform:rotate(-90deg);
+	}
+	&:after{
+		content:"";
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-top: ($size / 4) solid #fff;
+		border-left: (($size / 8)*1.732) solid transparent;
+		border-right: (($size / 8)*1.732) solid transparent;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin:auto;
+		transform:rotate(-90deg) scale(0.7) translateY(-1px);
 	}
 }
-.switchSilder{
-	@include switchSilder;
+.play_btn{
+	@include play_btn(50px);
 }
+
+
+
+
+//相册图标
+//
+@mixin album_icon( $color:#712704, $size:1 ) {
+	&{
+		width: 50px;
+		height: 40px;
+		border-radius: 14px;
+		color: $color;//下面的阴影和边框都继承自color属性
+		border:5px solid;
+		position: relative;
+		//取消和鼠标有关的相关样式
+		pointer-events: none;
+		overflow: hidden;
+		transform:scale($size);
+	}
+	&:before{
+		content:"";
+		position: absolute;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		left: 25px;
+		top: 8px;
+		box-shadow:  0 0 0 100000px inset;
+	}
+	&:after{
+		content:"";
+		position: absolute;
+		width: 40px;
+		height: 30px;
+		top: 30px;
+		left: 10px;
+		box-shadow: inset 0 0 0 50px,20px 10px 0;
+		transform:rotate(-225deg);
+	}
+}
+.album_icon{
+	@include album_icon();
+}
+
+// 找到一个纯css 一个标签的图标库 去看看
+
+//研究一下颜色继承
+//目前测试发现：颜色的继承比较好用，设置一个顶级的color属性，其下面的border、outline、box-shadow都可以继承该color值，进而可以写出易于修改整体颜色的scss代码

@@ -1,5 +1,5 @@
 /* line 1, index.scss */
-body {
+.flex {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8,7 +8,7 @@ body {
       -ms-flex-pack: distribute;
           justify-content: space-around; }
   /* line 4, index.scss */
-  body > div {
+  .flex > div {
     margin: 0 50px; }
 
 /* line 11, index.scss */
@@ -213,11 +213,12 @@ body {
   top: 70%;
   border-radius: 50%; }
 
-/* line 275, index.scss */
+/* line 276, index.scss */
 .correct {
   margin-top: 50px; }
   /* line 257, index.scss */
   .correct {
+    top: 50px;
     width: 20px;
     height: 4px;
     position: relative;
@@ -228,7 +229,7 @@ body {
     -webkit-transform-origin: 0 0;
         -ms-transform-origin: 0 0;
             transform-origin: 0 0; }
-  /* line 265, index.scss */
+  /* line 266, index.scss */
   .correct:after {
     content: "";
     position: absolute;
@@ -242,37 +243,83 @@ body {
         -ms-transform-origin: 0 0;
             transform-origin: 0 0; }
 
-/* line 283, index.scss */
-.switchSilder {
-  margin-top: 20px;
-  cursor: pointer;
-  position: relative;
+/* line 285, index.scss */
+.play_btn {
   width: 50px;
-  height: 39px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #090723;
   box-sizing: border-box;
-  border-top: 3px solid #0E0E0E;
-  border-bottom: 3px solid #0E0E0E; }
-/* line 301, index.scss */
-.switchSilder:after {
+  position: relative; }
+/* line 293, index.scss */
+.play_btn:before {
   content: "";
   position: absolute;
-  width: 50px;
-  height: 3px;
-  -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-          transform: rotate(0deg);
-  -webkit-transition: 0.2s;
-          transition: 0.2s; }
-/* line 311, index.scss */
-.switchSilder:before {
+  width: 0;
+  height: 0;
+  border-top: 12.5px solid #090723;
+  border-left: 10.825px solid transparent;
+  border-right: 10.825px solid transparent;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg); }
+/* line 308, index.scss */
+.play_btn:after {
   content: "";
   position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 12.5px solid #fff;
+  border-left: 10.825px solid transparent;
+  border-right: 10.825px solid transparent;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  -webkit-transform: rotate(-90deg) scale(0.7) translateY(-1px);
+      -ms-transform: rotate(-90deg) scale(0.7) translateY(-1px);
+          transform: rotate(-90deg) scale(0.7) translateY(-1px); }
+
+/* line 334, index.scss */
+.album_icon {
   width: 50px;
-  height: 3px;
-  -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-          transform: rotate(0deg);
-  -webkit-transition: 0.2s;
-          transition: 0.2s; }
+  height: 40px;
+  border-radius: 14px;
+  color: #712704;
+  border: 5px solid;
+  position: relative;
+  pointer-events: none;
+  overflow: hidden;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1); }
+/* line 346, index.scss */
+.album_icon:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  left: 25px;
+  top: 8px;
+  box-shadow: 0 0 0 100000px inset; }
+/* line 356, index.scss */
+.album_icon:after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  top: 30px;
+  left: 10px;
+  box-shadow: inset 0 0 0 50px,20px 10px 0;
+  -webkit-transform: rotate(-225deg);
+      -ms-transform: rotate(-225deg);
+          transform: rotate(-225deg); }
 
 /*# sourceMappingURL=index.css.map */
