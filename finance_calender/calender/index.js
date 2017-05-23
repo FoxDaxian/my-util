@@ -69,8 +69,6 @@ var calender = (function() {
 				li.innerHTML = ++lastDayI;
 				li.classList.add("selectable");
 				li.setAttribute("num",lastDayI);
-				//这里的判断，联动的问题，或者说是传进来的年月日有问题
-				//还有，以后再写主动东西，把API规范写好了，不然乱传东西，以后很难维护
 				if( i === now + firstDay - 1 ){
 					if( this.selectYear && (this.selectYear === this.year)){
 						if( this.month === this.selectMonth ){

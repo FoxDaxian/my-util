@@ -12,7 +12,6 @@ window.onload = function() {
 			calender.firstDay = (new Date( calender.year, calender.month, 1 )).getDay();
 			calenderBox.innerHTML = calender.render().el.outerHTML;
 		}
-		console.log(lastDate);
 		calenderBox.style.display = "block";
 		lastDate = {
 			year:calender.year,
@@ -55,13 +54,17 @@ window.onload = function() {
 				month:calender.month + 1,
 				day:ev.target.innerHTML
 			};
+
+			//for normal switching with sevenDay, so initialize Index
+			Index = 0;
+
+			//change sevenDay
 			sevenDay.innerHTML = "";
-			date = new Date(data.year + "-" + data.month + "-" + parseInt(data.day));
+			date = new Date(data.year + "-" + (data.month) + "-" + parseInt(data.day));
 			sevenDayRender();
 			calenderBox.style.display = "none";
-
-			miniCalender.innerHTML = data.year + "年" + addZero(data.month) + "月" + addZero(data.day) + "日";
-
+			
+			//change calender
 			calender.now = parseInt(data.day);
 			calender.month = parseInt(data.month - 1);
 			calender.year = parseInt(data.year);
@@ -69,10 +72,14 @@ window.onload = function() {
 			calender.selectYear = parseInt(data.year);
 			calenderBox.innerHTML = calender.render().el.outerHTML;
 
+			//save last date
 			lastDate = {
 				year:parseInt(data.year),
 				month:parseInt(data.month - 1),
 			};
+
+			// change miniCalender
+			miniCalender.innerHTML = data.year + "年" + addZero(data.month) + "月" + addZero(data.day) + "日";
 			return data;
 		}
 		if( ev.target.classList.contains("closeBtn")){
@@ -92,7 +99,7 @@ window.onload = function() {
 
 
 
-	//sevenDay
+	//sevenDay part
 	var sevenDay = document.querySelector('.tabs .calender .oneWeek .sevenDay'),
 	prev_btn = document.querySelector('.tabs .calender .oneWeek .prev_btn'),
 	next_btn = document.querySelector('.tabs .calender .oneWeek .next_btn'),
@@ -189,21 +196,34 @@ window.onload = function() {
 	sevenDay.onclick = function(e) {
 		var ev = e || window.event;
 		if( ev.target.classList.contains("day") ){
+			var day = ev.target.dataset.day,
+			month = ev.target.dataset.month,
+			year = ev.target.dataset.year;
 
-			//这里重设的，从这里入手
-			calender.now = parseInt(ev.target.dataset.day);
-			calender.month = parseInt(ev.target.dataset.month - 1);
-			calender.year = parseInt(ev.target.dataset.year);
+			//change sevenDay
+			sevenDay.innerHTML = "";
+			date = new Date(year + "-" + month + "-" + parseInt(day));
+			sevenDayRender();
+
+			//change calender
+			calender.now = parseInt(day);
+			calender.month = parseInt(month - 1);
+			calender.year = parseInt(year);
 			calender.firstDay = (new Date( calender.year,calender.month,1 )).getDay();
+			calender.selectMonth = parseInt(month - 1);
+			calender.selectYear = parseInt(year);
 
+			//save last time date
 			lastDate = {
 				year:calender.year,
 				month:calender.month,
 			};
 
+			// change miniCalender
+			miniCalender.innerHTML = year + "年" + addZero(month) + "月" + addZero(day) + "日";
+
 			calenderBox.innerHTML = calender.render().el.outerHTML;
 		}
-		// console.log(date);
 	}
 
 
