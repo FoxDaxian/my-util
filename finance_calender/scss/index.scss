@@ -204,6 +204,7 @@ $tempShowDivWidth:48px;
 				padding-left: 30px;
 				background-image: url("../imgs/calenderDetailTime.png");
 				background-repeat: no-repeat;
+				cursor: pointer;
 			}
 			.clickShowContent{
 				position: absolute;
@@ -224,6 +225,9 @@ $tempShowDivWidth:48px;
 				.holidayNotice{
 
 				}
+			}
+			.clickShowNone{
+				display: none;
 			}
 		}
 		.line{

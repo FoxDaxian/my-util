@@ -1,4 +1,5 @@
 window.onload = function() {
+
 	// record the last date to reset calender
 	var lastDate = null;//一个是点开的时候没选择记录一下，一个是选择之后记录一下
 	//calender mini box
@@ -143,29 +144,7 @@ window.onload = function() {
 			element = document.createElement("div");
 			element.classList.add("day");
 
-			switch( weeks ){
-				case 0:
-				weeks = "日";
-				break;
-				case 1:
-				weeks = "一";
-				break;
-				case 2:
-				weeks = "二";
-				break;
-				case 3:
-				weeks = "三";
-				break;
-				case 4:
-				weeks = "四";
-				break;
-				case 5:
-				weeks = "五";
-				break;
-				case 6:
-				weeks = "六";
-				break;
-			}
+			weeks = judgeWeek(weeks);
 
 			if( date.getTime() === tempDate.getTime() ){
 				elementArr[tempDate.getDay()] = "<div class='day dayActive' data-year='" + year + "' data-month='" + (tempDate.getMonth() + 1) + "' data-day='" + tempDate.getDate() + "'>周" + weeks + " " + month + "/" + day + "</div>";
@@ -293,7 +272,7 @@ window.onload = function() {
 			event:"韩国  |  休市一日韩国  |韩国  |  休市一日韩国  |韩国  |  休市一日韩国",
 			important:"imgs/starLevel0.png",
 			todayValue:"--",
-			expect:"56.71",
+			expect:"56.00",
 			preValue:"89.70",
 			tempShowDiv:""
 		},{
@@ -323,7 +302,7 @@ window.onload = function() {
 
 	//calender detail lists ajax data
 	var listAjaxData = [{
-		date:new Date( Date.now() - 24 * 60 * 60 * 60 * 1000 ),
+		date:new Date( Date.now() - 24  * 60 * 60 * 1000 ),
 		calEvent:9,
 		holidayNotice:2
 	},{
@@ -336,36 +315,121 @@ window.onload = function() {
 		holidayNotice:0
 	}];
 
+	//可以让 currentCalenderIndex 固定不变， 然后点击时候去获取数据， 改变数据，这样就会保持居中了	
+	//不好搞动画效果，不然就别搞动画效果了，点击跳转刷新吧
+	//还差echars图表
+
 	//current calender index
 	var currentCalenderIndex = 1;
 	
 
-	//从这里开始写
-	//
 	//calender detail lists
 	//API 生成calender选择的tab 并 调用 renderCalenderDetail方法
-	//参数 所有的tab元素
-	var threeLists = document.querySelectorAll('.calenderDetail .threeList');
+	//参数：所有的tab元素  数据
 	function renderCalenderTabs( tabsEl, data ) {
-		tabsEl.forEach(function( el, i ) {
-			// prepend
-			console.log(threeLists[i]);
+		[].slice.call(tabsEl).forEach(function( el, i ) {
+
+			var timeEl = document.createElement("div");
+			timeEl.classList.add("time");
+
+			var spanEl = document.createElement("span");
+			//below for click function 
+			spanEl.classList.add("forClick");
+			spanEl.setAttribute("data-id",i)
+			//stop here
+			if( data[i].date === null ){
+				spanEl.innerHTML =  "暂无数据";
+				spanEl.setAttribute("data-click",false)
+			}else{
+				var m = data[i].date.getMonth() + 1,
+				d = data[i].date.getDate(),
+				w = data[i].date.getDay();
+				
+				spanEl.innerHTML = "周" + judgeWeek(w) + " " + addZero(m) + "/" + addZero(d);
+			}
+
+			//assignment time
+			spanEl.setAttribute("data-date",data[i].date);
+			
+			var clickShowContentEl = document.createElement("div");
+			clickShowContentEl.classList.add("clickShowContent");
+
+
+			if( currentCalenderIndex !== i ){
+				clickShowContentEl.classList.add("clickShowNone");
+			}else{
+				el.classList.add("threeListActive");
+			}
+			var calEventEl = document.createElement("div");
+			calEventEl.classList.add("calEvent");
+			calEventEl.innerHTML = "财经大事: <span>" + data[i].calEvent + "</span>";
+
+			var holidayNoticeEl = document.createElement("div");
+			holidayNoticeEl.classList.add("holidayNotice");
+			holidayNoticeEl.innerHTML = "假期预告: <span>" + data[i].holidayNotice + "</span>";
+
+			//append to clickShowContentEl
+			clickShowContentEl.appendChild(calEventEl);
+			clickShowContentEl.appendChild(holidayNoticeEl);
+
+			//append to timeEl
+			timeEl.appendChild(spanEl);
+			timeEl.appendChild(clickShowContentEl);
+
+			//preappend to tabsEl[i]
+			el.insertBefore(timeEl,el.childNodes[0]);
+
 		});
+
+		// current select date element 当前选择日期的详细列表，包含图表的
+		var calenderDetailBox = document.querySelector('.calenderDetail .threeListActive .calenderDetailBox');
+		renderCalenderDetail( calenderDetailBox, ajaxData );
 	}
-	/*<div class="time">
-		<span>周四 05/04</span>
-		<div class="clickShowContent">
-			<div class="calEvent">财经大事: <span>9</span></div>
-			<div class="holidayNotice">假期预告: <span>2</span></div>
-		</div>
-	</div>*/
+	
+	var threeLists = document.querySelectorAll('.calenderDetail .threeList');
 	renderCalenderTabs( threeLists, listAjaxData );
 
 
+	// click to rerender charts
+	var chartsBox = document.querySelector('.calenderDetail');
+	chartsBox.onclick = function( e ) {
+		var ev = e || window.event;
+		if( ev.target.classList.contains("forClick") ){
+			if( ev.target.dataset.click === "false" ){
+				return false;
+			}
+			currentCalenderIndex = parseInt(ev.target.dataset.id);
+
+
+			[].slice.call(threeLists).forEach(function( el, i ) {
+				el.classList.contains("threeListActive") && el.classList.remove("threeListActive");
+				var lineEl = document.createElement("div");
+				lineEl.classList.add("line");
+				var calenderDetailBoxEl = document.createElement("div");
+				calenderDetailBoxEl.classList.add("calenderDetailBox");
+
+				el.innerHTML = "";
+
+				el.appendChild(lineEl);
+				el.appendChild(calenderDetailBoxEl);
+
+
+			});
+			renderCalenderTabs( threeLists, listAjaxData );
+
+			console.log({
+				year: (new Date(ev.target.dataset.date)).getFullYear(), 
+				month: (new Date(ev.target.dataset.date)).getMonth() + 1, 
+				day: (new Date(ev.target.dataset.date)).getDate()
+			});
+		}
+	}
 
 
 
-	//规定的API，要渲染的元素，数据（数据格式数组内嵌对象）
+
+
+	//规定的API：要渲染的元素，数据（数据格式数组内嵌对象）
 	function renderCalenderDetail( targetEl, data ) {
 		//title part
 		var detailTitleElement = document.createElement("div");
@@ -404,26 +468,43 @@ window.onload = function() {
 		});
 
 
-
-
-
 		targetEl.appendChild(calenderDetailWrapElement);
 	}
 
-	// current select date element
-	// var calenderDetailBox = document.querySelector('.calenderDetail .threeListActive .calenderDetailBox');
-	// renderCalenderDetail( calenderDetailBox, ajaxData );
 	
-
-
-
-
 
 	// util function
 	function addZero( num ) {
 		return num > 9 ? num : "0" + num;
 	}
 
+	function judgeWeek( getDay ) {
+		var weeks = getDay;
+		switch( weeks ){
+			case 0:
+			weeks = "日";
+			break;
+			case 1:
+			weeks = "一";
+			break;
+			case 2:
+			weeks = "二";
+			break;
+			case 3:
+			weeks = "三";
+			break;
+			case 4:
+			weeks = "四";
+			break;
+			case 5:
+			weeks = "五";
+			break;
+			case 6:
+			weeks = "六";
+			break;
+		}
+		return weeks;
+	}
 
 
 }
