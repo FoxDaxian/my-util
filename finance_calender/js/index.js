@@ -80,7 +80,7 @@ window.onload = function() {
 
 			// change miniCalender
 			miniCalender.innerHTML = data.year + "年" + addZero(data.month) + "月" + addZero(data.day) + "日";
-			return data;
+			console.log(data);
 		}
 		if( ev.target.classList.contains("closeBtn")){
 			calenderBox.style.display = "none";
@@ -223,8 +223,197 @@ window.onload = function() {
 			miniCalender.innerHTML = year + "年" + addZero(month) + "月" + addZero(day) + "日";
 
 			calenderBox.innerHTML = calender.render().el.outerHTML;
+			console.log({
+				year:year,
+				month:month,
+				day:day,
+			});
 		}
 	}
+
+
+	//filter show/hidden
+	document.querySelector('.tabs .calender .filterBtn').onclick = function() {
+		document.querySelector('.tabs .filter').style.height = "41px";
+		document.querySelector('.tabs .filter').style.color = "#f0f0f0";
+	}
+
+
+
+	
+
+
+	//calender detail render
+	
+	//fixed data
+	var detailTitleData = [{
+		className:"date",
+		text:"时间"
+	},{
+		className:"country",
+		text:"国家"
+	},{
+		className:"event",
+		text:"事件"
+	},{
+		className:"important",
+		text:"重要性"
+	},{
+		className:"todayValue",
+		text:"今值"
+	},{
+		className:"expect",
+		text:"预期"
+	},{
+		className:"preValue",
+		text:"前值"
+	},{
+		className:"tempShowDiv",
+		text:""
+	}];
+
+	//ajax data, the total amount of data is constant to three
+	var ajaxData = [{
+		date:"xxx时间",
+		data:[{
+			date:"待定",
+			country:"imgs/nationalFlag.png",
+			event:"韩国  |  休市一日韩国  |韩国  |  休市一日韩国  |韩国  |  休市一日韩国",
+			important:"imgs/starLevel0.png",
+			todayValue:"--",
+			expect:"56.70",
+			preValue:"89.70",
+			tempShowDiv:""
+		}]
+	},{
+		date:"xxx时间",
+		data:[{
+			date:"待定",
+			country:"imgs/nationalFlag.png",
+			event:"韩国  |  休市一日韩国  |韩国  |  休市一日韩国  |韩国  |  休市一日韩国",
+			important:"imgs/starLevel0.png",
+			todayValue:"--",
+			expect:"56.71",
+			preValue:"89.70",
+			tempShowDiv:""
+		},{
+			date:"待定",
+			country:"imgs/nationalFlag.png",
+			event:"韩国  |  休市一111111111日韩国  |韩国  |  休市一日韩国  |韩国  |  休市一日韩国",
+			important:"imgs/starLevel0.png",
+			todayValue:"--",
+			expect:"56.71",
+			preValue:"89.70",
+			tempShowDiv:""
+		}]
+	},{
+		date:"xxx时间",
+		data:[{
+			date:"待定",
+			country:"imgs/nationalFlag.png",
+			event:"韩国  |  休市一日韩国  |韩国  |  休市一日韩国  |韩国  |  休市一日韩国",
+			important:"imgs/starLevel0.png",
+			todayValue:"--",
+			expect:"56.72",
+			preValue:"89.70",
+			tempShowDiv:""
+		}]
+	}];
+
+
+	//calender detail lists ajax data
+	var listAjaxData = [{
+		date:new Date( Date.now() - 24 * 60 * 60 * 60 * 1000 ),
+		calEvent:9,
+		holidayNotice:2
+	},{
+		date:new Date(),
+		calEvent:9,
+		holidayNotice:2
+	},{
+		date:null,
+		calEvent:0,
+		holidayNotice:0
+	}];
+
+	//current calender index
+	var currentCalenderIndex = 1;
+	
+
+	//从这里开始写
+	//
+	//calender detail lists
+	//API 生成calender选择的tab 并 调用 renderCalenderDetail方法
+	//参数 所有的tab元素
+	var threeLists = document.querySelectorAll('.calenderDetail .threeList');
+	function renderCalenderTabs( tabsEl, data ) {
+		tabsEl.forEach(function( el, i ) {
+			// prepend
+			console.log(threeLists[i]);
+		});
+	}
+	/*<div class="time">
+		<span>周四 05/04</span>
+		<div class="clickShowContent">
+			<div class="calEvent">财经大事: <span>9</span></div>
+			<div class="holidayNotice">假期预告: <span>2</span></div>
+		</div>
+	</div>*/
+	renderCalenderTabs( threeLists, listAjaxData );
+
+
+
+
+
+	//规定的API，要渲染的元素，数据（数据格式数组内嵌对象）
+	function renderCalenderDetail( targetEl, data ) {
+		//title part
+		var detailTitleElement = document.createElement("div");
+		detailTitleElement.classList.add("detailTitle");
+		var calenderDetailWrapElement = document.createElement("div");
+		calenderDetailWrapElement.classList.add("calenderDetailWrap");
+		detailTitleData.forEach(function( el, i ) {
+			var tempEl = document.createElement("div");
+			tempEl.classList.add(el.className);
+			tempEl.innerHTML = el.text;
+			detailTitleElement.appendChild(tempEl);
+		});
+		calenderDetailWrapElement.appendChild(detailTitleElement);
+
+		//content part
+		data.forEach(function( el, i ) {
+			if( i === currentCalenderIndex ){
+				el.data.forEach(function( el, i ) {
+					var detailContentElement = document.createElement("div");
+					detailContentElement.classList.add("detailContent");
+					for( var index in el ){
+						var tempEl = document.createElement("div");
+						tempEl.classList.add(index);
+						if( index === "country" || index === "important" ){
+							var img = document.createElement("img");
+							img.src = el[index];
+							tempEl.appendChild(img);
+						}else{
+							tempEl.innerHTML = el[index];
+						}
+						detailContentElement.appendChild(tempEl);
+					}
+					calenderDetailWrapElement.appendChild(detailContentElement);
+				});
+			}
+		});
+
+
+
+
+
+		targetEl.appendChild(calenderDetailWrapElement);
+	}
+
+	// current select date element
+	// var calenderDetailBox = document.querySelector('.calenderDetail .threeListActive .calenderDetailBox');
+	// renderCalenderDetail( calenderDetailBox, ajaxData );
+	
 
 
 

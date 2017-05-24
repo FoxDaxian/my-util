@@ -1,4 +1,24 @@
 @import "./calender.scss";
+@mixin hollow_arrow( $color:red, $size:30px, $rotate:135deg, $borderWidth:1px) {
+	& {
+		position: relative;
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		width: $size;
+		height: $size;
+		border: $borderWidth solid $color;
+		transform: rotate($rotate);
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		border-left: none;
+		border-top: none;
+		margin:auto;
+	}
+}
 .tabs{
 	width: 1342px;
 	.calender{
@@ -128,6 +148,217 @@
 	}
 	.filter{
 		box-sizing: border-box;
-		border-bottom: 1px solid #f0f0f0;
+		color:transparent;
+		border-bottom: 1px solid;
+		height: 0;
+		transition:0.2s;
+		padding-left: 63px;
+		overflow: hidden;
+		.filterList{
+			position: relative;
+			top: 50%;
+			transform:translateY(-50%);
+			font-size: 14px;
+			color:#626262;
+			float: left;
+			box-sizing: border-box;
+			padding: 5px 8px;
+			margin-right: 26px;
+			cursor: pointer;
+		}
+		.filterActive{
+			background-color: #e6f2ff;
+		}
+	}
+}
+
+
+
+
+
+//表格边框的颜色
+$tableColor:#f0f0f0;
+//表格的宽
+$calenderDetailWrapWidth:1200px;
+$dateWidth:90px;
+$countryWidth:87px;
+$eventWidth:570px;
+$sameWidth:99px;
+$tempShowDivWidth:48px;
+
+.calenderDetail{
+	margin-top: 25px;
+	width: 1208px;
+	margin-left: 33px;
+	.threeList{
+		margin-bottom: 3px;
+		.time{
+			position: relative;
+			>span{
+				display: inline-block;
+				font-size: 14px;
+				color:#626262;
+				height: 16px;
+				line-height: 16px;
+				box-sizing: border-box;
+				padding-left: 30px;
+				background-image: url("../imgs/calenderDetailTime.png");
+				background-repeat: no-repeat;
+			}
+			.clickShowContent{
+				position: absolute;
+				right: 0;
+				top: 0;
+				>div{
+					float: left;
+					font-size: 14px;
+					color:#808080;
+					line-height: 16px;
+					span{
+						color:#444444;
+					}
+				}
+				.calEvent{
+					margin-right: 28px;
+				}
+				.holidayNotice{
+
+				}
+			}
+		}
+		.line{
+			width: 1px;
+			height: 23px;
+			background-color: $tableColor;
+			margin-left: 8px;
+			margin-top: 3px;
+		}
+		.calenderDetailWrap{
+			width: $calenderDetailWrapWidth;
+			border:1px solid $tableColor;
+			box-sizing: border-box;
+			margin-top: -8px;
+			margin-left: 8px;
+			margin-bottom: 11px;
+			position: relative;
+			&:after{
+				content:"";
+				position: absolute;
+				width: 1px;
+				height: 8px;
+				background-color: $tableColor;
+				bottom: -8px;
+				left: -1px;
+			}
+			.detailTitle{
+				height: 49px;
+				box-sizing: border-box;
+				border-bottom: 1px solid $tableColor;
+				@include cb;
+				>div{
+					font-size: 14px;
+					color:#626262;
+					text-align: center;
+					float: left;
+					height: 49px;
+					line-height: 49px;
+				}
+				>div:not(:last-of-type){
+					margin-right: 1px;
+				}
+				.date{
+					width: $dateWidth;
+				}
+				.country{
+					width: $countryWidth;
+				}
+				.event{
+					width: $eventWidth;
+				}
+				.important{
+					width: $sameWidth;
+				}
+				.todayValue{
+					width: $sameWidth;
+				}
+				.expect{
+					width: $sameWidth;
+				}
+				.preValue{
+					width: $sameWidth;
+				}
+				.tempShowDiv{
+					width: $tempShowDivWidth;
+				}
+			}
+			.detailContent:not(:last-of-type){
+				border-bottom: 1px dashed #c6c6c6;
+			}
+			.detailContent{
+				box-sizing: border-box;
+				font-size: 0;
+				>div{
+					font-size: 14px;
+					color:#626262;
+					text-align: center;
+					display: inline-block;
+					box-sizing: border-box;
+					padding: 14px 0;
+					line-height: 24px;
+					vertical-align:middle;
+					img{
+						display:table-cell;
+						vertical-align:middle;
+						position: relative;
+						left: 50%;
+						transform:translateX(-50%);
+					}
+				}
+				>div:not(:last-of-type){
+					margin-right: 1px;
+				}
+				.date{
+					width: $dateWidth;
+				}
+				.country{
+					width: $countryWidth;
+				}
+				.event{
+					width: $eventWidth;
+					color:#444444;
+					text-align: left;
+				}
+				.important{
+					width: $sameWidth;
+				}
+				.todayValue{
+					width: $sameWidth;
+				}
+				.expect{
+					width: $sameWidth;
+				}
+				.preValue{
+					width: $sameWidth;
+				}
+				.tempShowDiv{
+					width: $tempShowDivWidth;
+					margin-top: -6px;
+					@include hollow_arrow( #bfbfbf, 8px, 45deg);
+				}
+			}
+		}
+	}
+	.threeList:last-of-type{
+		.line{
+			visibility: hidden;
+		}
+	}
+	.threeListActive{
+		.time{
+			>span{
+				color:#0578e6;
+				background-position: 0 -16px;
+			}
+		}
 	}
 }

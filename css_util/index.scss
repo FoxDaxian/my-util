@@ -7,7 +7,7 @@
 }
 // 空心箭头
 // 垂直方向 垂直方向数值 水平方向 水平方向数值 颜色 大小 旋转角度 线条宽度
-@mixin hollow_arrow( $vertival:top, $vertivalNum: 0px, $level:left, $levelNum: 0px, $color:red, $size:30px, $rotate:135deg, $borderWidth:1px) {
+@mixin hollow_arrow( $color:red, $size:30px, $rotate:135deg, $borderWidth:1px) {
 	& {
 		position: relative;
 	}
@@ -18,20 +18,23 @@
 		height: $size;
 		border: $borderWidth solid $color;
 		transform: rotate($rotate);
-		#{$vertival}: $vertivalNum;
-		#{$level}: $levelNum;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
 		border-left: none;
 		border-top: none;
+		margin:auto;
 	}
 }
 .hollow_arrow {
-	@include hollow_arrow( top, 0, left, 0,black);
+	@include hollow_arrow(black);
 }
 
 
 //实心箭头
 //垂直方向 垂直方向数值 水平方向 水平方向数值 颜色 方向 大小
-@mixin solid_arrow( $vertival:top, $vertivalNum: 0px, $level:left, $levelNum: 0px, $color:red, $dir:bottom, $size: 20px, $thickness:40px) {
+@mixin solid_arrow( $color:red, $dir:bottom, $size: 20px, $thickness:40px) {
 	& {
 		position: relative;
 	}
@@ -43,12 +46,15 @@
 		border: $size solid transparent;
 		border-#{$dir}-width:$thickness;
 		border-#{$dir}-color: $color;
-		#{$vertival}: $vertivalNum;
-		#{$level}: $levelNum;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin:auto;
 	}
 }
 .solid_arrow {
-	@include solid_arrow( top, 0, left, 0, blue, right, 20px, 30px);
+	@include solid_arrow( blue, right, 20px, 30px);
 }
 
 // X 关闭按钮
