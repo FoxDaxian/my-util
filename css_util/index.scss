@@ -1,380 +1,48 @@
-.flex{
-	display: flex;
-	justify-content:space-around;
+//每一个图标的外层元素
+.iconBox{
+	border:1px solid #000;
+	box-sizing: border-box;
+	padding: 14px;
+	float: left;
+	margin: 6px;
 	>div{
-		margin:0 50px;
+		background-color: rgba(red, 0.2);
 	}
 }
-// 空心箭头
-// 垂直方向 垂直方向数值 水平方向 水平方向数值 颜色 大小 旋转角度 线条宽度
-@mixin hollow_arrow( $color:red, $size:30px, $rotate:135deg, $borderWidth:1px) {
-	& {
-		position: relative;
-	}
-	&:before {
-		content: "";
+//右箭头
+@mixin icon_right() {
+	width: 12px;
+	height: 20px;
+	position: relative;
+	&:after,&:before{
+		content:"";
 		position: absolute;
-		width: $size;
-		height: $size;
-		border: $borderWidth solid $color;
-		transform: rotate($rotate);
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		border-left: none;
-		border-top: none;
-		margin:auto;
-	}
-}
-.hollow_arrow {
-	@include hollow_arrow(black);
-}
-
-
-//实心箭头
-//垂直方向 垂直方向数值 水平方向 水平方向数值 颜色 方向 大小
-@mixin solid_arrow( $color:red, $dir:bottom, $size: 20px, $thickness:40px) {
-	& {
-		position: relative;
-	}
-	&:before {
-		content: "";
-		position: absolute;
-		width: 0;
-		height: 0;
-		border: $size solid transparent;
-		border-#{$dir}-width:$thickness;
-		border-#{$dir}-color: $color;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		margin:auto;
-	}
-}
-.solid_arrow {
-	@include solid_arrow( blue, right, 20px, 30px);
-}
-
-// X 关闭按钮
-// 颜色 大小 线条粗细 可控的旋转角度 动画时间
-@mixin close_icon( $vertival:top, $vertivalNum: 0px, $level:left, $levelNum: 0px, $color:blue, $size:100%, $borderWidth:2px, $rotate:45deg) {
-	&{
-		position: relative;
-		transform:rotate($rotate);
-		#{$vertival}: $vertivalNum;
-		#{$level}: $levelNum;
+		background-color: #000;
+		transform:rotate(-45deg);
 	}
 	&:after{
-		content:"";
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 50%;
-		margin:auto;
-		transform:translateX(-50%);
-		width: $size;
-		height: $borderWidth;
-		background-color: $color;
+		width: 13px;
+		height: 2px;
+		left: -1px;
+		top: 14px;
 	}
 	&:before{
-		content:"";
-		position: absolute;
-		left: 0;
-		right: 0;
-		top: 50%;
-		margin:auto;
-		transform:translateY(-50%);
-		margin:auto;
-		width: $borderWidth;
-		height: $size;
-		background-color: $color;
+		width: 2px;
+		height: 15px;
+		top: -2px;
+		left: 5px;
 	}
+}
+.icon_right{
+	@include icon_right;
+}
+//左箭头
+@mixin icon_left {
 	
 }
-.close_icon {
-	width: 50px;
-	height: 50px;
-	@include close_icon( top, 0, left, 0, green, 100%, 2px, 45deg);
+.icon_left{
+	width: 12px;
+	height: 20px;
+	position: relative;
+	@include icon_left;
 }
-
-//一个圈中间一个+号的增加图标
-//图标大小 线条在圆内的长度 线条宽度
-@mixin add_icon( $size:20px, $strokeLength:70%, $strokeWidth:3px, $color:red ){
-	&{
-		width: $size;
-		height: $size;
-		border-radius: 50%;
-		border:$strokeWidth solid $color;
-		position: relative;
-	}
-	&:after{
-		content:"";
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		margin:auto;
-		width: $strokeLength;
-		height: $strokeWidth;
-		background-color: $color;
-
-	}
-	&:before{
-		content:"";
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		margin:auto;
-		width: $strokeWidth;
-		height: $strokeLength;
-		background-color: $color;
-	}
-}
-.add{
-	@include add_icon( 50px, 90%, 5px, red );
-}
-
-
-//禁止图标
-//大小 线条粗细 颜色 
-@mixin forbid( $size:50px, $strokeWidth:3px, $color:red ) {
-	&{
-		position: relative;
-		top: 0;
-		left: 0;
-		width: $size;
-		height: $size;
-		border-radius: 50%;
-		border:$strokeWidth solid $color;
-		transform:rotate(45deg);
-	}
-	&:before{
-		content:"";
-		position: absolute;
-		top: 0;
-		right: 0;
-		left: 0;
-		bottom: 0;
-		margin:auto;
-		width: 100%;
-		height: $strokeWidth;
-		background-color: $color;
-	}
-}
-.forbid_icon{
-	@include forbid( 50px, 5px );
-}
-
-//个人信息图标
-//大小 整体背景颜色 像字母I的颜色
-@mixin personinfo( $size:50px, $bg:#3E3E3F, $strokeColor:#fff ) {
-	&{
-		width: $size;
-		height: $size;
-		border-radius: 50%;
-		background-color: $bg;
-		position: relative;
-	}
-	&:before{
-		content:"";
-		position: absolute;
-		left: 0;
-		right: 0;
-		margin:0 auto;
-		top: 15%;
-		width: 11%;
-		height: 11%;
-		background-color: $strokeColor;
-		border-radius: 50%;
-	}
-	&:after{
-		content:"";
-		position: absolute;	
-		width: 10%;
-		height: 47%;
-		background-color: $strokeColor;
-		left: 0;
-		right: 0;
-		margin:0 auto;
-		top: 35%;
-		//X轴拉伸  Y轴拉伸 
-		border-radius: 100% / 15%;
-	}
-}
-.personInfo{
-	@include personinfo( 50px );
-}
-
-
-//警告图标
-//大小 整体背景颜色 像字母I的颜色
-@mixin warning( $size:50px, $bg:#3E3E3F, $strokeColor:#fff, $spaceColor:#fff, $spaceStroke:#000 ) {
-	&{
-		width: $size;
-		height: $size;
-		border-radius: 50%;
-		background-color: $bg;
-		position: relative;
-		box-sizing: border-box;
-		border:3px solid $spaceColor;
-		box-shadow:0 0 2px $spaceStroke;
-	}
-	&:before{
-		content:"";
-		position: absolute;
-		left: 0;
-		right: 0;
-		margin:0 auto;
-		top: 15%;
-		width: 10%;
-		height: 47%;
-		background-color: $strokeColor;
-		border-bottom-left-radius: 70% 100%;
-		border-bottom-right-radius: 70% 100%;
-		border-top-right-radius: 70% 15%;
-		border-top-left-radius: 70% 15%;
-
-	}
-	&:after{
-		content:"";
-		position: absolute;	
-		width: 8%;
-		height: 8%;
-		background-color: $strokeColor;
-		left: 0;
-		right: 0;
-		margin:0 auto;
-		top: 70%;
-		border-radius: 50%;
-	}
-}
-.warning{
-	@include warning;
-}
-
-//对勾图标
-//颜色 大小 粗细
-@mixin correct( $color:#66BB6A, $size:20px, $storkeWidth:4px) {
-	&{
-		top: 50px;
-		width: $size;
-		height: $storkeWidth;
-		position: relative;
-		background-color: $color;
-		transform:rotate(-130deg);
-		transform-origin:0 0;
-	}
-	&:after{
-		content:"";
-		position: absolute;
-		width: 250%;
-		height: 100%;
-		background-color: #66BB6A;
-		transform:rotate(90deg) translateY(-1px);
-		transform-origin:0 0;
-	}
-}
-.correct{
-	margin-top: 50px;
-	@include correct;
-}
-
-
-//播放按钮btn
-//不太好使啊
-@mixin play_btn( $size:50px ) {
-	&{
-		width: $size;
-		height: $size;
-		border-radius: 50%;
-		border:1px solid #090723;
-		box-sizing: border-box;
-		position: relative;
-	}
-	&:before{
-		content:"";
-		position: absolute;
-		width: 0;
-		height: 0;
-		border-top: ($size / 4) solid #090723;
-		border-left: (($size / 8)*1.732) solid transparent;
-		border-right: (($size / 8)*1.732) solid transparent;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		margin:auto;
-		transform:rotate(-90deg);
-	}
-	&:after{
-		content:"";
-		position: absolute;
-		width: 0;
-		height: 0;
-		border-top: ($size / 4) solid #fff;
-		border-left: (($size / 8)*1.732) solid transparent;
-		border-right: (($size / 8)*1.732) solid transparent;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		margin:auto;
-		transform:rotate(-90deg) scale(0.7) translateY(-1px);
-	}
-}
-.play_btn{
-	@include play_btn(50px);
-}
-
-
-
-
-//相册图标
-//
-@mixin album_icon( $color:#712704, $size:1 ) {
-	&{
-		width: 50px;
-		height: 40px;
-		border-radius: 14px;
-		color: $color;//下面的阴影和边框都继承自color属性
-		border:5px solid;
-		position: relative;
-		//取消和鼠标有关的相关样式
-		pointer-events: none;
-		overflow: hidden;
-		transform:scale($size);
-	}
-	&:before{
-		content:"";
-		position: absolute;
-		width: 8px;
-		height: 8px;
-		border-radius: 50%;
-		left: 25px;
-		top: 8px;
-		box-shadow:  0 0 0 100000px inset;
-	}
-	&:after{
-		content:"";
-		position: absolute;
-		width: 40px;
-		height: 30px;
-		top: 30px;
-		left: 10px;
-		box-shadow: inset 0 0 0 50px,20px 10px 0;
-		transform:rotate(-225deg);
-	}
-}
-.album_icon{
-	@include album_icon();
-}
-
-// 找到一个纯css 一个标签的图标库 去看看
-
-//研究一下颜色继承
-//目前测试发现：颜色的继承比较好用，设置一个顶级的color属性，其下面的border、outline、box-shadow都可以继承该color值，进而可以写出易于修改整体颜色的scss代码
