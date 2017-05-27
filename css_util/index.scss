@@ -2,18 +2,22 @@
 @import "./util.scss";
 //每一个图标的外层元素
 .iconBox{
-	border:1px solid #000;
+	color:#000;
+	border:1px solid;
 	box-sizing: border-box;
-	padding: 14px;
+	padding: em(14em);
 	float: left;
 	margin: 6px;
+	&:hover{
+		color:rgba(red, 10)
+	}
 	>div{
 		background-color: rgba(#000, 0.4);
 	}
 }
 //右箭头
 @mixin icon_right() {
-	width: 1em;
+	width: em(12em);
 	height: em(20em);
 	position: relative;
 	&:after,&:before{
@@ -22,10 +26,10 @@
 		height: em(2em);
 		position: absolute;
 		bottom: 0;
-		margin: auto 0;
 		right: em(1em);
 		box-shadow: inset 0 0 0 10000000px;
 		transform-origin: right;
+		margin: auto 0;
 	}
 	&:after{
 		top: em(-1em);
@@ -43,7 +47,7 @@
 
 //左箭头
 @mixin icon_left {
-	width: 1em;
+	width: em(12em);
 	height: em(20em);
 	position: relative;
 	&:after,&:before{
@@ -53,9 +57,9 @@
 		position: absolute;
 		bottom: 0;
 		margin: auto 0;
-		right: em(-3em);
 		box-shadow: inset 0 0 0 10000000px;
 		transform-origin: left;
+		right: em(-3em);
 	}
 	&:after{
 		top: em(1em);
@@ -72,4 +76,172 @@
 	height: 20px;
 	position: relative;
 	@include icon_left;
+}
+//上箭头
+.icon_top_box{
+	padding: em(17em) em(11em);
+}
+@mixin icon_top {
+	height: em(12em);
+	width: em(20em);
+	position: relative;
+	&:after,&:before{
+		content:"";
+		width: em(2em);
+		height: em(14em);
+		position: absolute;
+		left: 0;
+		margin:0 auto;
+		box-shadow: inset 0 0 0 10000000px;
+		transform-origin: top;
+		top: em(1em);
+	}
+	&:after{
+		right: em(1em);
+		transform: rotate(-45deg);
+	}
+	&:before{
+		right: em(-1em);
+		transform: rotate(45deg);
+
+	}
+}
+.icon_top{
+	position: relative;
+	@include icon_top;
+}
+//下箭头
+.icon_bottom_box{
+	padding: em(17em) em(11em);
+}
+@mixin icon_bottom {
+	height: em(12em);
+	width: em(20em);
+	position: relative;
+	&:after,&:before{
+		content:"";
+		width: em(2em);
+		height: em(14em);
+		position: absolute;
+		left: 0;
+		margin:0 auto;
+		box-shadow: inset 0 0 0 10000000px;
+		transform-origin: bottom;
+		top: em(-3em);
+	}
+	&:after{
+		right: em(-1em);
+		transform: rotate(-45deg);
+	}
+	&:before{
+		right: em(1em);
+		transform: rotate(45deg);
+
+	}
+}
+.icon_bottom{
+	position: relative;
+	@include icon_bottom;
+}
+//播放图标
+.icon_play_box{
+	padding: em(14em) em(11em);
+}
+@mixin icon_play {
+	width: em(20em);
+	height: em(20em);
+	position: relative;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		border-width: em(10em) 0 em(10em) em(18em);
+		border-style: solid;
+		border-top-color: transparent;
+		border-bottom-color: transparent;
+		left: em(1em);
+	}
+	&:before{
+
+	}
+}
+.icon_play{
+	position: relative;
+	@include icon_play;
+}
+//暂停图标
+.icon_pause_box{
+	padding: em(14em) em(11em);
+}
+@mixin icon_pause {
+	width: em(20em);
+	height: em(20em);
+	position: relative;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+		width: em(5em);
+		height: 100%;
+		box-shadow: inset 0 0 0 100000px;
+	}
+	&:after{
+		left: em(1em);
+	}
+	&:before{
+		right: em(1em);
+	}
+}
+.icon_pause{
+	position: relative;
+	@include icon_pause;
+}
+//3格音量图标
+.icon_volume3_box{
+	padding: em(9.5em) em(16.7em) em(9.5em) em(6.7em);
+}
+@mixin icon_volume3 {
+	width: 0;
+	height: 0;
+	padding: em(6em) em(4em);
+	border:em(10em) solid;
+	border-left: none;
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+	box-shadow: inset em(5em) 0 0 0px;
+	position: relative;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+		border-radius: 50%;
+	}
+	&:after{
+		width: em(20em);
+		height: em(20em);
+		border: em(6em) double;
+		border-top-color: transparent;
+		border-left-color: transparent;
+		border-bottom-color: transparent;
+		top: 0;
+		bottom: 0;
+		margin:auto 0;
+		left: em(-3em);
+
+	}
+	&:before{
+		width: em(35em);
+		height: em(35em);
+		border: em(2em) solid;
+		border-top-color: transparent;
+		border-left-color: transparent;
+		border-bottom-color: transparent;
+		top: 0;
+		bottom: 0;
+		margin:auto 0;
+		left: em(-6em);
+	}
+}
+.icon_volume3{
+	position: relative;
+	@include icon_volume3;
 }
