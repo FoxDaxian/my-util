@@ -1,3 +1,5 @@
+//字体大小设置图标大小，最小从12PX开始
+@import "./util.scss";
 //每一个图标的外层元素
 .iconBox{
 	border:1px solid #000;
@@ -6,36 +8,39 @@
 	float: left;
 	margin: 6px;
 	>div{
-		background-color: rgba(red, 0.2);
+		background-color: rgba(#000, 0.8);
 	}
 }
 //右箭头
 @mixin icon_right() {
-	width: 12px;
-	height: 20px;
+	width: 1em;
+	height: em(20em);
 	position: relative;
 	&:after,&:before{
 		content:"";
+		width: em(14em);
+		height: em(2em);
 		position: absolute;
-		background-color: #000;
-		transform:rotate(-45deg);
+		bottom: 0;
+		margin: auto 0;
+		right: em(1em);
+		box-shadow: inset 0 0 0 10000000px;
+		transform-origin: right;
 	}
 	&:after{
-		width: 13px;
-		height: 2px;
-		left: -1px;
-		top: 14px;
+		top: em(-1em);
+		transform: rotate(-45deg);
 	}
 	&:before{
-		width: 2px;
-		height: 15px;
-		top: -2px;
-		left: 5px;
+		top: em(1em);
+		transform: rotate(45deg);
+
 	}
 }
 .icon_right{
 	@include icon_right;
 }
+
 //左箭头
 @mixin icon_left {
 	
