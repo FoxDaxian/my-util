@@ -6,7 +6,7 @@
   margin: 6px;
 }
 .iconBox > div {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .icon_right {
@@ -44,6 +44,34 @@
   width: 12px;
   height: 20px;
   position: relative;
+  width: 1em;
+  height: 1.66667em;
+  position: relative;
+}
+.icon_left:after, .icon_left:before {
+  content: "";
+  width: 1.16667em;
+  height: 0.16667em;
+  position: absolute;
+  bottom: 0;
+  margin: auto 0;
+  right: -0.25em;
+  box-shadow: inset 0 0 0 10000000px;
+  -webkit-transform-origin: left;
+      -ms-transform-origin: left;
+          transform-origin: left;
+}
+.icon_left:after {
+  top: 0.08333em;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.icon_left:before {
+  top: -0.08333em;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 /*# sourceMappingURL=index.css.map */
