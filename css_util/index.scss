@@ -245,3 +245,194 @@
 	position: relative;
 	@include icon_volume3;
 }
+//2格音量图标
+.icon_volume2_box{
+	padding: em(9.5em) em(14.7em) em(9.5em) em(8.7em);
+}
+@mixin icon_volume2 {
+	width: 0;
+	height: 0;
+	padding: em(6em) em(4em);
+	border:em(10em) solid;
+	border-left: none;
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+	box-shadow: inset em(5em) 0 0 0px;
+	position: relative;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+		border-radius: 50%;
+	}
+	&:after{
+		width: em(20em);
+		height: em(20em);
+		border: em(6em) double;
+		border-top-color: transparent;
+		border-left-color: transparent;
+		border-bottom-color: transparent;
+		top: 0;
+		bottom: 0;
+		margin:auto 0;
+		left: em(-3em);
+
+	}
+	&:before{
+
+	}
+}
+.icon_volume2{
+	position: relative;
+	@include icon_volume2;
+}
+//1格音量图标
+.icon_volume1_box{
+	padding: em(9.5em) em(12.7em) em(9.5em) em(10.7em);
+}
+@mixin icon_volume1 {
+	width: 0;
+	height: 0;
+	padding: em(6em) em(4em);
+	border:em(10em) solid;
+	border-left: none;
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+	box-shadow: inset em(5em) 0 0 0px;
+	position: relative;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+		border-radius: 50%;
+	}
+	&:after{
+		width: em(20em);
+		height: em(20em);
+		border: em(2em) solid;
+		border-top-color: transparent;
+		border-left-color: transparent;
+		border-bottom-color: transparent;
+		top: 0;
+		bottom: 0;
+		margin:auto 0;
+		left: em(1em);
+
+	}
+	&:before{
+
+	}
+}
+.icon_volume1{
+	position: relative;
+	@include icon_volume1;
+}
+
+//静音图标
+.icon_mute_box{
+	padding: em(9.5em) em(16.7em) em(9.5em) em(6.7em);
+}
+@mixin icon_mute {
+	width: 0;
+	height: 0;
+	padding: em(6em) em(4em);
+	border:em(10em) solid;
+	border-left: none;
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+	box-shadow: inset em(5em) 0 0 0px;
+	position: relative;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+		width: em(2em);
+		height: em(16em);
+		box-shadow: inset 0 0 0 100000px;
+		top: 0;
+		bottom: 0;
+		margin:auto 0;
+		transform-origin:center center;
+		right: em(-20em);
+	}
+	&:after{
+		transform:rotate(45deg);
+
+	}
+	&:before{
+		transform:rotate(-45deg);
+	}
+}
+.icon_mute{
+	position: relative;
+	@include icon_mute;
+}
+//全屏图标
+.icon_full_box{
+	padding: em(10em) em(7.2em);
+}
+@mixin icon_full {
+	// font-size: 200px!important;
+	width: em(30em);
+	height: em(30em);
+	position: relative;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+		width: 0;
+		height: 0;
+	}
+	&:after{
+		border-left-color: transparent;
+		border-bottom-color: transparent;
+		border-width:em(7em);
+		border-style: solid;
+		top: em(0);
+		right: em(0);
+	}
+	&:before{
+		border-right-color: transparent;
+		border-top-color: transparent;
+		border-width:em(7em);
+		border-style: solid;
+		bottom: em(0);
+		left: em(0);
+	}
+}
+.icon_full{
+	position: relative;
+	@include icon_full;
+}
+//退出全屏图标
+.icon_mini_box{
+	padding: em(10em) em(7.2em);
+}
+@mixin icon_mini {
+	// font-size: 200px!important;
+	width: em(30em);
+	height: em(30em);
+	position: relative;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+		width: 0;
+		height: 0;
+	}
+	&:after{
+		border-right-color: transparent;
+		border-top-color: transparent;
+		border-width:em(7em);
+		border-style: solid;
+		top: em(0);
+		right: em(0);
+	}
+	&:before{
+		border-left-color: transparent;
+		border-bottom-color: transparent;
+		border-width:em(7em);
+		border-style: solid;
+		bottom: em(0);
+		left: em(0);
+	}
+}
+.icon_mini{
+	position: relative;
+	@include icon_mini;
+}
