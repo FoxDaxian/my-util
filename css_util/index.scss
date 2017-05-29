@@ -198,17 +198,17 @@
 }
 //3格音量图标
 .icon_volume3_box{
-	padding: em(9.5em) em(16.7em) em(9.5em) em(6.7em);
+	padding: em(14em) em(19.5em) em(14em) em(9.5em);
 }
 @mixin icon_volume3 {
 	width: 0;
 	height: 0;
-	padding: em(6em) em(4em);
-	border:em(10em) solid;
+	padding: em(5em) em(3em);
+	border:em(5em) solid;
 	border-left: none;
 	border-top-color: transparent;
 	border-bottom-color: transparent;
-	box-shadow: inset em(5em) 0 0 0px;
+	box-shadow: inset em(4em) 0 0 0px;
 	position: relative;
 	&:after,&:before{
 		content:"";
@@ -216,8 +216,8 @@
 		border-radius: 50%;
 	}
 	&:after{
-		width: em(20em);
-		height: em(20em);
+		width: em(10em);
+		height: em(10em);
 		border: em(6em) double;
 		border-top-color: transparent;
 		border-left-color: transparent;
@@ -229,8 +229,8 @@
 
 	}
 	&:before{
-		width: em(35em);
-		height: em(35em);
+		width: em(25em);
+		height: em(25em);
 		border: em(2em) solid;
 		border-top-color: transparent;
 		border-left-color: transparent;
@@ -247,17 +247,17 @@
 }
 //2格音量图标
 .icon_volume2_box{
-	padding: em(9.5em) em(14.7em) em(9.5em) em(8.7em);
+	padding: em(14em) em(15.5em) em(14em) em(13.5em);
 }
 @mixin icon_volume2 {
 	width: 0;
 	height: 0;
-	padding: em(6em) em(4em);
-	border:em(10em) solid;
+	padding: em(5em) em(3em);
+	border:em(5em) solid;
 	border-left: none;
 	border-top-color: transparent;
 	border-bottom-color: transparent;
-	box-shadow: inset em(5em) 0 0 0px;
+	box-shadow: inset em(4em) 0 0 0px;
 	position: relative;
 	&:after,&:before{
 		content:"";
@@ -265,8 +265,8 @@
 		border-radius: 50%;
 	}
 	&:after{
-		width: em(20em);
-		height: em(20em);
+		width: em(10em);
+		height: em(10em);
 		border: em(6em) double;
 		border-top-color: transparent;
 		border-left-color: transparent;
@@ -287,17 +287,17 @@
 }
 //1格音量图标
 .icon_volume1_box{
-	padding: em(9.5em) em(12.7em) em(9.5em) em(10.7em);
+	padding: em(14em) em(14.5em) em(14em) em(14.5em);
 }
 @mixin icon_volume1 {
 	width: 0;
 	height: 0;
-	padding: em(6em) em(4em);
-	border:em(10em) solid;
+	padding: em(5em) em(3em);
+	border:em(5em) solid;
 	border-left: none;
 	border-top-color: transparent;
 	border-bottom-color: transparent;
-	box-shadow: inset em(5em) 0 0 0px;
+	box-shadow: inset em(4em) 0 0 0px;
 	position: relative;
 	&:after,&:before{
 		content:"";
@@ -305,8 +305,8 @@
 		border-radius: 50%;
 	}
 	&:after{
-		width: em(20em);
-		height: em(20em);
+		width: em(10em);
+		height: em(10em);
 		border: em(2em) solid;
 		border-top-color: transparent;
 		border-left-color: transparent;
@@ -328,29 +328,29 @@
 
 //静音图标
 .icon_mute_box{
-	padding: em(9.5em) em(16.7em) em(9.5em) em(6.7em);
+	padding: em(14em) em(19.5em) em(14em) em(9.5em);
 }
 @mixin icon_mute {
 	width: 0;
 	height: 0;
-	padding: em(6em) em(4em);
-	border:em(10em) solid;
+	padding: em(5em) em(3em);
+	border:em(5em) solid;
 	border-left: none;
 	border-top-color: transparent;
 	border-bottom-color: transparent;
-	box-shadow: inset em(5em) 0 0 0px;
+	box-shadow: inset em(4em) 0 0 0px;
 	position: relative;
 	&:after,&:before{
 		content:"";
 		position: absolute;
 		width: em(2em);
-		height: em(16em);
+		height: em(12em);
 		box-shadow: inset 0 0 0 100000px;
 		top: 0;
 		bottom: 0;
 		margin:auto 0;
 		transform-origin:center center;
-		right: em(-20em);
+		right: em(-15em);
 	}
 	&:after{
 		transform:rotate(45deg);
@@ -366,12 +366,11 @@
 }
 //全屏图标
 .icon_full_box{
-	padding: em(10em) em(7.2em);
+	padding: em(14em) em(11em);
 }
 @mixin icon_full {
-	// font-size: 200px!important;
-	width: em(30em);
-	height: em(30em);
+	width: em(20em);
+	height: em(20em);
 	position: relative;
 	&:after,&:before{
 		content:"";
@@ -382,7 +381,7 @@
 	&:after{
 		border-left-color: transparent;
 		border-bottom-color: transparent;
-		border-width:em(7em);
+		border-width:em(5em);
 		border-style: solid;
 		top: em(0);
 		right: em(0);
@@ -390,7 +389,7 @@
 	&:before{
 		border-right-color: transparent;
 		border-top-color: transparent;
-		border-width:em(7em);
+		border-width:em(5em);
 		border-style: solid;
 		bottom: em(0);
 		left: em(0);
@@ -402,12 +401,11 @@
 }
 //退出全屏图标
 .icon_mini_box{
-	padding: em(10em) em(7.2em);
+	padding: em(14em) em(11em);
 }
 @mixin icon_mini {
-	// font-size: 200px!important;
-	width: em(30em);
-	height: em(30em);
+	width: em(20em);
+	height: em(20em);
 	position: relative;
 	&:after,&:before{
 		content:"";
@@ -418,7 +416,7 @@
 	&:after{
 		border-right-color: transparent;
 		border-top-color: transparent;
-		border-width:em(7em);
+		border-width:em(5em);
 		border-style: solid;
 		top: em(0);
 		right: em(0);
@@ -426,7 +424,7 @@
 	&:before{
 		border-left-color: transparent;
 		border-bottom-color: transparent;
-		border-width:em(7em);
+		border-width:em(5em);
 		border-style: solid;
 		bottom: em(0);
 		left: em(0);
@@ -435,4 +433,44 @@
 .icon_mini{
 	position: relative;
 	@include icon_mini;
+}
+//转换图标
+.icon_convert_box{
+	padding: em(12.5em) em(9.5em);
+}
+@mixin icon_convert {
+	width: em(18em);
+	height: em(18em);
+	position: relative;
+	border-radius: 50%;
+	border:em(3em) solid;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+		width: em(10em);
+		height: em(10em);
+		border:em(3em) solid;
+		box-sizing: border-box;
+		transform:rotate(-86deg);
+	}
+	&:after{
+		top: em(-5em);
+		left: em(-1em);
+		border-right: none;
+		border-bottom: none;
+	}
+	&:before{
+		bottom: 0;
+		right: 0;
+		border-left: none;
+		border-top: none;
+		bottom: em(-5em);
+		right: em(-1em);
+	}
+}
+.icon_convert{
+	position: relative;
+	@include icon_convert;
 }

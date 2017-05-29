@@ -143,26 +143,26 @@
     right: 0.08333em; }
 
 .icon_volume3_box {
-  padding: 0.79167em 1.39167em 0.79167em 0.55833em; }
+  padding: 1.16667em 1.625em 1.16667em 0.79167em; }
 
 .icon_volume3 {
   position: relative;
   width: 0;
   height: 0;
-  padding: 0.5em 0.33333em;
-  border: 0.83333em solid;
+  padding: 0.41667em 0.25em;
+  border: 0.41667em solid;
   border-left: none;
   border-top-color: transparent;
   border-bottom-color: transparent;
-  box-shadow: inset 0.41667em 0 0 0px;
+  box-shadow: inset 0.33333em 0 0 0px;
   position: relative; }
   .icon_volume3:after, .icon_volume3:before {
     content: "";
     position: absolute;
     border-radius: 50%; }
   .icon_volume3:after {
-    width: 1.66667em;
-    height: 1.66667em;
+    width: 0.83333em;
+    height: 0.83333em;
     border: 0.5em double;
     border-top-color: transparent;
     border-left-color: transparent;
@@ -172,8 +172,8 @@
     margin: auto 0;
     left: -0.25em; }
   .icon_volume3:before {
-    width: 2.91667em;
-    height: 2.91667em;
+    width: 2.08333em;
+    height: 2.08333em;
     border: 0.16667em solid;
     border-top-color: transparent;
     border-left-color: transparent;
@@ -184,26 +184,26 @@
     left: -0.5em; }
 
 .icon_volume2_box {
-  padding: 0.79167em 1.225em 0.79167em 0.725em; }
+  padding: 1.16667em 1.29167em 1.16667em 1.125em; }
 
 .icon_volume2 {
   position: relative;
   width: 0;
   height: 0;
-  padding: 0.5em 0.33333em;
-  border: 0.83333em solid;
+  padding: 0.41667em 0.25em;
+  border: 0.41667em solid;
   border-left: none;
   border-top-color: transparent;
   border-bottom-color: transparent;
-  box-shadow: inset 0.41667em 0 0 0px;
+  box-shadow: inset 0.33333em 0 0 0px;
   position: relative; }
   .icon_volume2:after, .icon_volume2:before {
     content: "";
     position: absolute;
     border-radius: 50%; }
   .icon_volume2:after {
-    width: 1.66667em;
-    height: 1.66667em;
+    width: 0.83333em;
+    height: 0.83333em;
     border: 0.5em double;
     border-top-color: transparent;
     border-left-color: transparent;
@@ -214,26 +214,26 @@
     left: -0.25em; }
 
 .icon_volume1_box {
-  padding: 0.79167em 1.05833em 0.79167em 0.89167em; }
+  padding: 1.16667em 1.20833em 1.16667em 1.20833em; }
 
 .icon_volume1 {
   position: relative;
   width: 0;
   height: 0;
-  padding: 0.5em 0.33333em;
-  border: 0.83333em solid;
+  padding: 0.41667em 0.25em;
+  border: 0.41667em solid;
   border-left: none;
   border-top-color: transparent;
   border-bottom-color: transparent;
-  box-shadow: inset 0.41667em 0 0 0px;
+  box-shadow: inset 0.33333em 0 0 0px;
   position: relative; }
   .icon_volume1:after, .icon_volume1:before {
     content: "";
     position: absolute;
     border-radius: 50%; }
   .icon_volume1:after {
-    width: 1.66667em;
-    height: 1.66667em;
+    width: 0.83333em;
+    height: 0.83333em;
     border: 0.16667em solid;
     border-top-color: transparent;
     border-left-color: transparent;
@@ -244,42 +244,42 @@
     left: 0.08333em; }
 
 .icon_mute_box {
-  padding: 0.79167em 1.39167em 0.79167em 0.55833em; }
+  padding: 1.16667em 1.625em 1.16667em 0.79167em; }
 
 .icon_mute {
   position: relative;
   width: 0;
   height: 0;
-  padding: 0.5em 0.33333em;
-  border: 0.83333em solid;
+  padding: 0.41667em 0.25em;
+  border: 0.41667em solid;
   border-left: none;
   border-top-color: transparent;
   border-bottom-color: transparent;
-  box-shadow: inset 0.41667em 0 0 0px;
+  box-shadow: inset 0.33333em 0 0 0px;
   position: relative; }
   .icon_mute:after, .icon_mute:before {
     content: "";
     position: absolute;
     width: 0.16667em;
-    height: 1.33333em;
+    height: 1em;
     box-shadow: inset 0 0 0 100000px;
     top: 0;
     bottom: 0;
     margin: auto 0;
     transform-origin: center center;
-    right: -1.66667em; }
+    right: -1.25em; }
   .icon_mute:after {
     transform: rotate(45deg); }
   .icon_mute:before {
     transform: rotate(-45deg); }
 
 .icon_full_box {
-  padding: 0.83333em 0.6em; }
+  padding: 1.16667em 0.91667em; }
 
 .icon_full {
   position: relative;
-  width: 2.5em;
-  height: 2.5em;
+  width: 1.66667em;
+  height: 1.66667em;
   position: relative; }
   .icon_full:after, .icon_full:before {
     content: "";
@@ -289,25 +289,25 @@
   .icon_full:after {
     border-left-color: transparent;
     border-bottom-color: transparent;
-    border-width: 0.58333em;
+    border-width: 0.41667em;
     border-style: solid;
     top: 0;
     right: 0; }
   .icon_full:before {
     border-right-color: transparent;
     border-top-color: transparent;
-    border-width: 0.58333em;
+    border-width: 0.41667em;
     border-style: solid;
     bottom: 0;
     left: 0; }
 
 .icon_mini_box {
-  padding: 0.83333em 0.6em; }
+  padding: 1.16667em 0.91667em; }
 
 .icon_mini {
   position: relative;
-  width: 2.5em;
-  height: 2.5em;
+  width: 1.66667em;
+  height: 1.66667em;
   position: relative; }
   .icon_mini:after, .icon_mini:before {
     content: "";
@@ -317,16 +317,49 @@
   .icon_mini:after {
     border-right-color: transparent;
     border-top-color: transparent;
-    border-width: 0.58333em;
+    border-width: 0.41667em;
     border-style: solid;
     top: 0;
     right: 0; }
   .icon_mini:before {
     border-left-color: transparent;
     border-bottom-color: transparent;
-    border-width: 0.58333em;
+    border-width: 0.41667em;
     border-style: solid;
     bottom: 0;
     left: 0; }
+
+.icon_convert_box {
+  padding: 1.04167em 0.79167em; }
+
+.icon_convert {
+  position: relative;
+  width: 1.5em;
+  height: 1.5em;
+  position: relative;
+  border-radius: 50%;
+  border: 0.25em solid;
+  border-left-color: transparent;
+  border-right-color: transparent; }
+  .icon_convert:after, .icon_convert:before {
+    content: "";
+    position: absolute;
+    width: 0.83333em;
+    height: 0.83333em;
+    border: 0.25em solid;
+    box-sizing: border-box;
+    transform: rotate(-86deg); }
+  .icon_convert:after {
+    top: -0.41667em;
+    left: -0.08333em;
+    border-right: none;
+    border-bottom: none; }
+  .icon_convert:before {
+    bottom: 0;
+    right: 0;
+    border-left: none;
+    border-top: none;
+    bottom: -0.41667em;
+    right: -0.08333em; }
 
 /*# sourceMappingURL=index.css.map */
