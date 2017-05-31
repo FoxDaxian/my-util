@@ -474,3 +474,102 @@
 	position: relative;
 	@include icon_convert;
 }
+//关闭图标
+.icon_close_box{
+	padding: em(14em) em(11em);
+}
+@mixin icon_close {
+	width: em(20em);
+	height: em(20em);
+	position: relative;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+		box-shadow: inset 0 0 0 100000px;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin:auto;
+		transform:rotate(45deg);
+	}
+	&:after{
+		width: em(2em);
+		height: 100%;
+	}
+	&:before{
+		height: em(2em);
+		width: 100%;
+	}
+}
+.icon_close{
+	position: relative;
+	@include icon_close;
+}
+//增加图标
+.icon_add_box{
+	padding: em(14em) em(11em);
+}
+@mixin icon_add {
+	width: em(20em);
+	height: em(20em);
+	position: relative;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+		box-shadow: inset 0 0 0 100000px;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin:auto;
+	}
+	&:after{
+		width: em(2em);
+		height: em(18em);
+	}
+	&:before{
+		height: em(2em);
+		width: em(18em);
+	}
+}
+.icon_add{
+	position: relative;
+	@include icon_add;
+}
+//坐标图标
+.icon_coordinate_box{
+	padding: em(14em) em(11em);
+}
+@mixin icon_coordinate {
+	width: em(20em);
+	height: em(20em);
+	position: relative;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+		border-radius: 50%;
+		border:em(2em) solid;
+		box-sizing: border-box;
+	}
+	&:after{
+		width: 100%;
+		height: 100%;
+		border-bottom-right-radius: 0;
+		transform:rotate(45deg);
+	}
+	&:before{
+		width: 40%;
+		height: 40%;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin:auto;
+		z-index: 100;
+	}
+}
+.icon_coordinate{
+	position: relative;
+	@include icon_coordinate;
+}

@@ -362,4 +362,82 @@
     bottom: -0.41667em;
     right: -0.08333em; }
 
+.icon_close_box {
+  padding: 1.16667em 0.91667em; }
+
+.icon_close {
+  position: relative;
+  width: 1.66667em;
+  height: 1.66667em;
+  position: relative; }
+  .icon_close:after, .icon_close:before {
+    content: "";
+    position: absolute;
+    box-shadow: inset 0 0 0 100000px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transform: rotate(45deg); }
+  .icon_close:after {
+    width: 0.16667em;
+    height: 100%; }
+  .icon_close:before {
+    height: 0.16667em;
+    width: 100%; }
+
+.icon_add_box {
+  padding: 1.16667em 0.91667em; }
+
+.icon_add {
+  position: relative;
+  width: 1.66667em;
+  height: 1.66667em;
+  position: relative; }
+  .icon_add:after, .icon_add:before {
+    content: "";
+    position: absolute;
+    box-shadow: inset 0 0 0 100000px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto; }
+  .icon_add:after {
+    width: 0.16667em;
+    height: 1.5em; }
+  .icon_add:before {
+    height: 0.16667em;
+    width: 1.5em; }
+
+.icon_coordinate_box {
+  padding: 1.16667em 0.91667em; }
+
+.icon_coordinate {
+  position: relative;
+  width: 1.66667em;
+  height: 1.66667em;
+  position: relative; }
+  .icon_coordinate:after, .icon_coordinate:before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 0.16667em solid;
+    box-sizing: border-box; }
+  .icon_coordinate:after {
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 0;
+    transform: rotate(45deg); }
+  .icon_coordinate:before {
+    width: 40%;
+    height: 40%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    z-index: 100; }
+
 /*# sourceMappingURL=index.css.map */
