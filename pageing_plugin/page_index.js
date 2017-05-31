@@ -87,7 +87,9 @@ var pageSet = function(sum, now) {
                 if (pageSum > 9) {
                     pages.appendChild(points);
                 }
-                main((pageSum - 8), pageSum);
+                console.log(pageSum);
+                (pageSum === 10) &&  main((pageSum - 7), pageSum);
+                (pageSum === 9) &&  main((pageSum - 8), pageSum);
             }
         } else {
             alert('不能为负数');
