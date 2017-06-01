@@ -1,0 +1,186 @@
+.video_box{
+	position: relative;
+	height: 500px;
+	.video{
+		*{
+			user-select:none;
+		}
+		position: absolute;
+		width: 881px;
+		height: 479px;
+		background-color: rgba(0,0,0,0.9);
+		z-index: 100;
+		top: 0;
+		left: 0px;
+		.video_wrap{
+			height: 432px;
+			width: 100%;
+			position: relative;
+			video{
+				width: 100%;
+				height: 100%;
+				object-fit:fill;
+				&:hover{
+					cursor: pointer;
+				}						
+			}
+		}
+		.controls{
+			width: 100%;
+			height: 48px;
+			>div:not(.time){
+				cursor: pointer;
+			}
+			.play_bar{
+				width: 100%;
+				height: 4px;
+				position: relative;
+				.bar{
+					height: 4px;
+					width: 871px;
+					margin:0 auto;
+					background-color: #b3b3b3;
+					.color_bar{
+						width: 0px;
+						height: 4px;
+						background-color: #f07124;
+					}
+				}
+				.control_ball{
+					position: absolute;
+					width: 10px;
+					height: 10px;
+					border-radius: 50%;
+					background-color: #ffffff;
+					top: -3px;
+					left: 0;
+				}
+			}
+			.play_btn_pause{
+				background-image: url("video_imgs/stop_default.png")!important;
+				&:hover{
+					background-image: url("video_imgs/stop_hover.png")!important;
+				}
+			}
+			.play_btn{
+				float: left;
+				margin-top: 12px;
+				margin-left: 19px;
+				width: 16px;
+				height: 19px;
+				background-repeat: no-repeat;
+				background-image: url("video_imgs/play_default.png");
+				&:hover{
+					background-image: url("video_imgs/play_hover.png");
+				}
+			}
+			.time{
+				float: left;
+				margin-top: 16px;
+				margin-left: 21px;
+				span{
+					font-size: 12px;
+					color:#ffffff;
+				}
+			}
+			.toMini{
+				background-image: url("video_imgs/narrow_default.png")!important;
+				&:hover{
+					background-image: url("video_imgs/narrow_hover.png")!important;
+				}
+			}
+			.toFull{
+				float: right;
+				margin-top: 12px;
+				margin-right: 21px;
+				width: 17px;
+				height: 18px;
+				background-image: url("video_imgs/full_screen_default.png");
+				&:hover{
+					background-image: url("video_imgs/full_screen_hover.png");
+				}
+			}
+			.mute{
+				background-image: url("video_imgs/mute_default.png")!important;
+				&:hover{
+					background-image: url("video_imgs/mute_hover.png")!important;
+				}
+			}
+			.volume{
+				position: relative;
+				float: right;
+				margin-top: 11px;
+				margin-right: 26px;
+				width: 19px;
+				height: 19px;
+				background-repeat: no-repeat;
+				background-image: url("video_imgs/volume_default.png");
+				&:hover{
+					background-image: url("video_imgs/volume_hover.png");
+					.volume_control{
+						display: block;
+					}
+				}
+				.volume_control{
+					display: none;
+					position: absolute;
+					right: -3px;
+					top: -131px;
+					width: 30px;
+					height: 118px;
+					background-color: #313b3a;
+					&:hover{
+						cursor: default;
+						display: block;
+					}
+					&:after{
+						content:"";
+						position: absolute;
+						width: 0;
+						height: 0;
+						border:10px solid transparent;
+						border-left:5px solid transparent;
+						border-right:5px solid transparent;
+						border-top:10px solid #313b3a;
+						bottom: -20px;
+						left: 50%;
+						margin-left: -5px;
+					}
+					.bar{
+						position: absolute;
+						height: 100px;
+						width: 2px;
+						background-color: #111111;
+						left: 50%;
+						margin-left: -1px;
+						top: 10px;
+						&:hover{
+							cursor: pointer;
+						}
+						.color_bar{
+							position: absolute;
+							bottom: 0;
+							left: 0;
+							height: 100px;
+							width: 2px;
+							background-color: #ff6000
+						}
+					}
+					.control_ball{
+						position: absolute;
+						width: 10px;
+						height: 10px;
+						border-radius: 50%;
+						background-color: #ededed;
+						left: 50%;
+						margin-left: -5px;
+						top: 5px;
+						&:hover{
+							cursor: pointer;
+						}
+					}
+				}
+			}
+		}
+	}
+}

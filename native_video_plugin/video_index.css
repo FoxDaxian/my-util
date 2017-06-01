@@ -1,0 +1,191 @@
+.video_box {
+  position: relative;
+  height: 500px;
+}
+.video_box .video {
+  position: absolute;
+  width: 881px;
+  height: 479px;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 100;
+  top: 0;
+  left: 0px;
+}
+.video_box .video * {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.video_box .video .video_wrap {
+  height: 432px;
+  width: 100%;
+  position: relative;
+}
+.video_box .video .video_wrap video {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.video_box .video .video_wrap video:hover {
+  cursor: pointer;
+}
+.video_box .video .controls {
+  width: 100%;
+  height: 48px;
+}
+.video_box .video .controls > div:not(.time) {
+  cursor: pointer;
+}
+.video_box .video .controls .play_bar {
+  width: 100%;
+  height: 4px;
+  position: relative;
+}
+.video_box .video .controls .play_bar .bar {
+  height: 4px;
+  width: 871px;
+  margin: 0 auto;
+  background-color: #b3b3b3;
+}
+.video_box .video .controls .play_bar .bar .color_bar {
+  width: 0px;
+  height: 4px;
+  background-color: #f07124;
+}
+.video_box .video .controls .play_bar .control_ball {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  top: -3px;
+  left: 0;
+}
+.video_box .video .controls .play_btn_pause {
+  background-image: url("video_imgs/stop_default.png") !important;
+}
+.video_box .video .controls .play_btn_pause:hover {
+  background-image: url("video_imgs/stop_hover.png") !important;
+}
+.video_box .video .controls .play_btn {
+  float: left;
+  margin-top: 12px;
+  margin-left: 19px;
+  width: 16px;
+  height: 19px;
+  background-repeat: no-repeat;
+  background-image: url("video_imgs/play_default.png");
+}
+.video_box .video .controls .play_btn:hover {
+  background-image: url("video_imgs/play_hover.png");
+}
+.video_box .video .controls .time {
+  float: left;
+  margin-top: 16px;
+  margin-left: 21px;
+}
+.video_box .video .controls .time span {
+  font-size: 12px;
+  color: #ffffff;
+}
+.video_box .video .controls .toMini {
+  background-image: url("video_imgs/narrow_default.png") !important;
+}
+.video_box .video .controls .toMini:hover {
+  background-image: url("video_imgs/narrow_hover.png") !important;
+}
+.video_box .video .controls .toFull {
+  float: right;
+  margin-top: 12px;
+  margin-right: 21px;
+  width: 17px;
+  height: 18px;
+  background-image: url("video_imgs/full_screen_default.png");
+}
+.video_box .video .controls .toFull:hover {
+  background-image: url("video_imgs/full_screen_hover.png");
+}
+.video_box .video .controls .mute {
+  background-image: url("video_imgs/mute_default.png") !important;
+}
+.video_box .video .controls .mute:hover {
+  background-image: url("video_imgs/mute_hover.png") !important;
+}
+.video_box .video .controls .volume {
+  position: relative;
+  float: right;
+  margin-top: 11px;
+  margin-right: 26px;
+  width: 19px;
+  height: 19px;
+  background-repeat: no-repeat;
+  background-image: url("video_imgs/volume_default.png");
+}
+.video_box .video .controls .volume:hover {
+  background-image: url("video_imgs/volume_hover.png");
+}
+.video_box .video .controls .volume:hover .volume_control {
+  display: block;
+}
+.video_box .video .controls .volume .volume_control {
+  display: none;
+  position: absolute;
+  right: -3px;
+  top: -131px;
+  width: 30px;
+  height: 118px;
+  background-color: #313b3a;
+}
+.video_box .video .controls .volume .volume_control:hover {
+  cursor: default;
+  display: block;
+}
+.video_box .video .controls .volume .volume_control:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid #313b3a;
+  bottom: -20px;
+  left: 50%;
+  margin-left: -5px;
+}
+.video_box .video .controls .volume .volume_control .bar {
+  position: absolute;
+  height: 100px;
+  width: 2px;
+  background-color: #111111;
+  left: 50%;
+  margin-left: -1px;
+  top: 10px;
+}
+.video_box .video .controls .volume .volume_control .bar:hover {
+  cursor: pointer;
+}
+.video_box .video .controls .volume .volume_control .bar .color_bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  width: 2px;
+  background-color: #ff6000;
+}
+.video_box .video .controls .volume .volume_control .control_ball {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ededed;
+  left: 50%;
+  margin-left: -5px;
+  top: 5px;
+}
+.video_box .video .controls .volume .volume_control .control_ball:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=video_index.css.map */
