@@ -1,5 +1,6 @@
 //字体大小设置图标大小，最小从12PX开始
 @import "./util.scss";
+@import "./animate.scss";
 //每一个图标的外层元素
 .iconBox{
 	color:#000;
@@ -12,7 +13,7 @@
 		color:rgba(red, 10)
 	}
 	>div{
-		background-color: rgba(#000, 0.4);
+		// background-color: rgba(#000, 0.4);
 	}
 }
 //右箭头
@@ -572,4 +573,222 @@
 .icon_coordinate{
 	position: relative;
 	@include icon_coordinate;
+}
+//对勾图标
+.icon_correct_box{
+	padding: em(14em) em(11em);
+	overflow: hidden;
+}
+@mixin icon_correct {
+	width: em(20em);
+	height: em(20em);
+	position: relative;
+	transform:rotate(-135deg);
+	&:after,&:before{
+		content:"";
+		position: absolute;
+		box-shadow: inset 0 0 0 100000px;
+		top: em(2em);
+	}
+	&:after{
+		width: em(2em);
+		height: 80%;
+		left: 33.3333%;
+
+	}
+	&:before{
+		height: em(2em);
+		width: 43.3333%;
+		left: 33.3333%;
+	}
+}
+.icon_correct{
+	position: relative;
+	@include icon_correct;
+}
+//菜单图标
+.icon_menu_box{
+	padding: em(20.7em) em(11em);
+	overflow: hidden;
+}
+@mixin icon_menu {
+	width: em(20em);
+	height: em(2em);
+	position: relative;
+	box-shadow: inset 0 0 0 10000px,0 em(7em),0 em(-7em);
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+
+	}
+	&:before{
+	}
+}
+.icon_menu{
+	position: relative;
+	@include icon_menu;
+}
+//加载中图标
+.icon_loading_box{
+	padding: em(14em) em(11em);
+	overflow: hidden;
+}
+@mixin icon_loading {
+	width: em(20em);
+	height: em(20em);
+	position: relative;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		width: 100%;
+		height: 100%;
+		border:em(2em) solid;
+		border-left-color: transparent;
+		box-sizing: border-box;
+		border-radius: 50%;
+		animation:loading 1s linear infinite;
+	}
+	&:before{
+	}
+}
+.icon_loading{
+	position: relative;
+	@include icon_loading;
+}
+//笑脸图标
+.icon_smile_box{
+	padding: em(10.2em) em(7.3em);
+	overflow: hidden;
+}
+@mixin icon_smile {
+	width: em(30em);
+	height: em(30em);
+	position: relative;
+	border-radius: 50%;
+	box-sizing: border-box;
+	border:em(2em) solid;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		width: em(5em);
+		height: em(5em);
+		left: 50%;
+		margin-left: em(-2.5em);
+		border-radius: 50%;
+		top: em(8em);
+		box-shadow: em(6em) 0,em(-6em) 0;
+	}
+	&:before{
+		width: 80%;
+		height: 80%;
+		border-radius: 50%;
+		box-sizing: border-box;
+		border:em(2em) solid;
+		border-top-color: transparent;
+		border-left-color: transparent;
+		border-right-color: transparent;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin:auto;
+	}
+}
+.icon_smile{
+	position: relative;
+	@include icon_smile;
+}
+//哭脸图标
+.icon_cry_box{
+	padding: em(10.2em) em(7.3em);
+	overflow: hidden;
+}
+@mixin icon_cry {
+	width: em(30em);
+	height: em(30em);
+	position: relative;
+	border-radius: 50%;
+	box-sizing: border-box;
+	border:em(2em) solid;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		width: em(5em);
+		height: em(5em);
+		left: 50%;
+		margin-left: em(-2.5em);
+		border-radius: 50%;
+		top: em(8em);
+		box-shadow: em(6em) 0,em(-6em) 0;
+	}
+	&:before{
+		width: 80%;
+		height: 80%;
+		border-radius: 50%;
+		box-sizing: border-box;
+		border:em(2em) solid;
+		border-bottom-color: transparent;
+		border-left-color: transparent;
+		border-right-color: transparent;
+		right: 0;
+		left: 0;
+		margin:0 auto;
+		bottom: -50%;
+	}
+}
+.icon_cry{
+	position: relative;
+	@include icon_cry;
+}
+//面无表情图标
+.icon_expressionless_box{
+	padding: em(10.2em) em(7.3em);
+	overflow: hidden;
+}
+@mixin icon_expressionless {
+	width: em(30em);
+	height: em(30em);
+	position: relative;
+	border-radius: 50%;
+	box-sizing: border-box;
+	border:em(2em) solid;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		width: em(5em);
+		height: em(5em);
+		left: 50%;
+		margin-left: em(-2.5em);
+		border-radius: 50%;
+		top: em(8em);
+		box-shadow: em(6em) 0,em(-6em) 0;
+	}
+	&:before{
+		width: 60%;
+		height: 60%;
+		box-sizing: border-box;
+		border:em(2em) solid;
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin:auto;
+	}
+}
+.icon_expressionless{
+	position: relative;
+	@include icon_expressionless;
 }
