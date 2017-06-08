@@ -9,6 +9,7 @@
 html方面：  
 ```html
 <!-- 其中 外层div为控制的间接层（方便控制图标大小，位置等），内部的div为真正的图标-->
+<!-- 鼠标hover以查看图标类名 -->
 <div class="yourClassName"><div class="icon_chooseOne"></div></div>
 ```
 
