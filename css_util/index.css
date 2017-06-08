@@ -18,6 +18,10 @@
             transform: rotate(360deg);
   }
 }
+[class^="icon_"] {
+  font-size: 12px;
+}
+
 .iconBox {
   color: #000;
   border: 1px solid;
@@ -62,9 +66,6 @@
 }
 
 .icon_left {
-  width: 12px;
-  height: 20px;
-  position: relative;
   width: 1em;
   height: 1.66667em;
   position: relative;
@@ -100,7 +101,6 @@
 }
 
 .icon_top {
-  position: relative;
   height: 1em;
   width: 1.66667em;
   position: relative;
@@ -136,7 +136,6 @@
 }
 
 .icon_bottom {
-  position: relative;
   height: 1em;
   width: 1.66667em;
   position: relative;
@@ -172,7 +171,6 @@
 }
 
 .icon_play {
-  position: relative;
   width: 1.66667em;
   height: 1.66667em;
   position: relative;
@@ -194,7 +192,6 @@
 }
 
 .icon_pause {
-  position: relative;
   width: 1.66667em;
   height: 1.66667em;
   position: relative;
@@ -218,7 +215,6 @@
 }
 
 .icon_volume3 {
-  position: relative;
   width: 0;
   height: 0;
   padding: 0.41667em 0.25em;
@@ -264,7 +260,6 @@
 }
 
 .icon_volume2 {
-  position: relative;
   width: 0;
   height: 0;
   padding: 0.41667em 0.25em;
@@ -298,7 +293,6 @@
 }
 
 .icon_volume1 {
-  position: relative;
   width: 0;
   height: 0;
   padding: 0.41667em 0.25em;
@@ -332,7 +326,6 @@
 }
 
 .icon_mute {
-  position: relative;
   width: 0;
   height: 0;
   padding: 0.41667em 0.25em;
@@ -373,7 +366,6 @@
 }
 
 .icon_full {
-  position: relative;
   width: 1.66667em;
   height: 1.66667em;
   position: relative;
@@ -406,7 +398,6 @@
 }
 
 .icon_mini {
-  position: relative;
   width: 1.66667em;
   height: 1.66667em;
   position: relative;
@@ -439,7 +430,6 @@
 }
 
 .icon_convert {
-  position: relative;
   width: 1.5em;
   height: 1.5em;
   position: relative;
@@ -479,7 +469,6 @@
 }
 
 .icon_close {
-  position: relative;
   width: 1.66667em;
   height: 1.66667em;
   position: relative;
@@ -511,7 +500,6 @@
 }
 
 .icon_add {
-  position: relative;
   width: 1.66667em;
   height: 1.66667em;
   position: relative;
@@ -540,7 +528,6 @@
 }
 
 .icon_coordinate {
-  position: relative;
   width: 1.66667em;
   height: 1.66667em;
   position: relative;
@@ -577,7 +564,6 @@
 }
 
 .icon_correct {
-  position: relative;
   width: 1.66667em;
   height: 1.66667em;
   position: relative;
@@ -603,12 +589,11 @@
 }
 
 .icon_menu_box {
-  padding: 1.725em 0.91667em;
+  padding: 1.72917em 0.91667em;
   overflow: hidden;
 }
 
 .icon_menu {
-  position: relative;
   width: 1.66667em;
   height: 0.16667em;
   position: relative;
@@ -625,7 +610,6 @@
 }
 
 .icon_loading {
-  position: relative;
   width: 1.66667em;
   height: 1.66667em;
   position: relative;
@@ -646,12 +630,11 @@
 }
 
 .icon_smile_box {
-  padding: 0.85em 0.60833em;
+  padding: 0.85417em 0.60833em;
   overflow: hidden;
 }
 
 .icon_smile {
-  position: relative;
   width: 2.5em;
   height: 2.5em;
   position: relative;
@@ -689,12 +672,11 @@
 }
 
 .icon_cry_box {
-  padding: 0.85em 0.60833em;
+  padding: 0.85417em 0.60833em;
   overflow: hidden;
 }
 
 .icon_cry {
-  position: relative;
   width: 2.5em;
   height: 2.5em;
   position: relative;
@@ -731,12 +713,11 @@
 }
 
 .icon_expressionless_box {
-  padding: 0.85em 0.60833em;
+  padding: 0.85417em 0.60833em;
   overflow: hidden;
 }
 
 .icon_expressionless {
-  position: relative;
   width: 2.5em;
   height: 2.5em;
   position: relative;
@@ -770,6 +751,149 @@
   bottom: 0;
   left: 0;
   margin: auto;
+}
+
+.icon_forbid_box {
+  padding: 0.85em 0.60833em;
+  overflow: hidden;
+}
+
+.icon_forbid {
+  width: 2.5em;
+  height: 2.5em;
+  position: relative;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 0.16667em solid;
+}
+.icon_forbid:after, .icon_forbid:before {
+  content: "";
+  position: absolute;
+}
+.icon_forbid:after {
+  width: 100%;
+  height: 0.16667em;
+  box-shadow: inset 0 0 0 10000px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.icon_set_box {
+  padding: 0.85em 0.60833em;
+  overflow: hidden;
+}
+
+.icon_set {
+  width: 2.5em;
+  height: 2.5em;
+  position: relative;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 0.25em dotted;
+}
+.icon_set:after, .icon_set:before {
+  content: "";
+  position: absolute;
+}
+.icon_set:after {
+  width: 80%;
+  height: 80%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.25em, inset 0 0 0 100000px;
+  border: 0.41667em solid transparent;
+  box-sizing: border-box;
+}
+
+.icon_hollowHeart_box {
+  padding: 0.85em 0.60833em;
+  overflow: hidden;
+}
+
+.icon_hollowHeart {
+  width: 1.16667em;
+  height: 1.16667em;
+  margin: 0.58333em;
+  position: relative;
+  border-right: 0.16667em solid;
+  border-bottom: 0.16667em solid;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.icon_hollowHeart:after, .icon_hollowHeart:before {
+  content: "";
+  position: absolute;
+}
+.icon_hollowHeart:after {
+  width: 0.66667em;
+  height: 0.66667em;
+  border: 0.16667em solid;
+  border-right-color: transparent;
+  border-radius: 50% 0 0 50%;
+  left: -0.5em;
+  top: 0.33333em;
+}
+.icon_hollowHeart:before {
+  width: 0.66667em;
+  height: 0.66667em;
+  border: 0.16667em solid;
+  border-bottom-color: transparent;
+  border-radius: 50% 50% 0 0;
+  right: -0.16667em;
+  top: -0.5em;
+}
+
+.icon_solidHeart_box {
+  padding: 0.85em 0.60833em;
+  overflow: hidden;
+}
+
+.icon_solidHeart {
+  width: 1.16667em;
+  height: 1.16667em;
+  margin: 0.58333em;
+  position: relative;
+  border-top-left-radius: 100%;
+  border-right: 0.16667em solid;
+  border-bottom: 0.16667em solid;
+  box-shadow: inset 0 0 0 0.58167em;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.icon_solidHeart:after, .icon_solidHeart:before {
+  content: "";
+  position: absolute;
+  box-shadow: inset 0 0 0 10000px;
+}
+.icon_solidHeart:after {
+  width: 0.66667em;
+  height: 0.66667em;
+  border: 0.16667em solid;
+  border-right-color: transparent;
+  border-radius: 50% 0 0 50%;
+  left: -0.5em;
+  top: 0.33333em;
+}
+.icon_solidHeart:before {
+  width: 0.66667em;
+  height: 0.66667em;
+  border: 0.16667em solid;
+  border-bottom-color: transparent;
+  border-radius: 50% 50% 0 0;
+  right: -0.16667em;
+  top: -0.5em;
 }
 
 /*# sourceMappingURL=index.css.map */

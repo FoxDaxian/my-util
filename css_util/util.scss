@@ -6,3 +6,11 @@ $base_fontSize : 12;
 @function em( $size ) {
 	@return $size / $base_fontSize;
 }
+
+@mixin midCen() {
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;	
+	margin:auto;
+}

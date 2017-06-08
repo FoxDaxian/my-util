@@ -1,6 +1,9 @@
 //字体大小设置图标大小，最小从12PX开始
 @import "./util.scss";
 @import "./animate.scss";
+[class^="icon_"]{
+	font-size: 12px;
+}
 //每一个图标的外层元素
 .iconBox{
 	color:#000;
@@ -73,9 +76,6 @@
 	}
 }
 .icon_left{
-	width: 12px;
-	height: 20px;
-	position: relative;
 	@include icon_left;
 }
 //上箭头
@@ -108,7 +108,6 @@
 	}
 }
 .icon_top{
-	position: relative;
 	@include icon_top;
 }
 //下箭头
@@ -141,7 +140,6 @@
 	}
 }
 .icon_bottom{
-	position: relative;
 	@include icon_bottom;
 }
 //播放图标
@@ -168,7 +166,6 @@
 	}
 }
 .icon_play{
-	position: relative;
 	@include icon_play;
 }
 //暂停图标
@@ -194,7 +191,6 @@
 	}
 }
 .icon_pause{
-	position: relative;
 	@include icon_pause;
 }
 //3格音量图标
@@ -243,7 +239,6 @@
 	}
 }
 .icon_volume3{
-	position: relative;
 	@include icon_volume3;
 }
 //2格音量图标
@@ -283,7 +278,6 @@
 	}
 }
 .icon_volume2{
-	position: relative;
 	@include icon_volume2;
 }
 //1格音量图标
@@ -323,7 +317,6 @@
 	}
 }
 .icon_volume1{
-	position: relative;
 	@include icon_volume1;
 }
 
@@ -362,7 +355,6 @@
 	}
 }
 .icon_mute{
-	position: relative;
 	@include icon_mute;
 }
 //全屏图标
@@ -397,7 +389,6 @@
 	}
 }
 .icon_full{
-	position: relative;
 	@include icon_full;
 }
 //退出全屏图标
@@ -432,7 +423,6 @@
 	}
 }
 .icon_mini{
-	position: relative;
 	@include icon_mini;
 }
 //转换图标
@@ -472,7 +462,6 @@
 	}
 }
 .icon_convert{
-	position: relative;
 	@include icon_convert;
 }
 //关闭图标
@@ -504,7 +493,6 @@
 	}
 }
 .icon_close{
-	position: relative;
 	@include icon_close;
 }
 //增加图标
@@ -535,7 +523,6 @@
 	}
 }
 .icon_add{
-	position: relative;
 	@include icon_add;
 }
 //坐标图标
@@ -571,7 +558,6 @@
 	}
 }
 .icon_coordinate{
-	position: relative;
 	@include icon_coordinate;
 }
 //对勾图标
@@ -603,12 +589,11 @@
 	}
 }
 .icon_correct{
-	position: relative;
 	@include icon_correct;
 }
 //菜单图标
 .icon_menu_box{
-	padding: em(20.7em) em(11em);
+	padding: em(20.75em) em(11em);
 	overflow: hidden;
 }
 @mixin icon_menu {
@@ -627,7 +612,6 @@
 	}
 }
 .icon_menu{
-	position: relative;
 	@include icon_menu;
 }
 //加载中图标
@@ -656,12 +640,11 @@
 	}
 }
 .icon_loading{
-	position: relative;
 	@include icon_loading;
 }
 //笑脸图标
 .icon_smile_box{
-	padding: em(10.2em) em(7.3em);
+	padding: em(10.25em) em(7.3em);
 	overflow: hidden;
 }
 @mixin icon_smile {
@@ -701,12 +684,11 @@
 	}
 }
 .icon_smile{
-	position: relative;
 	@include icon_smile;
 }
 //哭脸图标
 .icon_cry_box{
-	padding: em(10.2em) em(7.3em);
+	padding: em(10.25em) em(7.3em);
 	overflow: hidden;
 }
 @mixin icon_cry {
@@ -745,12 +727,11 @@
 	}
 }
 .icon_cry{
-	position: relative;
 	@include icon_cry;
 }
 //面无表情图标
 .icon_expressionless_box{
-	padding: em(10.2em) em(7.3em);
+	padding: em(10.25em) em(7.3em);
 	overflow: hidden;
 }
 @mixin icon_expressionless {
@@ -789,6 +770,152 @@
 	}
 }
 .icon_expressionless{
-	position: relative;
 	@include icon_expressionless;
+}
+//禁止操作图标
+.icon_forbid_box{
+	padding: em(10.2em) em(7.3em);
+	overflow: hidden;
+}
+@mixin icon_forbid {
+	width: em(30em);
+	height: em(30em);
+	position: relative;
+	border-radius: 50%;
+	box-sizing: border-box;
+	border:em(2em) solid;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		width: 100%;
+		height: em(2em);
+		box-shadow: inset 0 0 0 10000px;
+		@include midCen;
+		transform:rotate(45deg);
+
+	}
+	&:before{
+		
+	}
+}
+.icon_forbid{
+	@include icon_forbid;
+}
+//设置图标
+.icon_set_box{
+	padding: em(10.2em) em(7.3em);
+	overflow: hidden;
+}
+@mixin icon_set {
+	width: em(30em);
+	height: em(30em);
+	position: relative;
+	border-radius: 50%;
+	box-sizing: border-box;
+	border:em(3em) dotted;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		width: 80%;
+		height: 80%;
+		@include midCen;
+		border-radius: 50%;
+		box-shadow: 0 0 0 em(3em),
+		inset 0 0 0 100000px;
+		border:em(5em) solid transparent;
+		box-sizing: border-box;
+	}
+	&:before{
+		
+	}
+}
+.icon_set{
+	@include icon_set;
+}
+//空心图标
+.icon_hollowHeart_box{
+	padding: em(10.2em) em(7.3em);
+	overflow: hidden;
+}
+@mixin icon_hollowHeart {
+	width: em(14em);
+	height: em(14em);
+	margin: em(7em);
+	position: relative;
+	border-right: em(2em) solid;
+	border-bottom: em(2em) solid;
+	transform:rotate(45deg);
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		width: em(8em);
+		height: em(8em);
+		border:em(2em) solid;
+		border-right-color: transparent;
+		border-radius: 50% 0 0 50%;	
+		left: em(-6em);
+		top: em(4em);
+		
+	}
+	&:before{
+		width: em(8em);
+		height: em(8em);
+		border:em(2em) solid;
+		border-bottom-color: transparent;
+		border-radius: 50% 50% 0 0;
+		right: em(-2em);
+		top: em(-6em);
+	}
+}
+.icon_hollowHeart{
+	@include icon_hollowHeart;
+}
+//实心图标
+.icon_solidHeart_box{
+	padding: em(10.2em) em(7.3em);
+	overflow: hidden;
+}
+@mixin icon_solidHeart {
+	width: em(14em);
+	height: em(14em);
+	margin: em(7em);
+	position: relative;
+	border-top-left-radius: 100%;
+	border-right: em(2em) solid;
+	border-bottom: em(2em) solid;
+	box-shadow: inset 0 0 0 em(6.98em);
+	transform:rotate(45deg);
+	&:after,&:before{
+		content:"";
+		position: absolute;
+		box-shadow: inset 0 0 0 10000px;
+	}
+	&:after{
+		width: em(8em);
+		height: em(8em);
+		border:em(2em) solid;
+		border-right-color: transparent;
+		border-radius: 50% 0 0 50%;	
+		left: em(-6em);
+		top: em(4em);
+		
+	}
+	&:before{
+		width: em(8em);
+		height: em(8em);
+		border:em(2em) solid;
+		border-bottom-color: transparent;
+		border-radius: 50% 50% 0 0;
+		right: em(-2em);
+		top: em(-6em);
+	}
+}
+.icon_solidHeart{
+	@include icon_solidHeart;
 }
