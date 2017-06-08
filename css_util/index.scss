@@ -919,3 +919,49 @@
 .icon_solidHeart{
 	@include icon_solidHeart;
 }
+//tag图标
+.icon_tag_box{
+	padding: em(13.2em) em(11em);
+	overflow: hidden;
+}
+@mixin icon_tag {
+	width: em(20em);
+	height: em(22em);
+	position: relative;
+	border:em(2em) solid;
+	border-top: none;
+	box-sizing: border-box;
+	transform:rotate(45deg);
+	border-bottom-left-radius: em(3em);
+	border-bottom-right-radius: em(3em);
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		border:em(2em) solid;
+		border-right: none;
+		border-bottom: none;
+		box-sizing: border-box;
+		border-top-left-radius: 30%;
+		width: em(14.2em);
+		height: em(14.2em);
+		left: em(0.9em);
+		top: em(-7.1em);
+		transform:rotate(45deg);
+	}
+	&:before{
+		width: em(8em);
+		height: em(8em);
+		border-radius: 50%;
+		border:em(2em) solid;
+		box-sizing: border-box;
+		box-sizing: border-box;
+		left: 0;
+		right: 0;
+		margin:0 auto;
+	}
+}
+.icon_tag{
+	@include icon_tag;
+}
