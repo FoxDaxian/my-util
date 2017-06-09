@@ -774,7 +774,7 @@
 }
 //禁止操作图标
 .icon_forbid_box{
-	padding: em(10.2em) em(7.3em);
+	padding: em(10.25em) em(7.3em);
 	overflow: hidden;
 }
 @mixin icon_forbid {
@@ -805,7 +805,7 @@
 }
 //设置图标
 .icon_set_box{
-	padding: em(10.2em) em(7.3em);
+	padding: em(10.25em) em(7.3em);
 	overflow: hidden;
 }
 @mixin icon_set {
@@ -838,7 +838,7 @@
 }
 //空心图标
 .icon_hollowHeart_box{
-	padding: em(10.2em) em(7.3em);
+	padding: em(10.257em) em(7.3em);
 	overflow: hidden;
 }
 @mixin icon_hollowHeart {
@@ -878,7 +878,7 @@
 }
 //实心图标
 .icon_solidHeart_box{
-	padding: em(10.2em) em(7.3em);
+	padding: em(10.257em) em(7.3em);
 	overflow: hidden;
 }
 @mixin icon_solidHeart {
@@ -921,7 +921,7 @@
 }
 //tag图标
 .icon_tag_box{
-	padding: em(13.2em) em(11em);
+	padding: em(13.25em) em(11em);
 	overflow: hidden;
 }
 @mixin icon_tag {
@@ -964,4 +964,168 @@
 }
 .icon_tag{
 	@include icon_tag;
+}
+//相册图标
+.icon_album_box{
+	padding: em(10.25em) em(3.5em);
+	overflow: hidden;
+}
+@mixin icon_album {
+	width: em(40em);
+	height: em(30em);
+	position: relative;
+	box-sizing: border-box;
+	border:em(2em) solid;
+	overflow: hidden;
+	border-radius: em(4em);
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		width: em(5em);
+		height: em(5em);
+		border-radius: 50%;
+		box-shadow: inset 0 0 0 1000px;
+		right: em(4em);
+		top: em(4em)
+	}
+	&:before{
+		width: em(30em);
+		height: em(20em);
+		bottom: em(-12em);
+		transform:rotate(45deg);
+		box-shadow: inset 0 0 0 10000px,em(10em) em(-7em) 0;
+	}
+}
+.icon_album{
+	@include icon_album;
+}
+//对话图标
+.icon_dialogue_box{
+	padding: em(10.25em) em(3.5em);
+}
+@mixin icon_dialogue {
+	width: em(40em);
+	height: em(30em);
+	position: relative;
+	border:em(2em) solid;
+	border-bottom-color: transparent;
+	box-sizing: border-box;
+	border-radius: em(8em);
+	border-top-left-radius: em(5em);
+	border-top-right-radius: em(5em);
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		width: em(7em);
+		height: em(7em);
+		border:em(2em) solid;
+		border-left: none;
+		border-top: none;
+		bottom: em(-3.6em);
+		left: em(7.9em);
+		transform:rotate(45deg);
+	}
+	&:before{
+		width: em(10em);
+		height: em(2em);
+		border-width: 0 em(18.5em) 0 em(7em);
+		border-style: solid;
+		bottom: em(0.35em);
+		left: em(0.4em);
+	}
+}
+.icon_dialogue{
+	@include icon_dialogue;
+}
+//转换2图标
+.icon_convert2_box{
+	padding: em(10.2em) em(7.3em);
+	&:hover{
+		.icon_convert2{
+			animation-play-state:running;
+		}
+	}
+}
+@mixin icon_convert2 {
+	width: em(30em);
+	height: em(30em);
+	position: relative;
+	box-sizing: border-box;
+	border: em(2em) solid;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-radius: 50%;
+	animation:loading 2s linear infinite;
+	animation-play-state:paused;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		width: 0;
+		height: 0;
+		border-width: em(4em) 0 em(4em) em(4em);
+		border-style: solid;
+		border-top-color: transparent;
+		border-bottom-color: transparent;
+		right: em(-0.4em);
+		top: em(0.4em);
+		transform:rotate(45deg);
+	}
+	&:before{
+		width: 0;
+		height: 0;
+		border-width: em(4em) em(4em) em(4em) 0;
+		border-style: solid;
+		border-top-color: transparent;
+		border-bottom-color: transparent;
+		left: em(-0.4em);
+		bottom: em(0.4em);
+		transform:rotate(45deg);
+	}
+}
+.icon_convert2{
+	@include icon_convert2;
+}
+//无穷图标
+.icon_infinitely_box{
+	padding: em(10.2em) em(7.3em);
+}
+@mixin icon_infinitely {
+	width: em(30em);
+	height: em(30em);
+	position: relative;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+		transform:rotate(45deg);
+		top: 0;
+		bottom: 0;
+		margin:auto 0;
+	}
+	&:after{
+		width: em(14em);
+		height: em(14em);
+		border:em(2em) solid;
+		box-sizing: border-box;
+		border-radius: 50%;
+		border-top-right-radius:0;
+		left: em(-.5em);
+	}
+	&:before{
+		width: em(14em);
+		height: em(14em);
+		border:em(2em) solid;
+		box-sizing: border-box;
+		border-radius: 50%;
+		border-bottom-left-radius:0;
+		right: em(-.5em);
+	}
+}
+.icon_infinitely{
+	@include icon_infinitely;
 }

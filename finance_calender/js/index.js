@@ -212,6 +212,25 @@ window.onload = function() {
 	}
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	//filter show/hidden
 	document.querySelector('.tabs .calender .filterBtn').onclick = function() {
 		document.querySelector('.tabs .filter').style.height = "41px";
@@ -223,254 +242,273 @@ window.onload = function() {
 	
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	//calender detail render
 	
 	//fixed data
-	var detailTitleData = [{
-		className:"date",
-		text:"时间"
-	},{
-		className:"country",
-		text:"国家"
-	},{
-		className:"event",
-		text:"事件"
-	},{
-		className:"important",
-		text:"重要性"
-	},{
-		className:"todayValue",
-		text:"今值"
-	},{
-		className:"expect",
-		text:"预期"
-	},{
-		className:"preValue",
-		text:"前值"
-	},{
-		className:"tempShowDiv",
-		text:""
-	}];
+	// var detailTitleData = [{
+	// 	className:"date",
+	// 	text:"时间"
+	// },{
+	// 	className:"country",
+	// 	text:"国家"
+	// },{
+	// 	className:"event",
+	// 	text:"事件"
+	// },{
+	// 	className:"important",
+	// 	text:"重要性"
+	// },{
+	// 	className:"todayValue",
+	// 	text:"今值"
+	// },{
+	// 	className:"expect",
+	// 	text:"预期"
+	// },{
+	// 	className:"preValue",
+	// 	text:"前值"
+	// },{
+	// 	className:"tempShowDiv",
+	// 	text:""
+	// }];
 
 	//ajax data, the total amount of data is constant to three
-	var ajaxData = [{
-		date:"xxx时间",
-		data:[{
-			date:"待定",
-			country:"imgs/nationalFlag.png",
-			event:"韩国  |  休市一日韩国  |韩国  |  休市一日韩国  |韩国  |  休市一日韩国",
-			important:"imgs/starLevel0.png",
-			todayValue:"--",
-			expect:"56.70",
-			preValue:"89.70",
-			tempShowDiv:""
-		}]
-	},{
-		date:"xxx时间",
-		data:[{
-			date:"待定",
-			country:"imgs/nationalFlag.png",
-			event:"韩国  |  休市一日韩国  |韩国  |  休市一日韩国  |韩国  |  休市一日韩国",
-			important:"imgs/starLevel0.png",
-			todayValue:"--",
-			expect:"56.00",
-			preValue:"89.70",
-			tempShowDiv:""
-		},{
-			date:"待定",
-			country:"imgs/nationalFlag.png",
-			event:"韩国  |  休市一111111111日韩国  |韩国  |  休市一日韩国  |韩国  |  休市一日韩国",
-			important:"imgs/starLevel0.png",
-			todayValue:"--",
-			expect:"56.71",
-			preValue:"89.70",
-			tempShowDiv:""
-		}]
-	},{
-		date:"xxx时间",
-		data:[{
-			date:"待定",
-			country:"imgs/nationalFlag.png",
-			event:"韩国  |  休市一日韩国  |韩国  |  休市一日韩国  |韩国  |  休市一日韩国",
-			important:"imgs/starLevel0.png",
-			todayValue:"--",
-			expect:"56.72",
-			preValue:"89.70",
-			tempShowDiv:""
-		}]
-	}];
+	// var ajaxData = [{
+	// 	date:"xxx时间",
+	// 	data:[{
+	// 		date:"待定",
+	// 		country:"imgs/nationalFlag.png",
+	// 		event:"韩国  |  休市一日韩国  |韩国  |  休市一日韩国  |韩国  |  休市一日韩国",
+	// 		important:"imgs/starLevel0.png",
+	// 		todayValue:"--",
+	// 		expect:"56.70",
+	// 		preValue:"89.70",
+	// 		tempShowDiv:""
+	// 	}]
+	// },{
+	// 	date:"xxx时间",
+	// 	data:[{
+	// 		date:"待定",
+	// 		country:"imgs/nationalFlag.png",
+	// 		event:"韩国  |  休市一日韩国  |韩国  |  休市一日韩国  |韩国  |  休市一日韩国",
+	// 		important:"imgs/starLevel0.png",
+	// 		todayValue:"--",
+	// 		expect:"56.00",
+	// 		preValue:"89.70",
+	// 		tempShowDiv:""
+	// 	},{
+	// 		date:"待定",
+	// 		country:"imgs/nationalFlag.png",
+	// 		event:"韩国  |  休市一111111111日韩国  |韩国  |  休市一日韩国  |韩国  |  休市一日韩国",
+	// 		important:"imgs/starLevel0.png",
+	// 		todayValue:"--",
+	// 		expect:"56.71",
+	// 		preValue:"89.70",
+	// 		tempShowDiv:""
+	// 	}]
+	// },{
+	// 	date:"xxx时间",
+	// 	data:[{
+	// 		date:"待定",
+	// 		country:"imgs/nationalFlag.png",
+	// 		event:"韩国  |  休市一日韩国  |韩国  |  休市一日韩国  |韩国  |  休市一日韩国",
+	// 		important:"imgs/starLevel0.png",
+	// 		todayValue:"--",
+	// 		expect:"56.72",
+	// 		preValue:"89.70",
+	// 		tempShowDiv:""
+	// 	}]
+	// }];
 
 
 	//calender detail lists ajax data
-	var listAjaxData = [{
-		date:new Date( Date.now() - 24  * 60 * 60 * 1000 ),
-		calEvent:9,
-		holidayNotice:2
-	},{
-		date:new Date(),
-		calEvent:9,
-		holidayNotice:2
-	},{
-		date:null,
-		calEvent:0,
-		holidayNotice:0
-	}];
+	// var listAjaxData = [{
+	// 	date:new Date( Date.now() - 24  * 60 * 60 * 1000 ),
+	// 	calEvent:9,
+	// 	holidayNotice:2
+	// },{
+	// 	date:new Date(),
+	// 	calEvent:9,
+	// 	holidayNotice:2
+	// },{
+	// 	date:null,
+	// 	calEvent:0,
+	// 	holidayNotice:0
+	// }];
 
 	//可以让 currentCalenderIndex 固定不变， 然后点击时候去获取数据， 改变数据，这样就会保持居中了	
 	//不好搞动画效果，不然就别搞动画效果了，点击跳转刷新吧
 	//还差echars图表
 
 	//current calender index
-	var currentCalenderIndex = 1;
+	// var currentCalenderIndex = 1;
 	
 
 	//calender detail lists
 	//API 生成calender选择的tab 并 调用 renderCalenderDetail方法
 	//参数：所有的tab元素  数据
-	function renderCalenderTabs( tabsEl, data ) {
-		[].slice.call(tabsEl).forEach(function( el, i ) {
+	// function renderCalenderTabs( tabsEl, data ) {
+	// 	[].slice.call(tabsEl).forEach(function( el, i ) {
 
-			var timeEl = document.createElement("div");
-			timeEl.classList.add("time");
+	// 		var timeEl = document.createElement("div");
+	// 		timeEl.classList.add("time");
 
-			var spanEl = document.createElement("span");
-			//below for click function 
-			spanEl.classList.add("forClick");
-			spanEl.setAttribute("data-id",i)
-			//stop here
-			if( data[i].date === null ){
-				spanEl.innerHTML =  "暂无数据";
-				spanEl.setAttribute("data-click",false)
-			}else{
-				var m = data[i].date.getMonth() + 1,
-				d = data[i].date.getDate(),
-				w = data[i].date.getDay();
+	// 		var spanEl = document.createElement("span");
+	// 		//below for click function 
+	// 		spanEl.classList.add("forClick");
+	// 		spanEl.setAttribute("data-id",i)
+	// 		//stop here
+	// 		if( data[i].date === null ){
+	// 			spanEl.innerHTML =  "暂无数据";
+	// 			spanEl.setAttribute("data-click",false)
+	// 		}else{
+	// 			var m = data[i].date.getMonth() + 1,
+	// 			d = data[i].date.getDate(),
+	// 			w = data[i].date.getDay();
 				
-				spanEl.innerHTML = "周" + judgeWeek(w) + " " + addZero(m) + "/" + addZero(d);
-			}
+	// 			spanEl.innerHTML = "周" + judgeWeek(w) + " " + addZero(m) + "/" + addZero(d);
+	// 		}
 
-			//assignment time
-			spanEl.setAttribute("data-date",data[i].date);
+	// 		//assignment time
+	// 		spanEl.setAttribute("data-date",data[i].date);
 			
-			var clickShowContentEl = document.createElement("div");
-			clickShowContentEl.classList.add("clickShowContent");
+	// 		var clickShowContentEl = document.createElement("div");
+	// 		clickShowContentEl.classList.add("clickShowContent");
 
 
-			if( currentCalenderIndex !== i ){
-				clickShowContentEl.classList.add("clickShowNone");
-			}else{
-				el.classList.add("threeListActive");
-			}
-			var calEventEl = document.createElement("div");
-			calEventEl.classList.add("calEvent");
-			calEventEl.innerHTML = "财经大事: <span>" + data[i].calEvent + "</span>";
+	// 		if( currentCalenderIndex !== i ){
+	// 			clickShowContentEl.classList.add("clickShowNone");
+	// 		}else{
+	// 			el.classList.add("threeListActive");
+	// 		}
+	// 		var calEventEl = document.createElement("div");
+	// 		calEventEl.classList.add("calEvent");
+	// 		calEventEl.innerHTML = "财经大事: <span>" + data[i].calEvent + "</span>";
 
-			var holidayNoticeEl = document.createElement("div");
-			holidayNoticeEl.classList.add("holidayNotice");
-			holidayNoticeEl.innerHTML = "假期预告: <span>" + data[i].holidayNotice + "</span>";
+	// 		var holidayNoticeEl = document.createElement("div");
+	// 		holidayNoticeEl.classList.add("holidayNotice");
+	// 		holidayNoticeEl.innerHTML = "假期预告: <span>" + data[i].holidayNotice + "</span>";
 
-			//append to clickShowContentEl
-			clickShowContentEl.appendChild(calEventEl);
-			clickShowContentEl.appendChild(holidayNoticeEl);
+	// 		//append to clickShowContentEl
+	// 		clickShowContentEl.appendChild(calEventEl);
+	// 		clickShowContentEl.appendChild(holidayNoticeEl);
 
-			//append to timeEl
-			timeEl.appendChild(spanEl);
-			timeEl.appendChild(clickShowContentEl);
+	// 		//append to timeEl
+	// 		timeEl.appendChild(spanEl);
+	// 		timeEl.appendChild(clickShowContentEl);
 
-			//preappend to tabsEl[i]
-			el.insertBefore(timeEl,el.childNodes[0]);
+	// 		//preappend to tabsEl[i]
+	// 		el.insertBefore(timeEl,el.childNodes[0]);
 
-		});
+	// 	});
 
-		// current select date element 当前选择日期的详细列表，包含图表的
-		var calenderDetailBox = document.querySelector('.calenderDetail .threeListActive .calenderDetailBox');
-		renderCalenderDetail( calenderDetailBox, ajaxData );
-	}
+	// 	// current select date element 当前选择日期的详细列表，包含图表的
+	// 	var calenderDetailBox = document.querySelector('.calenderDetail .threeListActive .calenderDetailBox');
+	// 	renderCalenderDetail( calenderDetailBox, ajaxData );
+	// }
 	
-	var threeLists = document.querySelectorAll('.calenderDetail .threeList');
-	renderCalenderTabs( threeLists, listAjaxData );
+	// var threeLists = document.querySelectorAll('.calenderDetail .threeList');
+	// renderCalenderTabs( threeLists, listAjaxData );
 
 
 	// click to rerender charts
-	var chartsBox = document.querySelector('.calenderDetail');
-	chartsBox.onclick = function( e ) {
-		var ev = e || window.event;
-		if( ev.target.classList.contains("forClick") ){
-			if( ev.target.dataset.click === "false" ){
-				return false;
-			}
-			currentCalenderIndex = parseInt(ev.target.dataset.id);
+	// var chartsBox = document.querySelector('.calenderDetail');
+	// chartsBox.onclick = function( e ) {
+	// 	var ev = e || window.event;
+	// 	if( ev.target.classList.contains("forClick") ){
+	// 		if( ev.target.dataset.click === "false" ){
+	// 			return false;
+	// 		}
+	// 		currentCalenderIndex = parseInt(ev.target.dataset.id);
 
 
-			[].slice.call(threeLists).forEach(function( el, i ) {
-				el.classList.contains("threeListActive") && el.classList.remove("threeListActive");
-				var lineEl = document.createElement("div");
-				lineEl.classList.add("line");
-				var calenderDetailBoxEl = document.createElement("div");
-				calenderDetailBoxEl.classList.add("calenderDetailBox");
+	// 		[].slice.call(threeLists).forEach(function( el, i ) {
+	// 			el.classList.contains("threeListActive") && el.classList.remove("threeListActive");
+	// 			var lineEl = document.createElement("div");
+	// 			lineEl.classList.add("line");
+	// 			var calenderDetailBoxEl = document.createElement("div");
+	// 			calenderDetailBoxEl.classList.add("calenderDetailBox");
 
-				el.innerHTML = "";
+	// 			el.innerHTML = "";
 
-				el.appendChild(lineEl);
-				el.appendChild(calenderDetailBoxEl);
-
-
-			});
-			renderCalenderTabs( threeLists, listAjaxData );
-
-			console.log({
-				year: (new Date(ev.target.dataset.date)).getFullYear(), 
-				month: (new Date(ev.target.dataset.date)).getMonth() + 1, 
-				day: (new Date(ev.target.dataset.date)).getDate()
-			});
-		}
-	}
+	// 			el.appendChild(lineEl);
+	// 			el.appendChild(calenderDetailBoxEl);
 
 
+	// 		});
+	// 		renderCalenderTabs( threeLists, listAjaxData );
+
+	// 		console.log({
+	// 			year: (new Date(ev.target.dataset.date)).getFullYear(), 
+	// 			month: (new Date(ev.target.dataset.date)).getMonth() + 1, 
+	// 			day: (new Date(ev.target.dataset.date)).getDate()
+	// 		});
+	// 	}
+	// }
 
 
 
-	//规定的API：要渲染的元素，数据（数据格式数组内嵌对象）
-	function renderCalenderDetail( targetEl, data ) {
-		//title part
-		var detailTitleElement = document.createElement("div");
-		detailTitleElement.classList.add("detailTitle");
-		var calenderDetailWrapElement = document.createElement("div");
-		calenderDetailWrapElement.classList.add("calenderDetailWrap");
-		detailTitleData.forEach(function( el, i ) {
-			var tempEl = document.createElement("div");
-			tempEl.classList.add(el.className);
-			tempEl.innerHTML = el.text;
-			detailTitleElement.appendChild(tempEl);
-		});
-		calenderDetailWrapElement.appendChild(detailTitleElement);
-
-		//content part
-		data.forEach(function( el, i ) {
-			if( i === currentCalenderIndex ){
-				el.data.forEach(function( el, i ) {
-					var detailContentElement = document.createElement("div");
-					detailContentElement.classList.add("detailContent");
-					for( var index in el ){
-						var tempEl = document.createElement("div");
-						tempEl.classList.add(index);
-						if( index === "country" || index === "important" ){
-							var img = document.createElement("img");
-							img.src = el[index];
-							tempEl.appendChild(img);
-						}else{
-							tempEl.innerHTML = el[index];
-						}
-						detailContentElement.appendChild(tempEl);
-					}
-					calenderDetailWrapElement.appendChild(detailContentElement);
-				});
-			}
-		});
 
 
-		targetEl.appendChild(calenderDetailWrapElement);
-	}
+	// //规定的API：要渲染的元素，数据（数据格式数组内嵌对象）
+	// function renderCalenderDetail( targetEl, data ) {
+	// 	//title part
+	// 	var detailTitleElement = document.createElement("div");
+	// 	detailTitleElement.classList.add("detailTitle");
+	// 	var calenderDetailWrapElement = document.createElement("div");
+	// 	calenderDetailWrapElement.classList.add("calenderDetailWrap");
+	// 	detailTitleData.forEach(function( el, i ) {
+	// 		var tempEl = document.createElement("div");
+	// 		tempEl.classList.add(el.className);
+	// 		tempEl.innerHTML = el.text;
+	// 		detailTitleElement.appendChild(tempEl);
+	// 	});
+	// 	calenderDetailWrapElement.appendChild(detailTitleElement);
+
+	// 	//content part
+	// 	data.forEach(function( el, i ) {
+	// 		if( i === currentCalenderIndex ){
+	// 			el.data.forEach(function( el, i ) {
+	// 				var detailContentElement = document.createElement("div");
+	// 				detailContentElement.classList.add("detailContent");
+	// 				for( var index in el ){
+	// 					var tempEl = document.createElement("div");
+	// 					tempEl.classList.add(index);
+	// 					if( index === "country" || index === "important" ){
+	// 						var img = document.createElement("img");
+	// 						img.src = el[index];
+	// 						tempEl.appendChild(img);
+	// 					}else{
+	// 						tempEl.innerHTML = el[index];
+	// 					}
+	// 					detailContentElement.appendChild(tempEl);
+	// 				}
+	// 				calenderDetailWrapElement.appendChild(detailContentElement);
+	// 			});
+	// 		}
+	// 	});
+
+
+	// 	targetEl.appendChild(calenderDetailWrapElement);
+	// }
 
 	
 
