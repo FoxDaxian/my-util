@@ -181,7 +181,8 @@ window.onload = function() {
 
 			//change sevenDay
 			sevenDay.innerHTML = "";
-			date = new Date(year + "-" + month + "-" + parseInt(day));
+			//in IE must use "/" to join year month and day
+			date = new Date(year + "/" + month + "/" + parseInt(day));
 			sevenDayRender();
 
 			//change calender
