@@ -22,3 +22,17 @@
  	}
  	return res !== null ? res : str;
  }
+
+/**
+ * 柯粒化函数，用法：~~fn(10)(100)
+ * @param  {Number}   num 计算的数
+ * @return {Number}     结果咯
+ */
+ function fn( num ) {
+ 	num += ~~fn.num; 
+ 	fn.num = num;
+ 	return fn;
+ }
+ fn.valueOf = fn.toString = function() {
+ 	return fn.num;
+ }
