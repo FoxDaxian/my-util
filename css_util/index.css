@@ -6,7 +6,9 @@
 body {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start; }
+  justify-content: flex-start;
+  width: 1024px;
+  margin: 0 auto; }
 
 [class^="icon_"] {
   font-size: 12px; }
@@ -16,7 +18,7 @@ body {
   border: 1px solid;
   box-sizing: border-box;
   padding: 1.16667em;
-  margin: 6px; }
+  margin: 10px; }
   .iconBox:hover {
     color: red; }
 
@@ -1053,5 +1055,156 @@ body {
     bottom: 0;
     margin: auto;
     transform: translateY(0.75em); }
+
+.icon_letter_box {
+  padding: 0.85417em 0.29167em; }
+
+.icon_letter {
+  overflow: hidden;
+  width: 3.33333em;
+  height: 2.5em;
+  position: relative;
+  border: 0.16667em solid;
+  box-sizing: border-box; }
+  .icon_letter:after, .icon_letter:before {
+    content: "";
+    position: absolute; }
+  .icon_letter:after {
+    width: 0.16667em;
+    height: 0.33333em;
+    border-width: 0.16667em 0 0.33333em 0;
+    border-style: solid;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto; }
+  .icon_letter:before {
+    width: 4.16667em;
+    height: 4.16667em;
+    border-width: 0.16667em;
+    border-style: solid;
+    left: -0.75em;
+    top: -3.58333em;
+    transform: rotate(45deg) skew(-13deg, -13deg); }
+
+.icon_battery3_box {
+  padding: 0.85417em 0.60833em; }
+
+.icon_battery3 {
+  width: 2.5em;
+  height: 1.16667em;
+  position: relative;
+  border: 0.08333em solid;
+  box-sizing: border-box;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 0.16667em; }
+  .icon_battery3:after, .icon_battery3:before {
+    content: "";
+    position: absolute; }
+  .icon_battery3:after {
+    width: 0.33333em;
+    height: 50%;
+    box-shadow: inset 0 0 0 100000px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -0.33333em; }
+  .icon_battery3:before {
+    height: 100%;
+    width: 94%;
+    border: 0.04167em solid transparent;
+    box-sizing: border-box;
+    border-radius: 0.16667em;
+    box-shadow: inset 0 0 0 10000px; }
+
+.icon_battery2_box {
+  padding: 0.85417em 0.60833em; }
+
+.icon_battery2 {
+  width: 2.5em;
+  height: 1.16667em;
+  position: relative;
+  border: 0.08333em solid;
+  box-sizing: border-box;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 0.16667em; }
+  .icon_battery2:after, .icon_battery2:before {
+    content: "";
+    position: absolute; }
+  .icon_battery2:after {
+    width: 0.33333em;
+    height: 50%;
+    box-shadow: inset 0 0 0 100000px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -0.33333em; }
+  .icon_battery2:before {
+    height: 100%;
+    width: 64%;
+    border: 0.04167em solid transparent;
+    box-sizing: border-box;
+    border-radius: 0.16667em;
+    box-shadow: inset 0 0 0 10000px; }
+
+.icon_battery1_box {
+  padding: 0.85417em 0.60833em; }
+
+.icon_battery1 {
+  width: 2.5em;
+  height: 1.16667em;
+  position: relative;
+  border: 0.08333em solid;
+  box-sizing: border-box;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 0.16667em; }
+  .icon_battery1:after, .icon_battery1:before {
+    content: "";
+    position: absolute; }
+  .icon_battery1:after {
+    width: 0.33333em;
+    height: 50%;
+    box-shadow: inset 0 0 0 100000px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -0.33333em; }
+  .icon_battery1:before {
+    height: 100%;
+    width: 34%;
+    border: 0.04167em solid transparent;
+    box-sizing: border-box;
+    border-radius: 0.16667em;
+    box-shadow: inset 0 0 0 10000px; }
+
+.icon_battery0_box {
+  padding: 0.85417em 0.60833em; }
+
+.icon_battery0 {
+  width: 2.5em;
+  height: 1.16667em;
+  position: relative;
+  border: 0.08333em solid;
+  box-sizing: border-box;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 0.16667em; }
+  .icon_battery0:after, .icon_battery0:before {
+    content: "";
+    position: absolute; }
+  .icon_battery0:after {
+    width: 0.33333em;
+    height: 50%;
+    box-shadow: inset 0 0 0 100000px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -0.33333em; }
+  .icon_battery0:before {
+    height: 100%;
+    border: 0.04167em solid transparent;
+    box-sizing: border-box;
+    border-radius: 0.16667em;
+    box-shadow: inset 0 0 0 10000px; }
 
 /*# sourceMappingURL=index.css.map */

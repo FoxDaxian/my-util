@@ -5,6 +5,8 @@ body{
 	display: flex;
 	flex-wrap:wrap;
 	justify-content:flex-start;
+	width: 1024px;
+	margin:0 auto;
 }
 [class^="icon_"]{
 	font-size: 12px;
@@ -15,7 +17,7 @@ body{
 	border:1px solid;
 	box-sizing: border-box;
 	padding: em(14em);
-	margin: 6px;
+	margin: 10px;
 	&:hover{
 		color:rgba(red, 10)
 	}
@@ -1300,4 +1302,187 @@ body{
 }
 .icon_exclamationCircle{
 	@include icon_exclamationCircle;
+}
+//信封图标
+//暂时没想到一个样式直接出空心三角形的方法
+.icon_letter_box{
+	padding: em(10.25em) em(3.5em);
+}
+@mixin icon_letter() {
+	overflow: hidden;
+	width: em(40em);
+	height: em(30em);
+	position: relative;
+	border:em(2em) solid;
+	box-sizing: border-box;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		width: em(2em);
+		height: em(4em);
+		border-width: em(2em) 0 em(4em) 0;
+		border-style: solid;
+		@include midCen;
+	}
+	&:before{
+		width: em(50em);
+		height: em(50em);
+		border-width: em(2em);
+		border-style:solid;
+		left: em(-9em);
+		top: em(-43em);
+		transform: rotate(45deg) skew(-13deg,-13deg);
+	}
+}
+.icon_letter{
+	@include icon_letter;
+}
+//电池3图标
+.icon_battery3_box{
+	padding: em(10.25em) em(7.3em);
+}
+@mixin icon_battery3() {
+	width: em(30em);
+	height: em(14em);
+	position: relative;
+	border:em(1em) solid;
+	box-sizing: border-box;
+	top: 50%;
+	transform:translateY(-50%);
+	border-radius: em(2em);
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		width: em(4em);
+		height: 50%;
+		box-shadow: inset 0 0 0 100000px;
+		top: 50%;
+		transform:translateY(-50%);
+		right: em(-4em);
+	}
+	&:before{
+		height: 100%;
+		width: 94%;
+		border:em(0.5em) solid transparent;
+		box-sizing: border-box;
+		border-radius: em(2em);
+		box-shadow: inset 0 0 0 10000px;
+	}
+}
+.icon_battery3{
+	@include icon_battery3;
+}
+//电池2图标
+.icon_battery2_box{
+	padding: em(10.25em) em(7.3em);
+}
+@mixin icon_battery2() {
+	width: em(30em);
+	height: em(14em);
+	position: relative;
+	border:em(1em) solid;
+	box-sizing: border-box;
+	top: 50%;
+	transform:translateY(-50%);
+	border-radius: em(2em);
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		width: em(4em);
+		height: 50%;
+		box-shadow: inset 0 0 0 100000px;
+		top: 50%;
+		transform:translateY(-50%);
+		right: em(-4em);
+	}
+	&:before{
+		height: 100%;
+		width: 64%;
+		border:em(0.5em) solid transparent;
+		box-sizing: border-box;
+		border-radius: em(2em);
+		box-shadow: inset 0 0 0 10000px;
+	}
+}
+.icon_battery2{
+	@include icon_battery2;
+}
+//电池1图标
+.icon_battery1_box{
+	padding: em(10.25em) em(7.3em);
+}
+@mixin icon_battery1() {
+	width: em(30em);
+	height: em(14em);
+	position: relative;
+	border:em(1em) solid;
+	box-sizing: border-box;
+	top: 50%;
+	transform:translateY(-50%);
+	border-radius: em(2em);
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		width: em(4em);
+		height: 50%;
+		box-shadow: inset 0 0 0 100000px;
+		top: 50%;
+		transform:translateY(-50%);
+		right: em(-4em);
+	}
+	&:before{
+		height: 100%;
+		width: 34%;
+		border:em(0.5em) solid transparent;
+		box-sizing: border-box;
+		border-radius: em(2em);
+		box-shadow: inset 0 0 0 10000px;
+	}
+}
+.icon_battery1{
+	@include icon_battery1;
+}
+//电池0图标
+.icon_battery0_box{
+	padding: em(10.25em) em(7.3em);
+}
+@mixin icon_battery0() {
+	width: em(30em);
+	height: em(14em);
+	position: relative;
+	border:em(1em) solid;
+	box-sizing: border-box;
+	top: 50%;
+	transform:translateY(-50%);
+	border-radius: em(2em);
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		width: em(4em);
+		height: 50%;
+		box-shadow: inset 0 0 0 100000px;
+		top: 50%;
+		transform:translateY(-50%);
+		right: em(-4em);
+	}
+	&:before{
+		height: 100%;
+		border:em(0.5em) solid transparent;
+		box-sizing: border-box;
+		border-radius: em(2em);
+		box-shadow: inset 0 0 0 10000px;
+	}
+}
+.icon_battery0{
+	@include icon_battery0;
 }
