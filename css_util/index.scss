@@ -1486,11 +1486,11 @@ body{
 .icon_battery0{
 	@include icon_battery0;
 }
-//房屋图标
-.icon_house_box{
+//楼房图标
+.icon_building_box{
 	padding: em(10em) em(15em) em(10em) em(13em);
 }
-@mixin icon_house() {
+@mixin icon_building() {
 	width: em(14em);
 	height: em(30em);
 	position: relative;
@@ -1524,6 +1524,46 @@ body{
 		0 em(6em) 0,
 		0 em(12em) 0,
 		0 em(18em) 0;
+	}
+}
+.icon_building{
+	@include icon_building;
+}
+//房屋图标
+.icon_house_box{
+	padding: em(20.25em) em(7.3em) em(0);
+}
+@mixin icon_house() {
+	width: em(30em);
+	height: em(20em);
+	position: relative;
+	box-sizing: border-box;
+	border:em(2em) solid;
+	border-top: none;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		width: em(30em);
+		height: em(30em);
+		border: em(2em) solid;
+		border-right: none;
+		border-bottom: none;
+		box-sizing: border-box;
+		left: 50%;
+		//旋转之后的样子和transform的顺序有关
+		transform:translateX(-50%) rotate(45deg);
+		top: em(-9.5em);
+	}
+	&:before{
+		width: em(10em);
+		height: em(18em);
+		box-sizing: border-box;
+		border:em(1.5em) solid;
+		left: 50%;
+		bottom: em(-1.5em);
+		transform:translateX(-50%);
 	}
 }
 .icon_house{
