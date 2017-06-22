@@ -1265,4 +1265,205 @@ body {
     bottom: -0.125em;
     transform: translateX(-50%); }
 
+.icon_leftSide_box {
+  padding: 0.85417em 0.60833em; }
+
+.icon_leftSide {
+  width: 2.5em;
+  height: 0.16667em;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: inset 0 0 0 10000px, 0 1em 0, 0 -1em 0; }
+  .icon_leftSide:after, .icon_leftSide:before {
+    content: "";
+    position: absolute; }
+  .icon_leftSide:after {
+    width: 1.66667em;
+    height: 0.16667em;
+    top: 0.5em;
+    box-shadow: inset 0 0 0 10000px, 0 1em 0, 0 -1em 0; }
+
+.icon_center_box {
+  padding: 0.85417em 0.60833em; }
+
+.icon_center {
+  width: 2.5em;
+  height: 0.16667em;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: inset 0 0 0 10000px, 0 1em 0, 0 -1em 0; }
+  .icon_center:after, .icon_center:before {
+    content: "";
+    position: absolute; }
+  .icon_center:after {
+    width: 1.66667em;
+    height: 0.16667em;
+    top: 0.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: inset 0 0 0 10000px, 0 1em 0, 0 -1em 0; }
+
+.icon_rightSide_box {
+  padding: 0.85417em 0.60833em; }
+
+.icon_rightSide {
+  width: 2.5em;
+  height: 0.16667em;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: inset 0 0 0 10000px, 0 1em 0, 0 -1em 0; }
+  .icon_rightSide:after, .icon_rightSide:before {
+    content: "";
+    position: absolute; }
+  .icon_rightSide:after {
+    width: 1.66667em;
+    height: 0.16667em;
+    top: 0.5em;
+    right: 0;
+    box-shadow: inset 0 0 0 10000px, 0 1em 0, 0 -1em 0; }
+
+.icon_nineClock_box {
+  padding: 0.85417em 0.60833em; }
+
+.icon_nineClock {
+  width: 2.5em;
+  height: 2.5em;
+  position: relative;
+  border-radius: 50%;
+  border: 0.16667em solid;
+  box-sizing: border-box; }
+  .icon_nineClock:after, .icon_nineClock:before {
+    content: "";
+    position: absolute; }
+  .icon_nineClock:after {
+    width: 0;
+    height: 0.16667em;
+    border-left: 0.66667em solid;
+    border-right: 0.66667em solid transparent;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto; }
+  .icon_nineClock:before {
+    width: 0.25em;
+    height: 0;
+    border-top: 1em solid;
+    border-bottom: 1em solid transparent;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    top: 0.08333em; }
+
+.icon_twelveClock_box {
+  padding: 0.85417em 0.60833em; }
+
+.icon_twelveClock {
+  width: 2.5em;
+  height: 2.5em;
+  position: relative;
+  border-radius: 50%;
+  border: 0.16667em solid;
+  box-sizing: border-box; }
+  .icon_twelveClock:after, .icon_twelveClock:before {
+    content: "";
+    position: absolute; }
+  .icon_twelveClock:after {
+    width: 0.16667em;
+    height: 0;
+    border-top: 0.66667em solid;
+    border-bottom: 0.66667em solid transparent;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto; }
+  .icon_twelveClock:before {
+    width: 0.25em;
+    height: 0;
+    border-top: 1em solid;
+    border-bottom: 1em solid transparent;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    top: 0.08333em; }
+
+.icon_threeClock_box {
+  padding: 0.85417em 0.60833em; }
+
+.icon_threeClock {
+  width: 2.5em;
+  height: 2.5em;
+  position: relative;
+  border-radius: 50%;
+  border: 0.16667em solid;
+  box-sizing: border-box; }
+  .icon_threeClock:after, .icon_threeClock:before {
+    content: "";
+    position: absolute; }
+  .icon_threeClock:after {
+    width: 0;
+    height: 0.16667em;
+    border-right: 0.66667em solid;
+    border-left: 0.66667em solid transparent;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto; }
+  .icon_threeClock:before {
+    width: 0.25em;
+    height: 0;
+    border-top: 1em solid;
+    border-bottom: 1em solid transparent;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    top: 0.08333em; }
+
+.icon_sixClock_box {
+  padding: 0.85417em 0.60833em; }
+
+.icon_sixClock {
+  width: 2.5em;
+  height: 2.5em;
+  position: relative;
+  border-radius: 50%;
+  border: 0.16667em solid;
+  box-sizing: border-box; }
+  .icon_sixClock:after, .icon_sixClock:before {
+    content: "";
+    position: absolute; }
+  .icon_sixClock:after {
+    width: 0.16667em;
+    height: 0;
+    border-bottom: 0.66667em solid;
+    border-top: 0.66667em solid transparent;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0.03333em; }
+  .icon_sixClock:before {
+    width: 0.25em;
+    height: 0;
+    border-top: 1em solid;
+    border-bottom: 1em solid transparent;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    top: 0.08333em; }
+
 /*# sourceMappingURL=index.css.map */

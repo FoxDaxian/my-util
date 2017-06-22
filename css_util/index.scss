@@ -1569,3 +1569,240 @@ body{
 .icon_house{
 	@include icon_house;
 }
+//居左图标
+.icon_leftSide_box{
+	padding: em(10.25em) em(7.3em);
+}
+@mixin icon_leftSide() {
+	width: em(30em);
+	height: em(2em);
+	position: relative;
+	top: 50%;
+	transform:translateY(-50%);
+	box-shadow: inset 0 0 0 10000px,
+	0 em(12em) 0,
+	0 em(-12em) 0;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		width: em(20em);
+		height: em(2em);
+		top: em(6em);
+		box-shadow: inset 0 0 0 10000px,
+		0 em(12em) 0,
+		0 em(-12em) 0;
+	}
+	&:before{
+		
+	}
+}
+.icon_leftSide{
+	@include icon_leftSide;
+}
+//居中图标
+.icon_center_box{
+	padding: em(10.25em) em(7.3em);
+}
+@mixin icon_center() {
+	width: em(30em);
+	height: em(2em);
+	position: relative;
+	top: 50%;
+	transform:translateY(-50%);
+	box-shadow: inset 0 0 0 10000px,
+	0 em(12em) 0,
+	0 em(-12em) 0;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		width: em(20em);
+		height: em(2em);
+		top: em(6em);
+		left: 50%;
+		transform:translateX(-50%);
+		box-shadow: inset 0 0 0 10000px,
+		0 em(12em) 0,
+		0 em(-12em) 0;
+	}
+	&:before{
+		
+	}
+}
+.icon_center{
+	@include icon_center;
+}
+//居右图标
+.icon_rightSide_box{
+	padding: em(10.25em) em(7.3em);
+}
+@mixin icon_rightSide() {
+	width: em(30em);
+	height: em(2em);
+	position: relative;
+	top: 50%;
+	transform:translateY(-50%);
+	box-shadow: inset 0 0 0 10000px,
+	0 em(12em) 0,
+	0 em(-12em) 0;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		width: em(20em);
+		height: em(2em);
+		top: em(6em);
+		right: 0;
+		box-shadow: inset 0 0 0 10000px,
+		0 em(12em) 0,
+		0 em(-12em) 0;
+	}
+	&:before{
+		
+	}
+}
+.icon_rightSide{
+	@include icon_rightSide;
+}
+//九点图标
+.icon_nineClock_box{
+	padding: em(10.25em) em(7.3em);
+}
+@mixin icon_nineClock() {
+	width: em(30em);
+	height: em(30em);
+	position: relative;
+	border-radius: 50%;
+	border: em(2em) solid;
+	box-sizing: border-box;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		width: 0;
+		height: em(2em);
+		border-left: em(8em) solid;
+		border-right: em(8em) solid transparent;
+		@include midCen;
+	}
+	&:before{
+		width: em(3em);
+		height: 0;
+		border-top: em(12em) solid;
+		border-bottom: em(12em) solid transparent;
+		@include midCen;
+		top: em(1em);
+	}
+}
+.icon_nineClock{
+	@include icon_nineClock;
+}
+//十二点图标
+.icon_twelveClock_box{
+	padding: em(10.25em) em(7.3em);
+}
+@mixin icon_twelveClock() {
+	width: em(30em);
+	height: em(30em);
+	position: relative;
+	border-radius: 50%;
+	border: em(2em) solid;
+	box-sizing: border-box;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		width: em(2em);
+		height: 0;
+		border-top: em(8em) solid;
+		border-bottom: em(8em) solid transparent;
+		@include midCen;
+	}
+	&:before{
+		width: em(3em);
+		height: 0;
+		border-top: em(12em) solid;
+		border-bottom: em(12em) solid transparent;
+		@include midCen;
+		top: em(1em);
+	}
+}
+.icon_twelveClock{
+	@include icon_twelveClock;
+}
+//三点图标
+.icon_threeClock_box{
+	padding: em(10.25em) em(7.3em);
+}
+@mixin icon_threeClock() {
+	width: em(30em);
+	height: em(30em);
+	position: relative;
+	border-radius: 50%;
+	border: em(2em) solid;
+	box-sizing: border-box;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		width: 0;
+		height: em(2em);
+		border-right: em(8em) solid;
+		border-left: em(8em) solid transparent;
+		@include midCen;
+	}
+	&:before{
+		width: em(3em);
+		height: 0;
+		border-top: em(12em) solid;
+		border-bottom: em(12em) solid transparent;
+		@include midCen;
+		top: em(1em);
+	}
+}
+.icon_threeClock{
+	@include icon_threeClock;
+}
+//六点图标
+.icon_sixClock_box{
+	padding: em(10.25em) em(7.3em);
+}
+@mixin icon_sixClock() {
+	width: em(30em);
+	height: em(30em);
+	position: relative;
+	border-radius: 50%;
+	border: em(2em) solid;
+	box-sizing: border-box;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		width: em(2em);
+		height: 0;
+		border-bottom: em(8em) solid;
+		border-top: em(8em) solid transparent;
+		@include midCen;
+		left: em(0.4em);
+
+	}
+	&:before{
+		width: em(3em);
+		height: 0;
+		border-top: em(12em) solid;
+		border-bottom: em(12em) solid transparent;
+		@include midCen;
+		top: em(1em);	
+	}
+}
+.icon_sixClock{
+	@include icon_sixClock;
+}
