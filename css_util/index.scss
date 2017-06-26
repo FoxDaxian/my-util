@@ -1806,3 +1806,156 @@ body{
 .icon_sixClock{
 	@include icon_sixClock;
 }
+//三点面板图标
+.icon_panel_box{
+	padding: em(10.25em) em(7.3em);
+}
+@mixin icon_panel() {
+	width: em(30em);
+	height: em(30em);
+	position: relative;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		width: em(5em);
+		height: em(5em);
+		border-radius:50%;
+		box-shadow: inset 0 0 0 10000000px,
+		em(10em) 0 0,
+		em(-10em) 0 0;
+		@include midCen;
+	}
+	&:before{	
+	}
+}
+.icon_panel{
+	@include icon_panel;
+}
+//编辑图标
+.icon_editMenu_box{
+	padding: em(10.25em) em(7.3em);
+}
+@mixin icon_editMenu( $shadowColor ) {
+	width: em(30em);
+	height: em(30em);
+	position: relative;
+	border:em(2em) solid;
+	box-sizing: border-box;
+	border-radius:em(6em);
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		width: em(2em);
+		height: em(26em);
+		background-color: currentColor;
+		right: em(4em);
+		top: em(-7em);
+		transform:rotate(45deg);
+		box-shadow: em(2em) 0 0 $shadowColor,em(-2em) 0 0 $shadowColor;
+	}
+	&:before{
+	}
+}
+.icon_editMenu{
+	@include icon_editMenu( #fff );
+}
+//表格图标
+.icon_table_box{
+	padding: em(10.25em) em(7.3em);
+}
+@mixin icon_table() {
+	width: em(30em);
+	height: em(30em);
+	position: relative;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		width: em(8em);
+		height: em(8em);
+		box-shadow: inset 0 0 0 100000px,
+		em(12em) 0 0,
+		em(24em) 0 0,
+		0 em(12em) 0,
+		em(12em) em(12em) 0,
+		em(24em) em(12em) 0,
+		0 em(24em) 0,
+		em(12em) em(24em) 0,
+		em(24em) em(24em) 0;
+	}
+	&:before{
+	}
+}
+.icon_table{
+	@include icon_table;
+}
+//列表图标
+.icon_list_box{
+	padding: em(10.25em) em(7.3em);
+}
+@mixin icon_list() {
+	width: em(30em);
+	height: em(30em);
+	position: relative;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		width: em(8em);
+		height: em(8em);
+		box-shadow: inset 0 0 0 100000px,
+		0 em(12em) 0,
+		0 em(24em) 0;
+	}
+	&:before{
+		width: em(20em);
+		height: em(8em);
+		left: em(12em);
+		box-shadow: inset 0 0 0 100000px,
+		0 em(12em) 0,
+		0 em(24em) 0;
+	}
+}
+.icon_list{
+	@include icon_list;
+}
+//分栏图标
+.icon_column_box{
+	padding: em(10.25em) em(21em) em(10.25em) em(9em);
+}
+@mixin icon_column() {
+	width: em(10em);
+	height: em(30em);
+	position: relative;
+	border:em(2em) solid;
+	box-sizing: border-box;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		width: em(10em);
+		height: em(30em);
+		border:em(2em) solid;
+		box-sizing: border-box;
+		left: em(6em);
+		top: em(-2em);
+	}
+	&:before{
+		width: em(10em);
+		height: em(30em);
+		border:em(2em) solid;
+		box-sizing: border-box;
+		left: em(14em);
+		top: em(-2em);
+	}
+}
+.icon_column{
+	@include icon_column;
+}
