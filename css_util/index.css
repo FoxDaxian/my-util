@@ -1466,4 +1466,109 @@ body {
     margin: auto;
     top: 0.08333em; }
 
+.icon_panel_box {
+  padding: 0.85417em 0.60833em; }
+
+.icon_panel {
+  width: 2.5em;
+  height: 2.5em;
+  position: relative; }
+  .icon_panel:after, .icon_panel:before {
+    content: "";
+    position: absolute; }
+  .icon_panel:after {
+    width: 0.41667em;
+    height: 0.41667em;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 10000000px, 0.83333em 0 0, -0.83333em 0 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto; }
+
+.icon_editMenu_box {
+  padding: 0.85417em 0.60833em; }
+
+.icon_editMenu {
+  width: 2.5em;
+  height: 2.5em;
+  position: relative;
+  border: 0.16667em solid;
+  box-sizing: border-box;
+  border-radius: 0.5em; }
+  .icon_editMenu:after, .icon_editMenu:before {
+    content: "";
+    position: absolute; }
+  .icon_editMenu:after {
+    width: 0.16667em;
+    height: 2.16667em;
+    background-color: currentColor;
+    right: 0.33333em;
+    top: -0.58333em;
+    transform: rotate(45deg);
+    box-shadow: 0.16667em 0 0 #fff, -0.16667em 0 0 #fff; }
+
+.icon_table_box {
+  padding: 0.85417em 0.60833em; }
+
+.icon_table {
+  width: 2.5em;
+  height: 2.5em;
+  position: relative; }
+  .icon_table:after, .icon_table:before {
+    content: "";
+    position: absolute; }
+  .icon_table:after {
+    width: 0.66667em;
+    height: 0.66667em;
+    box-shadow: inset 0 0 0 100000px, 1em 0 0, 2em 0 0, 0 1em 0, 1em 1em 0, 2em 1em 0, 0 2em 0, 1em 2em 0, 2em 2em 0; }
+
+.icon_list_box {
+  padding: 0.85417em 0.60833em; }
+
+.icon_list {
+  width: 2.5em;
+  height: 2.5em;
+  position: relative; }
+  .icon_list:after, .icon_list:before {
+    content: "";
+    position: absolute; }
+  .icon_list:after {
+    width: 0.66667em;
+    height: 0.66667em;
+    box-shadow: inset 0 0 0 100000px, 0 1em 0, 0 2em 0; }
+  .icon_list:before {
+    width: 1.66667em;
+    height: 0.66667em;
+    left: 1em;
+    box-shadow: inset 0 0 0 100000px, 0 1em 0, 0 2em 0; }
+
+.icon_column_box {
+  padding: 0.85417em 1.75em 0.85417em 0.75em; }
+
+.icon_column {
+  width: 0.83333em;
+  height: 2.5em;
+  position: relative;
+  border: 0.16667em solid;
+  box-sizing: border-box; }
+  .icon_column:after, .icon_column:before {
+    content: "";
+    position: absolute; }
+  .icon_column:after {
+    width: 0.83333em;
+    height: 2.5em;
+    border: 0.16667em solid;
+    box-sizing: border-box;
+    left: 0.5em;
+    top: -0.16667em; }
+  .icon_column:before {
+    width: 0.83333em;
+    height: 2.5em;
+    border: 0.16667em solid;
+    box-sizing: border-box;
+    left: 1.16667em;
+    top: -0.16667em; }
+
 /*# sourceMappingURL=index.css.map */
