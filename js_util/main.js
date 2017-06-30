@@ -167,3 +167,8 @@ function scrollFn () {
         this.footerSwitch = false
     }
 }
+
+//去除html标签
+function clearTag( str ) {
+    return str.replace(/<[^>]+>/g,"")
+}
