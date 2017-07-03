@@ -1571,4 +1571,218 @@ body {
     left: 1.16667em;
     top: -0.16667em; }
 
+.icon_trash_box {
+  padding: 1.10417em 0.375em 0.60417em 1.54167em; }
+
+.icon_trash {
+  width: 1.66667em;
+  height: 2.5em;
+  position: relative;
+  border: 0.16667em solid;
+  box-sizing: border-box;
+  border-top: none;
+  transform: translateX(-50%);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px; }
+  .icon_trash:after, .icon_trash:before {
+    content: "";
+    position: absolute; }
+  .icon_trash:after {
+    width: 2.5em;
+    height: 0.16667em;
+    box-shadow: inset 0 0 0 1000000px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -0.25em; }
+  .icon_trash:before {
+    width: 0.83333em;
+    height: 0.41667em;
+    border-top: 0.16667em solid;
+    border-left: 0.16667em solid;
+    border-right: 0.16667em solid;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -0.66667em; }
+
+.icon_hyperlink_box {
+  padding: 1.10417em 1.29167em 1.10417em 1.04167em; }
+
+.icon_hyperlink {
+  width: 1em;
+  height: 1.83333em;
+  position: relative;
+  border: 0.16667em solid;
+  box-sizing: border-box;
+  border-radius: 0.25em;
+  transform: translateY(1em) translateX(-0.5em) rotate(45deg); }
+  .icon_hyperlink:after, .icon_hyperlink:before {
+    content: "";
+    position: absolute; }
+  .icon_hyperlink:after {
+    width: 1em;
+    height: 1.83333em;
+    border: 0.16667em solid;
+    box-sizing: border-box;
+    border-radius: 0.25em;
+    transform: translateY(-2.33333em) translateX(-0.16667em); }
+  .icon_hyperlink:before {
+    width: 0.16667em;
+    height: 1.33333em;
+    box-shadow: inset 0 0 0 1000000px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -1em; }
+
+.icon_pen_box {
+  padding: 0.41667em 1.29167em 0.91667em 1.29167em; }
+
+.icon_pen {
+  width: 0.66667em;
+  height: 3em;
+  position: relative;
+  border: 0.16667em solid;
+  box-sizing: border-box;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  transform: rotate(30deg); }
+  .icon_pen:after, .icon_pen:before {
+    content: "";
+    position: absolute; }
+  .icon_pen:after {
+    width: 0;
+    height: 0;
+    border-left-width: 0.33333em;
+    border-right-width: 0.33333em;
+    border-top-width: 0.83333em;
+    border-style: solid;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    left: -0.16667em;
+    bottom: -1.16667em; }
+  .icon_pen:before {
+    width: 0.625em;
+    height: 0.83333em;
+    border-top: 0.08333em solid;
+    border-right: 0.16667em solid;
+    top: 0.16667em; }
+
+.icon_upload_box {
+  padding: 2.16667em 0.60833em 0.91667em 0.60833em; }
+
+.icon_upload {
+  width: 2.5em;
+  height: 0.66667em;
+  position: relative;
+  border: 0.16667em solid;
+  border-top: none;
+  box-sizing: border-box; }
+  .icon_upload:after, .icon_upload:before {
+    content: "";
+    position: absolute; }
+  .icon_upload:after {
+    width: 1em;
+    height: 1em;
+    box-sizing: border-box;
+    border-top: 0.16667em solid;
+    border-left: 0.16667em solid;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    top: -1.5em; }
+  .icon_upload:before {
+    width: 0.16667em;
+    height: 1.66667em;
+    box-shadow: inset 0 0 0 1000000px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -1.5em; }
+
+.icon_download_box {
+  padding: 2.16667em 0.60833em 0.91667em 0.60833em; }
+
+.icon_download {
+  width: 2.5em;
+  height: 0.66667em;
+  position: relative;
+  border: 0.16667em solid;
+  border-top: none;
+  box-sizing: border-box; }
+  .icon_download:after, .icon_download:before {
+    content: "";
+    position: absolute; }
+  .icon_download:after {
+    width: 1em;
+    height: 1em;
+    box-sizing: border-box;
+    border-bottom: 0.16667em solid;
+    border-right: 0.16667em solid;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    top: -0.75em; }
+  .icon_download:before {
+    width: 0.16667em;
+    height: 1.66667em;
+    box-shadow: inset 0 0 0 1000000px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -1.5em; }
+
+.icon_lock_box {
+  padding: 2em 0.60833em 0.58333em 0.60833em; }
+
+.icon_lock {
+  width: 2.5em;
+  height: 1.33333em;
+  position: relative;
+  border: 0.16667em solid;
+  box-sizing: border-box;
+  box-shadow: inset 0.08333em 0.16667em 0 0.08333em; }
+  .icon_lock:after, .icon_lock:before {
+    content: "";
+    position: absolute; }
+  .icon_lock:after {
+    width: 1.16667em;
+    height: 1.66667em;
+    border: 0.16667em solid;
+    border-bottom: none;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -1.83333em; }
+
+.icon_unlock_box {
+  padding: 2em 0.60833em 0.58333em 0.60833em; }
+
+.icon_unlock {
+  width: 2.5em;
+  height: 1.33333em;
+  position: relative;
+  border: 0.16667em solid;
+  box-sizing: border-box;
+  box-shadow: inset 0.08333em 0.16667em 0 0.08333em; }
+  .icon_unlock:after, .icon_unlock:before {
+    content: "";
+    position: absolute; }
+  .icon_unlock:after {
+    width: 1.16667em;
+    height: 0.66667em;
+    border: 0.16667em solid;
+    border-bottom: none;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -1.83333em; }
+  .icon_unlock:before {
+    width: 1.16667em;
+    height: 1em;
+    border-left: 0.16667em solid;
+    border-right: 0.16667em solid transparent;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -1em; }
+
 /*# sourceMappingURL=index.css.map */
