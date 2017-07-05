@@ -1959,3 +1959,132 @@ body{
 .icon_column{
 	@include icon_column;
 }
+//小汽车图标
+.icon_car_box{
+	padding: em(20em) em(4em) em(11em) em(4em);
+}
+@mixin icon_car($color) {
+	width: em(34em);
+	height: em(12em);
+	position: relative;
+	border:em(2em) solid;
+	border-top-left-radius: em(14em) em(14em);
+	border-top-right-radius: em(6em) em(6em);
+	border-bottom-left-radius: em(4em);
+	border-bottom-right-radius: em(4em);
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		width: em(20em);
+		height: em(8em);
+		border: em(2em) solid;
+		left: 58%;
+		transform:translateX(-50%);
+		top: em(-12em);
+		border-top-left-radius: em(26em) em(14em);
+		border-top-right-radius: em(6em) em(6em);
+		box-shadow: inset 0 em(2em) 0 em(.5em) $color,
+		inset 0 0 0 em(4em);
+	}
+	&:before{
+		width: em(8em);
+		height: em(8em);
+		border-radius: 50%;
+		bottom: em(-5em);
+		left: em(2em);
+		box-shadow: inset 0 0 0 10000px,
+		em(22em) 0 0;
+	}
+}
+.icon_car{
+	@include icon_car(#fff);
+}
+//公共汽车图标
+.icon_bus_box{
+	padding: em(12em) em(4em) em(0em) em(4em);
+}
+@mixin icon_bus($color) {
+	width: em(34em);
+	height: em(26em);
+	position: relative;
+	border:em(2em) solid;
+	border-radius: em(4em);
+	border-top-left-radius: em(8em);
+	border-top-right-radius: em(8em);
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		content:'o';
+		width: em(7em);
+		height: em(12em);
+		box-shadow: inset 0 0 0 10000px;
+		bottom: 0;
+		left: 50%;
+		transform:translateX(-50%);
+		font-weight: bold;
+		text-shadow: em(-12em) em(-15em) 0,
+		em(-4em) em(-15em) 0,
+		em(4em) em(-15em) 0,
+		em(12em) em(-15em) 0,
+		em(-12em) em(-6em) 0;
+	}
+	&:before{
+		width: em(9em);
+		height: em(9em);
+		border-radius: 50%;
+		bottom: em(-6em);
+		left: em(2em);
+		box-shadow: inset 0 0 0 10000px,
+		em(21em) 0 0;
+	}
+}
+.icon_bus{
+	@include icon_bus(#fff);
+}
+//自行车图标
+.icon_bicycle_box{
+	padding: em(16em) em(6.5em) em(0em) em(6.5em);
+}
+@mixin icon_bicycle($color) {
+	width: 0;
+	height: 0;
+	position: relative;
+	border-bottom-width: em(18em);
+	border-left-width: em(16em);
+	border-right-width: em(16em);
+	border-top-width: 0;
+	border-style: solid;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		width: em(36em);
+		height: em(6em);
+		border-bottom: em(2em) solid;
+		border-right: em(2em) solid;
+		transform:translateX(-55%) rotate(-8deg);
+		top: em(-4em);
+		// border-bottom-left-radius: em(5em) em(10em);
+		border-bottom-right-radius: em(5em) em(10em);
+
+	}
+	&:before{
+		width: em(16em);
+		height: em(16em);
+		border-radius: 50%;
+		box-shadow: inset 0 0 0 100000px,
+		em(24em) 0 0;
+		bottom: em(-26em);
+		left: em(-20em);
+	}
+}
+.icon_bicycle{
+	@include icon_bicycle(#fff);
+}
