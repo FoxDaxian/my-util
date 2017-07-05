@@ -1,21 +1,21 @@
 /*
 Error: Invalid CSS after "		width: em(20em)": expected "{", was ";"
-        on line 1998 of E:\gihub_repository\my-util\css_util\index.scss
+        on line 1999 of E:\gihub_repository\my-util\css_util\index.scss
 
-1993: 		content:"";
-1994: 		position: absolute;
-1995: 	}
-1996: 	&:after{
-1997: <<<<<<< HEAD
-1998: 		width: em(20em);
-1999: 		height: em(8em);
-2000: 		border: em(2em) solid;
-2001: 		left: 58%;
-2002: 		transform:translateX(-50%);
-2003: 		top: em(-12em);
+1994: 		content:"";
+1995: 		position: absolute;
+1996: 	}
+1997: 	&:after{
+1998: <<<<<<< HEAD
+1999: 		width: em(20em);
+2000: 		height: em(8em);
+2001: 		border: em(2em) solid;
+2002: 		left: 58%;
+2003: 		transform:translateX(-50%);
+2004: 		top: em(-12em);
 
 Backtrace:
-E:\gihub_repository\my-util\css_util\index.scss:1998
+E:\gihub_repository\my-util\css_util\index.scss:1999
 G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:1165:in `expected'
 G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:1101:in `expected'
 G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:1096:in `tok!'
@@ -55,4 +55,4 @@ G:/koala/Koala/bin/sass:18:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"		width: em(20em)\": expected \"{\", was \";\"\A         on line 1998 of E:\gihub_repository\my-util\css_util\index.scss\A \A 1993: 		content:\"\";\A 1994: 		position: absolute;\A 1995: 	}\A 1996: 	&:after{\A 1997: <<<<<<< HEAD\A 1998: 		width: em(20em);\A 1999: 		height: em(8em);\A 2000: 		border: em(2em) solid;\A 2001: 		left: 58%;\A 2002: 		transform:translateX(-50%);\A 2003: 		top: em(-12em);"; }
+  content: "Error: Invalid CSS after \"		width: em(20em)\": expected \"{\", was \";\"\A         on line 1999 of E:\gihub_repository\my-util\css_util\index.scss\A \A 1994: 		content:\"\";\A 1995: 		position: absolute;\A 1996: 	}\A 1997: 	&:after{\A 1998: <<<<<<< HEAD\A 1999: 		width: em(20em);\A 2000: 		height: em(8em);\A 2001: 		border: em(2em) solid;\A 2002: 		left: 58%;\A 2003: 		transform:translateX(-50%);\A 2004: 		top: em(-12em);"; }
