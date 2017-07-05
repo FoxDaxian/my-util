@@ -1,540 +1,428 @@
 .tabs {
-  width: 1342px;
-}
-.tabs .calender {
-  height: 40px;
-  background-color: #f5f9fe;
-  box-sizing: border-box;
-  border-top: 1px solid #dce7f6;
-  border-bottom: 1px solid #dce7f6;
-}
-.tabs .calender:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-.tabs .calender .showCalenderBtn {
-  float: left;
-  font-size: 0;
-  width: 242px;
-  height: 38px;
-  box-sizing: border-box;
-  padding-left: 64px;
-  line-height: 38px;
-  position: relative;
-}
-.tabs .calender .showCalenderBtn .calenderBox {
-  display: none;
-  position: relative;
-}
-.tabs .calender .showCalenderBtn .calenderBox .canenderWrap {
-  background-color: #fff;
-  position: absolute;
-  z-index: 100;
-  top: -10px;
-  left: -4px;
-  width: 390px;
-  padding-bottom: 14px;
-  border: 1px solid #e6e6e6;
-  box-sizing: border-box;
-}
-.tabs .calender .showCalenderBtn .calenderBox .canenderWrap * {
-  font-size: 14px;
-}
-.tabs .calender .showCalenderBtn .calenderBox .canenderWrap:after {
-  content: "";
-  position: absolute;
-  top: -6px;
-  left: 26px;
-  width: 10px;
-  height: 10px;
-  border: 1px solid #e8e8e9;
-  background-color: #fff;
-  border-bottom: none;
-  border-right: none;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-.tabs .calender .showCalenderBtn .calenderBox .canenderWrap .closeBtn {
-  height: 12px;
-  width: 12px;
-  cursor: pointer;
-  margin-top: 11px;
-  margin-bottom: 18px;
-  position: relative;
-  box-sizing: border-box;
-  left: 366px;
-}
-.tabs .calender .showCalenderBtn .calenderBox .canenderWrap .closeBtn:after {
-  -webkit-transform-origin: 0 0;
-      -ms-transform-origin: 0 0;
-          transform-origin: 0 0;
-  top: -1px;
-  left: 1px;
-  content: "";
-  position: absolute;
-  background-color: #d4d4d4;
-  height: 1px;
-  width: 14px;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-.tabs .calender .showCalenderBtn .calenderBox .canenderWrap .closeBtn:before {
-  -webkit-transform-origin: 0 0;
-      -ms-transform-origin: 0 0;
-          transform-origin: 0 0;
-  top: 0;
-  left: 11px;
-  content: "";
-  position: absolute;
-  background-color: #d4d4d4;
-  height: 1px;
-  width: 14px;
-  -webkit-transform: rotate(135deg);
-      -ms-transform: rotate(135deg);
-          transform: rotate(135deg);
-}
-.tabs .calender .showCalenderBtn .calenderBox .canenderWrap .title_btnsBox {
-  width: 344px;
-  margin: 0 auto;
-  height: 12px;
-}
-.tabs .calender .showCalenderBtn .calenderBox .canenderWrap .title_btnsBox:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-.tabs .calender .showCalenderBtn .calenderBox .canenderWrap .title_btnsBox > div {
-  height: 12px;
-  line-height: 12px;
-}
-.tabs .calender .showCalenderBtn .calenderBox .canenderWrap .title_btnsBox .nowTimeTitle {
-  text-align: center;
-}
-.tabs .calender .showCalenderBtn .calenderBox .canenderWrap .title_btnsBox .l_btn, .tabs .calender .showCalenderBtn .calenderBox .canenderWrap .title_btnsBox .r_btn {
-  width: 48px;
-  height: 12px;
-  cursor: pointer;
-  position: relative;
-}
-.tabs .calender .showCalenderBtn .calenderBox .canenderWrap .title_btnsBox .l_btn:after, .tabs .calender .showCalenderBtn .calenderBox .canenderWrap .title_btnsBox .r_btn:after {
-  content: "";
-  width: 8.5px;
-  height: 8.5px;
-  border: 1px solid #404040;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-  position: absolute;
-  top: 1px;
-}
-.tabs .calender .showCalenderBtn .calenderBox .canenderWrap .title_btnsBox .l_btn {
-  float: left;
-  text-align: right;
-}
-.tabs .calender .showCalenderBtn .calenderBox .canenderWrap .title_btnsBox .l_btn:after {
-  border-right: none;
-  border-top: none;
-  left: 0;
-}
-.tabs .calender .showCalenderBtn .calenderBox .canenderWrap .title_btnsBox .r_btn {
-  float: right;
-  margin-right: 9px;
-}
-.tabs .calender .showCalenderBtn .calenderBox .canenderWrap .title_btnsBox .r_btn:after {
-  border-left: none;
-  border-bottom: none;
-  right: 0;
-}
-.tabs .calender .showCalenderBtn .calenderBox .canenderWrap .weekBox {
-  width: 362px;
-  margin: 0 auto;
-  margin-top: 22px;
-}
-.tabs .calender .showCalenderBtn .calenderBox .canenderWrap .weekBox > div {
-  text-align: center;
-  line-height: 40px;
-  width: 50px;
-  height: 40px;
-  text-align: center;
-}
-.tabs .calender .showCalenderBtn .calenderBox .canenderWrap .weekBox:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-.tabs .calender .showCalenderBtn .calenderBox .canenderWrap .weekBox .weekIndex {
-  float: left;
-}
-.tabs .calender .showCalenderBtn .calenderBox .canenderWrap .cUl {
-  width: 362px;
-  margin: 0 auto;
-}
-.tabs .calender .showCalenderBtn .calenderBox .canenderWrap .cUl:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-.tabs .calender .showCalenderBtn .calenderBox .canenderWrap .cUl > li {
-  float: left;
-  width: 50px;
-  height: 40px;
-  text-align: center;
-  line-height: 40px;
-  border: 0.5px solid #fff;
-  box-sizing: border-box;
-}
-.tabs .calender .showCalenderBtn .calenderBox .canenderWrap .cUl .selectable {
-  cursor: pointer;
-  background-color: #f2f2f2;
-}
-.tabs .calender .showCalenderBtn .calenderBox .canenderWrap .cUl .selectable:hover {
-  background-color: #0578e6;
-  color: #fff;
-}
-.tabs .calender .showCalenderBtn .calenderBox .canenderWrap .cUl .bothSides {
-  background-color: #dcdcdc;
-}
-.tabs .calender .showCalenderBtn .calenderBox .canenderWrap .cUl .today {
-  color: #0578e6;
-}
-.tabs .calender .showCalenderBtn .calenderBox .canenderWrap .cUl .otherMonth {
-  background-color: #fff;
-  color: #c6c6c6;
-}
-.tabs .calender .showCalenderBtn span {
-  font-size: 14px;
-  font-weight: bold;
-  color: #0578e6;
-  position: relative;
-  cursor: pointer;
-}
-.tabs .calender .showCalenderBtn span:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-top: 6px solid #0578e6;
-  border-bottom: 6px solid transparent;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  right: -20px;
-  top: 8px;
-}
-.tabs .calender .showCalenderBtn span:before {
-  content: "";
-  position: absolute;
-  top: -3px;
-  left: -31px;
-  width: 20px;
-  height: 19px;
-  background-image: url("../imgs/calender.png");
-}
-.tabs .calender .oneWeek {
-  width: 862px;
-  height: 38px;
-  line-height: 38px;
-  float: left;
-}
-.tabs .calender .oneWeek .prev_btn, .tabs .calender .oneWeek .next_btn {
-  margin-top: 8px;
-  width: 70px;
-  height: 22px;
-  border-radius: 10px;
-  border: 1px solid #c6c6c6;
-  font-size: 14px;
-  color: #808080;
-  text-align: center;
-  line-height: 22px;
-  cursor: pointer;
-}
-.tabs .calender .oneWeek .prev_btn:hover, .tabs .calender .oneWeek .next_btn:hover {
-  border-color: #0578e6;
-  color: #0578e6;
-}
-.tabs .calender .oneWeek .prev_btn {
-  float: left;
-}
-.tabs .calender .oneWeek .next_btn {
-  float: right;
-}
-.tabs .calender .oneWeek .sevenDay {
-  width: 682px;
-  margin: 0 auto;
-}
-.tabs .calender .oneWeek .sevenDay:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-.tabs .calender .oneWeek .sevenDay .day {
-  float: left;
-  margin: 0 13px 0 13px;
-  font-size: 14px;
-  color: #808080;
-  box-sizing: border-box;
-  cursor: pointer;
-}
-.tabs .calender .oneWeek .sevenDay .dayActive {
-  color: #0578e6;
-  border-bottom: 2px solid #0578e6;
-}
-.tabs .calender .filterBtn {
-  cursor: pointer;
-  color: #6077ae;
-  font-size: 14px;
-  line-height: 40px;
-  width: 76px;
-  float: left;
-  box-sizing: border-box;
-  padding-left: 20px;
-  background-image: url("../imgs/filter.png");
-  background-repeat: no-repeat;
-  background-position: 0 50%;
-  margin-left: 130px;
-  position: relative;
-}
-.tabs .calender .filterBtn:after {
-  content: "";
-  position: absolute;
-  border-color: #0578e6;
-  color: #0578e6;
-  width: 8px;
-  height: 8px;
-  border: 1px solid #b7b8b9;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-  right: 0;
-  top: 14px;
-  border-left: none;
-  border-top: none;
-}
-.tabs .filter {
-  box-sizing: border-box;
-  color: transparent;
-  border-bottom: 1px solid;
-  height: 0;
-  -webkit-transition: 0.2s;
-          transition: 0.2s;
-  padding-left: 63px;
-  overflow: hidden;
-}
-.tabs .filter .filterList {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  font-size: 14px;
-  color: #626262;
-  float: left;
-  box-sizing: border-box;
-  padding: 5px 8px;
-  margin-right: 26px;
-  cursor: pointer;
-}
-.tabs .filter .filterActive {
-  background-color: #e6f2ff;
-}
+  width: 1342px; }
+  .tabs .calender {
+    height: 40px;
+    background-color: #f5f9fe;
+    box-sizing: border-box;
+    border-top: 1px solid #dce7f6;
+    border-bottom: 1px solid #dce7f6; }
+    .tabs .calender:after {
+      content: "";
+      display: block;
+      clear: both; }
+    .tabs .calender .showCalenderBtn {
+      float: left;
+      font-size: 0;
+      width: 242px;
+      height: 38px;
+      box-sizing: border-box;
+      padding-left: 64px;
+      line-height: 38px;
+      position: relative; }
+      .tabs .calender .showCalenderBtn .calenderBox {
+        display: none;
+        position: relative; }
+        .tabs .calender .showCalenderBtn .calenderBox .canenderWrap {
+          background-color: #fff;
+          position: absolute;
+          z-index: 100;
+          top: -10px;
+          left: -4px;
+          width: 390px;
+          padding-bottom: 14px;
+          border: 1px solid #e6e6e6;
+          box-sizing: border-box; }
+          .tabs .calender .showCalenderBtn .calenderBox .canenderWrap * {
+            font-size: 14px; }
+          .tabs .calender .showCalenderBtn .calenderBox .canenderWrap:after {
+            content: "";
+            position: absolute;
+            top: -6px;
+            left: 26px;
+            width: 10px;
+            height: 10px;
+            border: 1px solid #e8e8e9;
+            background-color: #fff;
+            border-bottom: none;
+            border-right: none;
+            transform: rotate(45deg); }
+          .tabs .calender .showCalenderBtn .calenderBox .canenderWrap .closeBtn {
+            height: 12px;
+            width: 12px;
+            cursor: pointer;
+            margin-top: 11px;
+            margin-bottom: 18px;
+            position: relative;
+            box-sizing: border-box;
+            left: 366px; }
+            .tabs .calender .showCalenderBtn .calenderBox .canenderWrap .closeBtn:after {
+              transform-origin: 0 0;
+              top: -1px;
+              left: 1px;
+              content: "";
+              position: absolute;
+              background-color: #d4d4d4;
+              height: 1px;
+              width: 14px;
+              transform: rotate(45deg); }
+            .tabs .calender .showCalenderBtn .calenderBox .canenderWrap .closeBtn:before {
+              transform-origin: 0 0;
+              top: 0;
+              left: 11px;
+              content: "";
+              position: absolute;
+              background-color: #d4d4d4;
+              height: 1px;
+              width: 14px;
+              transform: rotate(135deg); }
+          .tabs .calender .showCalenderBtn .calenderBox .canenderWrap .title_btnsBox {
+            width: 344px;
+            margin: 0 auto;
+            height: 12px; }
+            .tabs .calender .showCalenderBtn .calenderBox .canenderWrap .title_btnsBox:after {
+              content: "";
+              display: block;
+              clear: both; }
+            .tabs .calender .showCalenderBtn .calenderBox .canenderWrap .title_btnsBox > div {
+              height: 12px;
+              line-height: 12px; }
+            .tabs .calender .showCalenderBtn .calenderBox .canenderWrap .title_btnsBox .nowTimeTitle {
+              text-align: center; }
+            .tabs .calender .showCalenderBtn .calenderBox .canenderWrap .title_btnsBox .l_btn, .tabs .calender .showCalenderBtn .calenderBox .canenderWrap .title_btnsBox .r_btn {
+              width: 48px;
+              height: 12px;
+              cursor: pointer;
+              position: relative; }
+              .tabs .calender .showCalenderBtn .calenderBox .canenderWrap .title_btnsBox .l_btn:after, .tabs .calender .showCalenderBtn .calenderBox .canenderWrap .title_btnsBox .r_btn:after {
+                content: "";
+                width: 8.5px;
+                height: 8.5px;
+                border: 1px solid #404040;
+                transform: rotate(45deg);
+                position: absolute;
+                top: 1px; }
+            .tabs .calender .showCalenderBtn .calenderBox .canenderWrap .title_btnsBox .l_btn {
+              float: left;
+              text-align: right; }
+              .tabs .calender .showCalenderBtn .calenderBox .canenderWrap .title_btnsBox .l_btn:after {
+                border-right: none;
+                border-top: none;
+                left: 0; }
+            .tabs .calender .showCalenderBtn .calenderBox .canenderWrap .title_btnsBox .r_btn {
+              float: right;
+              margin-right: 9px; }
+              .tabs .calender .showCalenderBtn .calenderBox .canenderWrap .title_btnsBox .r_btn:after {
+                border-left: none;
+                border-bottom: none;
+                right: 0; }
+          .tabs .calender .showCalenderBtn .calenderBox .canenderWrap .weekBox {
+            width: 362px;
+            margin: 0 auto;
+            margin-top: 22px; }
+            .tabs .calender .showCalenderBtn .calenderBox .canenderWrap .weekBox > div {
+              text-align: center;
+              line-height: 40px;
+              width: 50px;
+              height: 40px;
+              text-align: center; }
+            .tabs .calender .showCalenderBtn .calenderBox .canenderWrap .weekBox:after {
+              content: "";
+              display: block;
+              clear: both; }
+            .tabs .calender .showCalenderBtn .calenderBox .canenderWrap .weekBox .weekIndex {
+              float: left; }
+          .tabs .calender .showCalenderBtn .calenderBox .canenderWrap .cUl {
+            width: 362px;
+            margin: 0 auto; }
+            .tabs .calender .showCalenderBtn .calenderBox .canenderWrap .cUl:after {
+              content: "";
+              display: block;
+              clear: both; }
+            .tabs .calender .showCalenderBtn .calenderBox .canenderWrap .cUl > li {
+              float: left;
+              width: 50px;
+              height: 40px;
+              text-align: center;
+              line-height: 40px;
+              border: 0.5px solid #fff;
+              box-sizing: border-box; }
+            .tabs .calender .showCalenderBtn .calenderBox .canenderWrap .cUl .selectable {
+              cursor: pointer;
+              background-color: #f2f2f2; }
+              .tabs .calender .showCalenderBtn .calenderBox .canenderWrap .cUl .selectable:hover {
+                background-color: #0578e6;
+                color: #fff; }
+            .tabs .calender .showCalenderBtn .calenderBox .canenderWrap .cUl .bothSides {
+              background-color: #dcdcdc; }
+            .tabs .calender .showCalenderBtn .calenderBox .canenderWrap .cUl .today {
+              color: #0578e6; }
+            .tabs .calender .showCalenderBtn .calenderBox .canenderWrap .cUl .otherMonth {
+              background-color: #fff;
+              color: #c6c6c6; }
+      .tabs .calender .showCalenderBtn span {
+        font-size: 14px;
+        font-weight: bold;
+        color: #0578e6;
+        position: relative;
+        cursor: pointer; }
+        .tabs .calender .showCalenderBtn span:after {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-top: 6px solid #0578e6;
+          border-bottom: 6px solid transparent;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          right: -20px;
+          top: 8px; }
+        .tabs .calender .showCalenderBtn span:before {
+          content: "";
+          position: absolute;
+          top: -3px;
+          left: -31px;
+          width: 20px;
+          height: 19px;
+          background-image: url("../imgs/calender.png"); }
+    .tabs .calender .oneWeek {
+      width: 862px;
+      height: 38px;
+      line-height: 38px;
+      float: left; }
+      .tabs .calender .oneWeek .prev_btn, .tabs .calender .oneWeek .next_btn {
+        margin-top: 8px;
+        width: 70px;
+        height: 22px;
+        border-radius: 10px;
+        border: 1px solid #c6c6c6;
+        font-size: 14px;
+        color: #808080;
+        text-align: center;
+        line-height: 22px;
+        cursor: pointer; }
+        .tabs .calender .oneWeek .prev_btn:hover, .tabs .calender .oneWeek .next_btn:hover {
+          border-color: #0578e6;
+          color: #0578e6; }
+      .tabs .calender .oneWeek .prev_btn {
+        float: left; }
+      .tabs .calender .oneWeek .next_btn {
+        float: right; }
+      .tabs .calender .oneWeek .sevenDay {
+        width: 682px;
+        margin: 0 auto; }
+        .tabs .calender .oneWeek .sevenDay:after {
+          content: "";
+          display: block;
+          clear: both; }
+        .tabs .calender .oneWeek .sevenDay .day {
+          float: left;
+          margin: 0 13px 0 13px;
+          font-size: 14px;
+          color: #808080;
+          box-sizing: border-box;
+          cursor: pointer; }
+        .tabs .calender .oneWeek .sevenDay .dayActive {
+          color: #0578e6;
+          border-bottom: 2px solid #0578e6; }
+    .tabs .calender .filterBtn {
+      cursor: pointer;
+      color: #6077ae;
+      font-size: 14px;
+      line-height: 40px;
+      width: 76px;
+      float: left;
+      box-sizing: border-box;
+      padding-left: 20px;
+      background-image: url("../imgs/filter.png");
+      background-repeat: no-repeat;
+      background-position: 0 50%;
+      margin-left: 130px;
+      position: relative; }
+      .tabs .calender .filterBtn:after {
+        content: "";
+        position: absolute;
+        border-color: #0578e6;
+        color: #0578e6;
+        width: 8px;
+        height: 8px;
+        border: 1px solid #b7b8b9;
+        transform: rotate(45deg);
+        right: 0;
+        top: 14px;
+        border-left: none;
+        border-top: none; }
+  .tabs .filter {
+    box-sizing: border-box;
+    color: transparent;
+    border-bottom: 1px solid;
+    height: 0;
+    transition: 0.2s;
+    padding-left: 63px;
+    overflow: hidden; }
+    .tabs .filter .filterList {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 14px;
+      color: #626262;
+      float: left;
+      box-sizing: border-box;
+      padding: 5px 8px;
+      margin-right: 26px;
+      cursor: pointer; }
+    .tabs .filter .filterActive {
+      background-color: #e6f2ff; }
 
 .calenderDetail {
   margin-top: 25px;
   width: 1208px;
-  margin-left: 33px;
-}
-.calenderDetail .threeList {
-  margin-bottom: 3px;
-}
-.calenderDetail .threeList .time {
-  position: relative;
-}
-.calenderDetail .threeList .time > span {
-  display: inline-block;
-  font-size: 14px;
-  color: #626262;
-  height: 16px;
-  line-height: 16px;
-  box-sizing: border-box;
-  padding-left: 30px;
-  background-image: url("../imgs/calenderDetailTime.png");
-  background-repeat: no-repeat;
-  cursor: pointer;
-}
-.calenderDetail .threeList .time .clickShowContent {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-.calenderDetail .threeList .time .clickShowContent > div {
-  float: left;
-  font-size: 14px;
-  color: #808080;
-  line-height: 16px;
-}
-.calenderDetail .threeList .time .clickShowContent > div span {
-  color: #444444;
-}
-.calenderDetail .threeList .time .clickShowContent .calEvent {
-  margin-right: 28px;
-}
-.calenderDetail .threeList .time .clickShowNone {
-  display: none;
-}
-.calenderDetail .threeList .line {
-  width: 1px;
-  height: 23px;
-  background-color: #f0f0f0;
-  margin-left: 8px;
-  margin-top: 3px;
-}
-.calenderDetail .threeList .calenderDetailWrap {
-  width: 1200px;
-  border: 1px solid #f0f0f0;
-  box-sizing: border-box;
-  margin-top: -8px;
-  margin-left: 8px;
-  margin-bottom: 11px;
-  position: relative;
-}
-.calenderDetail .threeList .calenderDetailWrap:after {
-  content: "";
-  position: absolute;
-  width: 1px;
-  height: 8px;
-  background-color: #f0f0f0;
-  bottom: -8px;
-  left: -1px;
-}
-.calenderDetail .threeList .calenderDetailWrap .detailTitle {
-  height: 49px;
-  box-sizing: border-box;
-  border-bottom: 1px solid #f0f0f0;
-}
-.calenderDetail .threeList .calenderDetailWrap .detailTitle:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-.calenderDetail .threeList .calenderDetailWrap .detailTitle > div {
-  font-size: 14px;
-  color: #626262;
-  text-align: center;
-  float: left;
-  height: 49px;
-  line-height: 49px;
-}
-.calenderDetail .threeList .calenderDetailWrap .detailTitle > div:not(:last-of-type) {
-  margin-right: 1px;
-}
-.calenderDetail .threeList .calenderDetailWrap .detailTitle .date {
-  width: 90px;
-}
-.calenderDetail .threeList .calenderDetailWrap .detailTitle .country {
-  width: 87px;
-}
-.calenderDetail .threeList .calenderDetailWrap .detailTitle .event {
-  width: 570px;
-}
-.calenderDetail .threeList .calenderDetailWrap .detailTitle .important {
-  width: 99px;
-}
-.calenderDetail .threeList .calenderDetailWrap .detailTitle .todayValue {
-  width: 99px;
-}
-.calenderDetail .threeList .calenderDetailWrap .detailTitle .expect {
-  width: 99px;
-}
-.calenderDetail .threeList .calenderDetailWrap .detailTitle .preValue {
-  width: 99px;
-}
-.calenderDetail .threeList .calenderDetailWrap .detailTitle .tempShowDiv {
-  width: 48px;
-}
-.calenderDetail .threeList .calenderDetailWrap .detailContent:not(:last-of-type) {
-  border-bottom: 1px dashed #c6c6c6;
-}
-.calenderDetail .threeList .calenderDetailWrap .detailContent {
-  box-sizing: border-box;
-  font-size: 0;
-}
-.calenderDetail .threeList .calenderDetailWrap .detailContent > div {
-  font-size: 14px;
-  color: #626262;
-  text-align: center;
-  display: inline-block;
-  box-sizing: border-box;
-  padding: 14px 0;
-  line-height: 24px;
-  vertical-align: middle;
-}
-.calenderDetail .threeList .calenderDetailWrap .detailContent > div img {
-  display: table-cell;
-  vertical-align: middle;
-  position: relative;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-.calenderDetail .threeList .calenderDetailWrap .detailContent > div:not(:last-of-type) {
-  margin-right: 1px;
-}
-.calenderDetail .threeList .calenderDetailWrap .detailContent .date {
-  width: 90px;
-}
-.calenderDetail .threeList .calenderDetailWrap .detailContent .country {
-  width: 87px;
-}
-.calenderDetail .threeList .calenderDetailWrap .detailContent .event {
-  width: 570px;
-  color: #444444;
-  text-align: left;
-}
-.calenderDetail .threeList .calenderDetailWrap .detailContent .important {
-  width: 99px;
-}
-.calenderDetail .threeList .calenderDetailWrap .detailContent .todayValue {
-  width: 99px;
-}
-.calenderDetail .threeList .calenderDetailWrap .detailContent .expect {
-  width: 99px;
-}
-.calenderDetail .threeList .calenderDetailWrap .detailContent .preValue {
-  width: 99px;
-}
-.calenderDetail .threeList .calenderDetailWrap .detailContent .tempShowDiv {
-  width: 48px;
-  margin-top: -6px;
-}
-.calenderDetail .threeList .calenderDetailWrap .detailContent .tempShowDiv {
-  position: relative;
-}
-.calenderDetail .threeList .calenderDetailWrap .detailContent .tempShowDiv:before {
-  content: "";
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  border: 1px solid #bfbfbf;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-left: none;
-  border-top: none;
-  margin: auto;
-}
-.calenderDetail .threeList:last-of-type .line {
-  visibility: hidden;
-}
-.calenderDetail .threeListActive .time > span {
-  color: #0578e6;
-  background-position: 0 -16px;
-}
+  margin-left: 33px; }
+  .calenderDetail .threeList {
+    margin-bottom: 3px; }
+    .calenderDetail .threeList .time {
+      position: relative; }
+      .calenderDetail .threeList .time > span {
+        display: inline-block;
+        font-size: 14px;
+        color: #626262;
+        height: 16px;
+        line-height: 16px;
+        box-sizing: border-box;
+        padding-left: 30px;
+        background-image: url("../imgs/calenderDetailTime.png");
+        background-repeat: no-repeat;
+        cursor: pointer; }
+      .calenderDetail .threeList .time .clickShowContent {
+        position: absolute;
+        right: 0;
+        top: 0; }
+        .calenderDetail .threeList .time .clickShowContent > div {
+          float: left;
+          font-size: 14px;
+          color: #808080;
+          line-height: 16px; }
+          .calenderDetail .threeList .time .clickShowContent > div span {
+            color: #444444; }
+        .calenderDetail .threeList .time .clickShowContent .calEvent {
+          margin-right: 28px; }
+      .calenderDetail .threeList .time .clickShowNone {
+        display: none; }
+    .calenderDetail .threeList .line {
+      width: 1px;
+      height: 23px;
+      background-color: #f0f0f0;
+      margin-left: 8px;
+      margin-top: 3px; }
+    .calenderDetail .threeList .calenderDetailWrap {
+      width: 1200px;
+      border: 1px solid #f0f0f0;
+      box-sizing: border-box;
+      margin-top: -8px;
+      margin-left: 8px;
+      margin-bottom: 11px;
+      position: relative; }
+      .calenderDetail .threeList .calenderDetailWrap:after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 8px;
+        background-color: #f0f0f0;
+        bottom: -8px;
+        left: -1px; }
+      .calenderDetail .threeList .calenderDetailWrap .detailTitle {
+        height: 49px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #f0f0f0; }
+        .calenderDetail .threeList .calenderDetailWrap .detailTitle:after {
+          content: "";
+          display: block;
+          clear: both; }
+        .calenderDetail .threeList .calenderDetailWrap .detailTitle > div {
+          font-size: 14px;
+          color: #626262;
+          text-align: center;
+          float: left;
+          height: 49px;
+          line-height: 49px; }
+        .calenderDetail .threeList .calenderDetailWrap .detailTitle > div:not(:last-of-type) {
+          margin-right: 1px; }
+        .calenderDetail .threeList .calenderDetailWrap .detailTitle .date {
+          width: 90px; }
+        .calenderDetail .threeList .calenderDetailWrap .detailTitle .country {
+          width: 87px; }
+        .calenderDetail .threeList .calenderDetailWrap .detailTitle .event {
+          width: 570px; }
+        .calenderDetail .threeList .calenderDetailWrap .detailTitle .important {
+          width: 99px; }
+        .calenderDetail .threeList .calenderDetailWrap .detailTitle .todayValue {
+          width: 99px; }
+        .calenderDetail .threeList .calenderDetailWrap .detailTitle .expect {
+          width: 99px; }
+        .calenderDetail .threeList .calenderDetailWrap .detailTitle .preValue {
+          width: 99px; }
+        .calenderDetail .threeList .calenderDetailWrap .detailTitle .tempShowDiv {
+          width: 48px; }
+      .calenderDetail .threeList .calenderDetailWrap .detailContent:not(:last-of-type) {
+        border-bottom: 1px dashed #c6c6c6; }
+      .calenderDetail .threeList .calenderDetailWrap .detailContent {
+        box-sizing: border-box;
+        font-size: 0; }
+        .calenderDetail .threeList .calenderDetailWrap .detailContent > div {
+          font-size: 14px;
+          color: #626262;
+          text-align: center;
+          display: inline-block;
+          box-sizing: border-box;
+          padding: 14px 0;
+          line-height: 24px;
+          vertical-align: middle; }
+          .calenderDetail .threeList .calenderDetailWrap .detailContent > div img {
+            display: table-cell;
+            vertical-align: middle;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%); }
+        .calenderDetail .threeList .calenderDetailWrap .detailContent > div:not(:last-of-type) {
+          margin-right: 1px; }
+        .calenderDetail .threeList .calenderDetailWrap .detailContent .date {
+          width: 90px; }
+        .calenderDetail .threeList .calenderDetailWrap .detailContent .country {
+          width: 87px; }
+        .calenderDetail .threeList .calenderDetailWrap .detailContent .event {
+          width: 570px;
+          color: #444444;
+          text-align: left; }
+        .calenderDetail .threeList .calenderDetailWrap .detailContent .important {
+          width: 99px; }
+        .calenderDetail .threeList .calenderDetailWrap .detailContent .todayValue {
+          width: 99px; }
+        .calenderDetail .threeList .calenderDetailWrap .detailContent .expect {
+          width: 99px; }
+        .calenderDetail .threeList .calenderDetailWrap .detailContent .preValue {
+          width: 99px; }
+        .calenderDetail .threeList .calenderDetailWrap .detailContent .tempShowDiv {
+          width: 48px;
+          margin-top: -6px; }
+          .calenderDetail .threeList .calenderDetailWrap .detailContent .tempShowDiv {
+            position: relative; }
+          .calenderDetail .threeList .calenderDetailWrap .detailContent .tempShowDiv:before {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border: 1px solid #bfbfbf;
+            transform: rotate(45deg);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-left: none;
+            border-top: none;
+            margin: auto; }
+  .calenderDetail .threeList:last-of-type .line {
+    visibility: hidden; }
+  .calenderDetail .threeListActive .time > span {
+    color: #0578e6;
+    background-position: 0 -16px; }
 
 /*# sourceMappingURL=index.css.map */

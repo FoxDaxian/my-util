@@ -1959,6 +1959,7 @@ body{
 .icon_column{
 	@include icon_column;
 }
+<<<<<<< HEAD
 //小汽车图标
 .icon_car_box{
 	padding: em(20em) em(4em) em(11em) em(4em);
@@ -1972,11 +1973,28 @@ body{
 	border-top-right-radius: em(6em) em(6em);
 	border-bottom-left-radius: em(4em);
 	border-bottom-right-radius: em(4em);
+=======
+//垃圾桶图标
+.icon_trash_box{
+	padding: em(13.25em) em(4.5em) em(7.25em) em(18.5em);
+}
+@mixin icon_trash() {
+	width: em(20em);
+	height: em(30em);
+	position: relative;
+	border:em(2em) solid;
+	box-sizing: border-box;
+	border-top: none;
+	transform:translateX(-50%);
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+>>>>>>> origin/master
 	&:after,&:before{
 		content:"";
 		position: absolute;
 	}
 	&:after{
+<<<<<<< HEAD
 		width: em(20em);
 		height: em(8em);
 		border: em(2em) solid;
@@ -2013,11 +2031,49 @@ body{
 	border-radius: em(4em);
 	border-top-left-radius: em(8em);
 	border-top-right-radius: em(8em);
+=======
+		width: em(30em);
+		height: em(2em);
+		box-shadow: inset 0 0 0 1000000px;
+		left: 50%;
+		transform:translateX(-50%);
+		top: em(-3em);
+	}
+	&:before{
+		width: em(10em);
+		height: em(5em);
+		border-top: em(2em) solid;
+		border-left: em(2em) solid;
+		border-right: em(2em) solid;
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+		left: 50%;
+		transform:translateX(-50%);
+		top: em(-8em);
+	}
+}
+.icon_trash{
+	@include icon_trash;
+}
+//超链接图标
+.icon_hyperlink_box{
+	padding: em(13.25em) em(15.5em) em(13.25em) em(12.5em);
+}
+@mixin icon_hyperlink() {
+	width: em(12em);
+	height: em(22em);
+	position: relative;
+	border:em(2em) solid;
+	box-sizing: border-box;
+	border-radius: em(3em);
+	transform:translateY(em(12em)) translateX(em(-6em)) rotate(45deg);
+>>>>>>> origin/master
 	&:after,&:before{
 		content:"";
 		position: absolute;
 	}
 	&:after{
+<<<<<<< HEAD
 		content:'o';
 		width: em(7em);
 		height: em(12em);
@@ -2060,11 +2116,85 @@ body{
 	border-style: solid;
 	border-left-color: transparent;
 	border-right-color: transparent;
+=======
+		width: em(12em);
+		height: em(22em);
+		border:em(2em) solid;
+		box-sizing: border-box;
+		border-radius: em(3em);
+		transform:translateY(em(-28em)) translateX(em(-2em));
+	}
+	&:before{
+		width: em(2em);
+		height: em(16em);
+		box-shadow: inset 0 0 0 1000000px;
+		left: 50%;
+		transform:translateX(-50%);
+		top: em(-12em);
+	}
+}
+.icon_hyperlink{
+	@include icon_hyperlink;
+}
+//笔图标
+.icon_pen_box{
+	padding: em(5em) em(15.5em) em(11em) em(15.5em);
+}
+@mixin icon_pen() {
+	width: em(8em);
+	height: em(36em);
+	position: relative;
+	border:em(2em) solid;
+	box-sizing: border-box;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	transform:rotate(30deg);
 	&:after,&:before{
 		content:"";
 		position: absolute;
 	}
 	&:after{
+		width: 0;
+		height: 0;
+		border-left-width: em(4em);
+		border-right-width: em(4em);
+		border-top-width: em(10em);
+		border-style:solid;
+		border-left-color:transparent;
+		border-right-color:transparent;
+		border-bottom-color:transparent;
+		left: em(-2em);
+		bottom:em(-14em);
+	}
+	&:before{
+		width: em(7.5em);
+		height: em(10em);
+		border-top: em(1em) solid;
+		border-right: em(2em) solid;
+		top: em(2em);
+	}
+}
+.icon_pen{
+	@include icon_pen;
+}
+//上传图标
+.icon_upload_box{
+	padding: em(26em) em(7.3em) em(11em) em(7.3em);
+}
+@mixin icon_upload() {
+	width: em(30em);
+	height: em(8em);
+	position: relative;
+	border:em(2em) solid;
+	border-top: none;
+	box-sizing: border-box;
+>>>>>>> origin/master
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+<<<<<<< HEAD
 		width: em(36em);
 		height: em(6em);
 		border-bottom: em(2em) solid;
@@ -2087,4 +2217,134 @@ body{
 }
 .icon_bicycle{
 	@include icon_bicycle(#fff);
+=======
+		width: em(12em);
+		height: em(12em);
+		box-sizing: border-box;
+		border-top: em(2em) solid;
+		border-left: em(2em) solid;
+		left:50%;
+		transform:translateX(-50%) rotate(45deg);
+		top: em(-18em);
+	}
+	&:before{
+		width: em(2em);
+		height: em(20em);
+		box-shadow: inset 0 0 0 1000000px;
+		left:50%;
+		transform:translateX(-50%);
+		top: em(-18em);
+	}
+}
+.icon_upload{
+	@include icon_upload;
+}
+//下载图标
+.icon_download_box{
+	padding: em(26em) em(7.3em) em(11em) em(7.3em);
+}
+@mixin icon_download() {
+	width: em(30em);
+	height: em(8em);
+	position: relative;
+	border:em(2em) solid;
+	border-top: none;
+	box-sizing: border-box;
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		width: em(12em);
+		height: em(12em);
+		box-sizing: border-box;
+		border-bottom: em(2em) solid;
+		border-right: em(2em) solid;
+		left:50%;
+		transform:translateX(-50%) rotate(45deg);
+		top: em(-9em);
+	}
+	&:before{
+		width: em(2em);
+		height: em(20em);
+		box-shadow: inset 0 0 0 1000000px;
+		left:50%;
+		transform:translateX(-50%);
+		top: em(-18em);
+	}
+}
+.icon_download{
+	@include icon_download;
+}
+//锁图标
+.icon_lock_box{
+	padding: em(24em) em(7.3em) em(7em) em(7.3em);
+}
+@mixin icon_lock() {
+	width: em(30em);
+	height: em(16em);
+	position: relative;
+	border:em(2em) solid;
+	box-sizing: border-box;
+	box-shadow: inset em(1em) em(2em) 0 em(1em);
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		width: em(14em);
+		height: em(20em);
+		border:em(2em) solid;
+		border-bottom: none;
+		border-top-left-radius: 6px;
+		border-top-right-radius: 6px;
+		left:50%;
+		transform:translateX(-50%);
+		top: em(-22em);
+	}
+	&:before{
+	}
+}
+.icon_lock{
+	@include icon_lock;
+}
+//解锁图标
+.icon_unlock_box{
+	padding: em(24em) em(7.3em) em(7em) em(7.3em);
+}
+@mixin icon_unlock() {
+	width: em(30em);
+	height: em(16em);
+	position: relative;
+	border:em(2em) solid;
+	box-sizing: border-box;
+	box-shadow: inset em(1em) em(2em) 0 em(1em);
+	&:after,&:before{
+		content:"";
+		position: absolute;
+	}
+	&:after{
+		width: em(14em);
+		height: em(8em);
+		border:em(2em) solid;
+		border-bottom: none;
+		border-top-left-radius: 6px;
+		border-top-right-radius: 6px;
+		left:50%;
+		transform:translateX(-50%);
+		top: em(-22em);
+	}
+	&:before{
+		width: em(14em);
+		height: em(12em);
+		border-left: em(2em) solid;
+		border-right: em(2em) solid transparent;
+		left:50%;
+		transform:translateX(-50%);
+		top: em(-12em);
+	}
+}
+.icon_unlock{
+	@include icon_unlock;
+>>>>>>> origin/master
 }
