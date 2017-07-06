@@ -2005,7 +2005,7 @@ body{
 .icon_bus_box{
 	padding: em(12em) em(4em) em(0em) em(4em);
 }
-@mixin icon_bus($color) {
+@mixin icon_bus() {
 	width: em(34em);
 	height: em(26em);
 	position: relative;
@@ -2043,13 +2043,13 @@ body{
 	}
 }
 .icon_bus{
-	@include icon_bus(#fff);
+	@include icon_bus;
 }
 //自行车图标
 .icon_bicycle_box{
 	padding: em(16em) em(6.5em) em(0em) em(6.5em);
 }
-@mixin icon_bicycle($color) {
+@mixin icon_bicycle() {
 	width: 0;
 	height: 0;
 	position: relative;
@@ -2086,5 +2086,5 @@ body{
 	}
 }
 .icon_bicycle{
-	@include icon_bicycle(#fff);
+	@include icon_bicycle;
 }
