@@ -4,38 +4,38 @@
  * @param  {number} limit 要截取的长度	
  * @return {string}       截取好的字符串
  */
-function limitLength(str, limit) {
-    var i = 0,
-        len = str.trim().length,
-        tempLen = 0,
-        res = null,
-        s;
-    for (; i < len; i++) {
-        s = str.charCodeAt(i);
-        tempLen += (s >= 0 && s <= 128) ? 1 : 2;
+ function limitLength(str, limit) {
+     var i = 0,
+     len = str.trim().length,
+     tempLen = 0,
+     res = null,
+     s;
+     for (; i < len; i++) {
+         s = str.charCodeAt(i);
+         tempLen += (s >= 0 && s <= 128) ? 1 : 2;
 
-        if (tempLen >= limit) {
-            res = str.slice(0, i) + "...";
-            break;
-        }
+         if (tempLen >= limit) {
+             res = str.slice(0, i) + "...";
+             break;
+         }
 
-    }
-    return res !== null ? res : str;
-}
+     }
+     return res !== null ? res : str;
+ }
 
 /**
  * 柯粒化函数，用法：~~fn(10)(100)
  * @param  {Number}   num 计算的数
  * @return {Number}     结果咯
  */
-function fn(num) {
-    num += ~~fn.num;
-    fn.num = num;
-    return fn;
-}
-fn.valueOf = fn.toString = function() {
-    return fn.num;
-}
+ function fn(num) {
+     num += ~~fn.num;
+     fn.num = num;
+     return fn;
+ }
+ fn.valueOf = fn.toString = function() {
+     return fn.num;
+ }
 
 
 //获取域名主机(host)
@@ -118,4 +118,57 @@ function getIE() {
         return parseFloat(v.substring(0, v.indexOf(".")));
     }
     return false;
+}
+
+//判断滚动条是否到底部的几个函数
+// 可视区高度
+function getWindowHeight () {
+    let windowHeight = 0
+    if (document.compatMode === 'CSS1Compat') {
+        windowHeight = document.documentElement.clientHeight
+    } else {
+        windowHeight = document.body.clientHeight
+    }
+    return windowHeight
+}
+//滚动加上可视区总高度
+function getScrollHeight () {
+    let scrollHeight = 0
+    let bodyScrollHeight = 0
+    let documentScrollHeight = 0
+    if (document.body) {
+        bodyScrollHeight = document.body.scrollHeight
+    }
+    if (document.documentElement) {
+        documentScrollHeight = document.documentElement.scrollHeight
+    }
+    scrollHeight = (bodyScrollHeight - documentScrollHeight > 0) ? bodyScrollHeight : documentScrollHeight
+    return scrollHeight
+}
+//当前滚动高度
+function getScrollTop () {
+    let scrollTop = 0
+    let bodyScrollTop = 0
+    let documentScrollTop = 0
+    if (document.body) {
+        bodyScrollTop = document.body.scrollTop
+    }
+    if (document.documentElement) {
+        documentScrollTop = document.documentElement.scrollTop
+    }
+    scrollTop = (bodyScrollTop - documentScrollTop > 0) ? bodyScrollTop : documentScrollTop
+    return scrollTop
+}
+// 判断函数
+function scrollFn () {
+    if (getScrollTop() + getWindowHeight() + 50 >= getScrollHeight()) {
+        this.footerSwitch = true
+    } else {
+        this.footerSwitch = false
+    }
+}
+
+//去除html标签
+function clearTag( str ) {
+    return str.replace(/<[^>]+>/g,"")
 }

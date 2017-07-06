@@ -1,3 +1,63 @@
+<<<<<<< HEAD
+/*
+Error: Invalid CSS after "		width: em(20em)": expected "{", was ";"
+        on line 1999 of E:\gihub_repository\my-util\css_util\index.scss
+
+1994: 		content:"";
+1995: 		position: absolute;
+1996: 	}
+1997: 	&:after{
+1998: <<<<<<< HEAD
+1999: 		width: em(20em);
+2000: 		height: em(8em);
+2001: 		border: em(2em) solid;
+2002: 		left: 58%;
+2003: 		transform:translateX(-50%);
+2004: 		top: em(-12em);
+
+Backtrace:
+E:\gihub_repository\my-util\css_util\index.scss:1999
+G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:1165:in `expected'
+G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:1101:in `expected'
+G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:1096:in `tok!'
+G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:641:in `block'
+G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:711:in `declaration_or_ruleset'
+G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:661:in `block_child'
+G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:650:in `block_contents'
+G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:642:in `block'
+G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:711:in `declaration_or_ruleset'
+G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:661:in `block_child'
+G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:653:in `block_contents'
+G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:642:in `block'
+G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:231:in `mixin_directive'
+G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:219:in `special_directive'
+G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:194:in `directive'
+G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:661:in `block_child'
+G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:653:in `block_contents'
+G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:642:in `block'
+G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:231:in `mixin_directive'
+G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:219:in `special_directive'
+G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:194:in `directive'
+G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:660:in `block_child'
+G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:653:in `block_contents'
+G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:117:in `stylesheet'
+G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:42:in `parse'
+G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:394:in `_to_tree'
+G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:369:in `_render_with_sourcemap'
+G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:286:in `render_with_sourcemap'
+G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:396:in `run'
+G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:62:in `process_result'
+G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:52:in `parse'
+G:/koala/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:19:in `parse!'
+G:/koala/Koala/rubygems/gems/sass-3.4.9/bin/sass:13:in `<top (required)>'
+G:/koala/Koala/bin/sass:18:in `load'
+G:/koala/Koala/bin/sass:18:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"		width: em(20em)\": expected \"{\", was \";\"\A         on line 1999 of E:\gihub_repository\my-util\css_util\index.scss\A \A 1994: 		content:\"\";\A 1995: 		position: absolute;\A 1996: 	}\A 1997: 	&:after{\A 1998: <<<<<<< HEAD\A 1999: 		width: em(20em);\A 2000: 		height: em(8em);\A 2001: 		border: em(2em) solid;\A 2002: 		left: 58%;\A 2003: 		transform:translateX(-50%);\A 2004: 		top: em(-12em);"; }
+=======
 @keyframes loading {
   from {
     transform: rotate(0deg); }
@@ -1571,102 +1631,5 @@ body {
     left: 1.16667em;
     top: -0.16667em; }
 
-.icon_car_box {
-  padding: 1.66667em 0.33333em 0.91667em 0.33333em; }
-
-.icon_car {
-  width: 2.83333em;
-  height: 1em;
-  position: relative;
-  border: 0.16667em solid;
-  border-top-left-radius: 1.16667em 1.16667em;
-  border-top-right-radius: 0.5em 0.5em;
-  border-bottom-left-radius: 0.33333em;
-  border-bottom-right-radius: 0.33333em; }
-  .icon_car:after, .icon_car:before {
-    content: "";
-    position: absolute; }
-  .icon_car:after {
-    width: 1.66667em;
-    height: 0.66667em;
-    border: 0.16667em solid;
-    left: 58%;
-    transform: translateX(-50%);
-    top: -1em;
-    border-top-left-radius: 2.16667em 1.16667em;
-    border-top-right-radius: 0.5em 0.5em;
-    box-shadow: inset 0 0.16667em 0 0.04167em #fff, inset 0 0 0 0.33333em; }
-  .icon_car:before {
-    width: 0.66667em;
-    height: 0.66667em;
-    border-radius: 50%;
-    bottom: -0.41667em;
-    left: 0.16667em;
-    box-shadow: inset 0 0 0 10000px, 1.83333em 0 0; }
-
-.icon_bus_box {
-  padding: 1em 0.33333em 0em 0.33333em; }
-
-.icon_bus {
-  width: 2.83333em;
-  height: 2.16667em;
-  position: relative;
-  border: 0.16667em solid;
-  border-radius: 0.33333em;
-  border-top-left-radius: 0.66667em;
-  border-top-right-radius: 0.66667em; }
-  .icon_bus:after, .icon_bus:before {
-    content: "";
-    position: absolute; }
-  .icon_bus:after {
-    content: 'o';
-    width: 0.58333em;
-    height: 1em;
-    box-shadow: inset 0 0 0 10000px;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    font-weight: bold;
-    text-shadow: -1em -1.25em 0, -0.33333em -1.25em 0, 0.33333em -1.25em 0, 1em -1.25em 0, -1em -0.5em 0; }
-  .icon_bus:before {
-    width: 0.75em;
-    height: 0.75em;
-    border-radius: 50%;
-    bottom: -0.5em;
-    left: 0.16667em;
-    box-shadow: inset 0 0 0 10000px, 1.75em 0 0; }
-
-.icon_bicycle_box {
-  padding: 1.33333em 0.54167em 0em 0.54167em; }
-
-.icon_bicycle {
-  width: 0;
-  height: 0;
-  position: relative;
-  border-bottom-width: 1.5em;
-  border-left-width: 1.33333em;
-  border-right-width: 1.33333em;
-  border-top-width: 0;
-  border-style: solid;
-  border-left-color: transparent;
-  border-right-color: transparent; }
-  .icon_bicycle:after, .icon_bicycle:before {
-    content: "";
-    position: absolute; }
-  .icon_bicycle:after {
-    width: 3em;
-    height: 0.5em;
-    border-bottom: 0.16667em solid;
-    border-right: 0.16667em solid;
-    transform: translateX(-55%) rotate(-8deg);
-    top: -0.33333em;
-    border-bottom-right-radius: 0.41667em 0.83333em; }
-  .icon_bicycle:before {
-    width: 1.33333em;
-    height: 1.33333em;
-    border-radius: 50%;
-    box-shadow: inset 0 0 0 100000px, 2em 0 0;
-    bottom: -2.16667em;
-    left: -1.66667em; }
-
 /*# sourceMappingURL=index.css.map */
+>>>>>>> parent of 3e75372... 交通工具相关
