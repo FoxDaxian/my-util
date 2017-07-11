@@ -1,41 +1,41 @@
 /**
  * 截取字符串出省略号
  * @param  {string} str   要截取的字符串
- * @param  {number} limit 要截取的长度	
+ * @param  {number} limit 要截取的长度    
  * @return {string}       截取好的字符串
  */
- function limitLength(str, limit) {
-     var i = 0,
-     len = str.trim().length,
-     tempLen = 0,
-     res = null,
-     s;
-     for (; i < len; i++) {
-         s = str.charCodeAt(i);
-         tempLen += (s >= 0 && s <= 128) ? 1 : 2;
+function limitLength(str, limit) {
+    var i = 0,
+        len = str.trim().length,
+        tempLen = 0,
+        res = null,
+        s;
+    for (; i < len; i++) {
+        s = str.charCodeAt(i);
+        tempLen += (s >= 0 && s <= 128) ? 1 : 2;
 
-         if (tempLen >= limit) {
-             res = str.slice(0, i) + "...";
-             break;
-         }
+        if (tempLen >= limit) {
+            res = str.slice(0, i) + "...";
+            break;
+        }
 
-     }
-     return res !== null ? res : str;
- }
+    }
+    return res !== null ? res : str;
+}
 
 /**
  * 柯粒化函数，用法：~~fn(10)(100)
  * @param  {Number}   num 计算的数
  * @return {Number}     结果咯
  */
- function fn(num) {
-     num += ~~fn.num;
-     fn.num = num;
-     return fn;
- }
- fn.valueOf = fn.toString = function() {
-     return fn.num;
- }
+function fn(num) {
+    num += ~~fn.num;
+    fn.num = num;
+    return fn;
+}
+fn.valueOf = fn.toString = function() {
+    return fn.num;
+}
 
 
 //获取域名主机(host)
@@ -122,7 +122,7 @@ function getIE() {
 
 //判断滚动条是否到底部的几个函数
 // 可视区高度
-function getWindowHeight () {
+function getWindowHeight() {
     let windowHeight = 0
     if (document.compatMode === 'CSS1Compat') {
         windowHeight = document.documentElement.clientHeight
@@ -132,7 +132,7 @@ function getWindowHeight () {
     return windowHeight
 }
 //滚动加上可视区总高度
-function getScrollHeight () {
+function getScrollHeight() {
     let scrollHeight = 0
     let bodyScrollHeight = 0
     let documentScrollHeight = 0
@@ -146,7 +146,7 @@ function getScrollHeight () {
     return scrollHeight
 }
 //当前滚动高度
-function getScrollTop () {
+function getScrollTop() {
     let scrollTop = 0
     let bodyScrollTop = 0
     let documentScrollTop = 0
@@ -160,7 +160,7 @@ function getScrollTop () {
     return scrollTop
 }
 // 判断函数
-function scrollFn () {
+function scrollFn() {
     if (getScrollTop() + getWindowHeight() + 50 >= getScrollHeight()) {
         this.footerSwitch = true
     } else {
@@ -169,8 +169,8 @@ function scrollFn () {
 }
 
 //去除html标签
-function clearTag( str ) {
-    return str.replace(/<[^>]+>/g,"")
+function clearTag(str) {
+    return str.replace(/<[^>]+>/g, "")
 }
 
 //textarea 自适应高度
@@ -181,33 +181,33 @@ function clearTag( str ) {
  * @param  {Number} maxHeight 设置最大高度，可选
  * @return {none}           无返回值
  */
-function autoTextarea (elem, extra, maxHeight) {
+function autoTextarea(elem, extra, maxHeight) {
     extra = extra || 0;
     var isFirefox = !!document.getBoxObjectFor || 'mozInnerScreenX' in window,
-    isOpera = !!window.opera && !!window.opera.toString().indexOf('Opera'),
-    addEvent = function(type, callback) {
-        elem.addEventListener ?
-        elem.addEventListener(type, callback, false) :
-        elem.attachEvent('on' + type, callback);
-    },
-    getStyle = elem.currentStyle ? function(name) {
-        var val = elem.currentStyle[name];
-        if (name === 'height' && val.search(/px/i) !== 1) {
-            var rect = elem.getBoundingClientRect();
-            return rect.bottom - rect.top -
-            parseFloat(getStyle('paddingTop')) -
-            parseFloat(getStyle('paddingBottom')) + 'px';
-        };
-        return val;
-    } : function(name) {
-        return getComputedStyle(elem, null)[name];
-    },
-    minHeight = parseFloat(getStyle('height'));
+        isOpera = !!window.opera && !!window.opera.toString().indexOf('Opera'),
+        addEvent = function(type, callback) {
+            elem.addEventListener ?
+                elem.addEventListener(type, callback, false) :
+                elem.attachEvent('on' + type, callback);
+        },
+        getStyle = elem.currentStyle ? function(name) {
+            var val = elem.currentStyle[name];
+            if (name === 'height' && val.search(/px/i) !== 1) {
+                var rect = elem.getBoundingClientRect();
+                return rect.bottom - rect.top -
+                    parseFloat(getStyle('paddingTop')) -
+                    parseFloat(getStyle('paddingBottom')) + 'px';
+            };
+            return val;
+        } : function(name) {
+            return getComputedStyle(elem, null)[name];
+        },
+        minHeight = parseFloat(getStyle('height'));
     elem.style.resize = 'none';
     var change = function() {
         var scrollTop, height,
-        padding = 0,
-        style = elem.style;
+            padding = 0,
+            style = elem.style;
         if (elem._length === elem.value.length) return;
         elem._length = elem.value.length;
         if (!isFirefox && !isOpera) {
@@ -234,4 +234,18 @@ function autoTextarea (elem, extra, maxHeight) {
     addEvent('input', change);
     addEvent('focus', change);
     change();
+}
+
+/**
+ * 用来复制input/textarea中的内容
+ * @param  {HTMLElement} element input/textarea元素
+ * @return {none}         无返回值
+ * 需要的时候去擦插画execComand的一系列操作:http://blog.csdn.net/kntao/article/details/4543123
+ * 元素上使用readonly，不要使用disabled
+ */
+function copyFn(element) {
+    element.select()
+    //execCommand 有很多操作
+    document.execCommand("Copy")
+    alert('复制成功')
 }
