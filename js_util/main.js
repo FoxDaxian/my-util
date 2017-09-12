@@ -66,60 +66,6 @@ function htmlDecode(text) {
         /&lt;/g, '<').replace(/&gt;/g, '>');
 }
 
-//大致能区分浏览器
-function getExplorerInfo() {
-    var explorer = window.navigator.userAgent.toLowerCase();
-    // ie
-    if (explorer.indexOf("msie") >= 0) {
-        var ver = explorer.match(/msie ([\d.]+)/)[1];
-        return {
-            type: "IE",
-            version: ver
-        };
-    }
-    // firefox
-    else if (explorer.indexOf("firefox") >= 0) {
-        var ver = explorer.match(/firefox\/([\d.]+)/)[1];
-        return {
-            type: "Firefox",
-            version: ver
-        };
-    }
-    // Chrome
-    else if (explorer.indexOf("chrome") >= 0) {
-        var ver = explorer.match(/chrome\/([\d.]+)/)[1];
-        return {
-            type: "Chrome",
-            version: ver
-        };
-    }
-    // Opera
-    else if (explorer.indexOf("opera") >= 0) {
-        var ver = explorer.match(/opera.([\d.]+)/)[1];
-        return {
-            type: "Opera",
-            version: ver
-        };
-    }
-    // Safari
-    else if (explorer.indexOf("Safari") >= 0) {
-        var ver = explorer.match(/version\/([\d.]+)/)[1];
-        return {
-            type: "Safari",
-            version: ver
-        };
-    }
-}
-
-//检测IE版本8-10
-function getIE() {
-    if (window.ActiveXObject) {
-        var v = navigator.userAgent.match(/MSIE ([^;]+)/)[1];
-        return parseFloat(v.substring(0, v.indexOf(".")));
-    }
-    return false;
-}
-
 //判断滚动条是否到底部的几个函数
 // 可视区高度
 function getWindowHeight() {
@@ -131,6 +77,7 @@ function getWindowHeight() {
     }
     return windowHeight
 }
+
 //滚动加上可视区总高度
 function getScrollHeight() {
     let scrollHeight = 0
@@ -145,6 +92,7 @@ function getScrollHeight() {
     scrollHeight = (bodyScrollHeight - documentScrollHeight > 0) ? bodyScrollHeight : documentScrollHeight
     return scrollHeight
 }
+
 //当前滚动高度
 function getScrollTop() {
     let scrollTop = 0
@@ -159,6 +107,7 @@ function getScrollTop() {
     scrollTop = (bodyScrollTop - documentScrollTop > 0) ? bodyScrollTop : documentScrollTop
     return scrollTop
 }
+
 // 判断函数
 function scrollFn() {
     if (getScrollTop() + getWindowHeight() + 50 >= getScrollHeight()) {
@@ -248,4 +197,70 @@ function copyFn(element) {
     //execCommand 有很多操作
     document.execCommand("Copy")
     alert('复制成功')
+}
+
+/**
+ * url上添加动画
+ * @return {[type]} [description]
+ */
+function urlAnimation() {
+    ~function() {
+        var round = ['🌑','🌒','🌓','🌔','🌕','🌖','🌗','🌘'],
+        i = 0, 
+        len = round.length;
+        setInterval(function() {
+            history.replaceState({}, '', '#' + round[i % len]); i++;
+        }, 120);
+    }();
+}
+
+/**
+ * 检测浏览器类型终极大法
+ */
+function BrowserType () {
+    const userAgent = navigator.userAgent //取得浏览器的userAgent字符串 
+    const isOpera = userAgent.indexOf('Opera') > -1 //判断是否Opera浏览器 
+    // //判断是否IE浏览器 
+    const isIE = window.ActiveXObject || 'ActiveXObject' in window
+    const isEdge = userAgent.indexOf('Edge') > -1 //判断是否IE的Edge浏览器
+    const isFF = userAgent.indexOf('Firefox') > -1 //判断是否Firefox浏览器 
+    const isSafari = userAgent.indexOf('Safari') > -1 && userAgent.indexOf('Chrome') === -1 //判断是否Safari浏览器 
+    const isChrome = userAgent.indexOf('Chrome') > -1 && userAgent.indexOf('Safari') > -1 && !isEdge //判断Chrome浏览器
+
+    if (isIE) {
+        const reIE = new RegExp('MSIE (\\d+\\.\\d+);')
+        reIE.test(userAgent)
+        const fIEVersion = parseFloat(RegExp.$1)
+        if (userAgent.indexOf('MSIE 6.0') !== -1) {
+            return 'IE6'
+        } else if (fIEVersion === 7) {
+            return 'IE7'
+        } else if (fIEVersion === 8) {
+            return 'IE8'
+        } else if (fIEVersion === 9) {
+            return 'IE9'
+        } else if (fIEVersion === 10) {
+            return 'IE10'
+        } else if (userAgent.toLowerCase().match(/rv:([\d.]+)\) like gecko/)) {
+            return 'IE11'
+        }
+        //IE版本过低
+        return '0'
+    }
+
+    if (isFF) {
+        return 'FF'
+    }
+    if (isOpera) {
+        return 'Opera'
+    }
+    if (isSafari) {
+        return 'Safari'
+    }
+    if (isChrome) {
+        return 'Chrome'
+    }
+    if (isEdge) {
+        return 'Edge'
+    }
 }
