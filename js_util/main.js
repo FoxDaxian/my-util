@@ -264,3 +264,24 @@ function BrowserType () {
         return 'Edge'
     }
 }
+
+/**
+ * 多层扁平化数组方法
+ * @param  {array} array 将要被处理的数组
+ * @return {array}       处理后的数组
+ */
+const flatten = function (array) {
+    let resArr
+    (function logical (arr) {
+        const res = arr.length > 0 ? [].concat.apply([], arr) : arr
+        const falg = res.some(function (el, index) {
+            if (Object.prototype.toString.call(el) === '[object Array]') {
+                logical(res)
+                return true
+            }
+            return false
+        })
+        falg || (resArr = res)
+    })(array)
+    return resArr
+}
