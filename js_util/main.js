@@ -285,3 +285,34 @@ const flatten = function (array) {
     })(array)
     return resArr
 }
+
+/**
+ * 返回对象(不包括数组)所有层级地址和对应value的对象
+ * @param  {Object} arg 一个对象
+ * @param  {String} str 要求匹配的value
+ * @return {Object}     parentKey-sonKey-grandsonKey: value
+ */
+// 例如：var res = getAddress(tarrgetObj, '李鹏')
+const getAddress = (arg, str) => {
+    const tempObj = {}
+    const res = {}
+    const internalFn = (obj, prevKey) => {
+        prevKey = prevKey || ''
+        Object.keys(obj).forEach((key) => {
+            tempObj[prevKey + key + '-'] = obj[key]
+            if (Object.prototype.toString.call(tempObj[prevKey + key + '-']) === '[object Object]') {
+                internalFn(tempObj[prevKey + key + '-'], prevKey + key + '-')
+            }
+        })
+    }
+    internalFn(arg)
+    const arr = Object.entries(tempObj)
+
+    arr.forEach((el, index) => {
+        if (new RegExp(str).test(el[1])) {
+            res[el[0]] = el[1]
+        }
+    })
+    return res
+}
+
