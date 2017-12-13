@@ -1,0 +1,207 @@
+.wrap {
+	background-color: transparent;
+	display: flex;
+	height: 100vh;
+	:global {
+		.content {
+			margin: auto;
+			position: relative;
+			line-height: 0;
+		}
+		#svg1 {
+			width: 7rem;
+			height: 7rem;
+		}
+		.circle {
+			width: 4.4rem;
+			height: 4.4rem;
+			background-position: 50% 50%;
+			background-size: 96%;
+			background-repeat: no-repeat;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			p {
+				margin: 0;
+				text-align: center;
+			}
+		}
+		#dashed {
+			width: 4.6rem;
+			height: 4.6rem;
+			position: absolute;
+			z-index: 10;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+		}
+		#star {
+			width: 6rem;
+			height: 6rem;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			.box1 {
+				position: absolute;
+				top: -0.63rem;
+				left: -4.5rem;
+				width: 5.5rem;
+				height: 2.58rem;
+				.ofh {
+					position: absolute;
+					top: 0; // 用left、right来做
+					left: 5.5rem;
+					right: 0; // 高度影响overflow:hidden
+					height: 100%;
+					overflow: hidden;
+				}
+				.fixBox {
+					width: 5.5rem;
+					display: flex;
+					justify-content: space-between;
+					position: absolute; // 这个定位关键
+					right: 0;
+				}
+
+				.img {
+					width: 4.28rem;
+					height: 2.58rem;
+					box-sizing: border-box;
+					color: #34c1e4;
+					padding-left: 1rem;
+					padding-top: 0.7rem;
+					background-position: 50% 50%;
+					background-size: cover;
+					.title {
+						font-size: 0.29rem;
+					}
+					.increament {
+						font-size: 0.6rem;
+					}
+				}
+				.line {
+					width: 0.92rem;
+					height: 2px;
+					background-color: #436aad;
+					align-self: center;
+					margin-top: 1rem;
+				}
+			}
+			.box2 {
+				transform: scale(.8);
+				position: absolute;
+				top: 3.04rem;
+				left: -4.6rem;
+				width: 6.22rem;
+				height: 2.58rem;
+				.ofh {
+					position: absolute;
+					top: 0; // 用left、right来做
+					left: 6.22rem;
+					right: 0; // 高度影响overflow:hidden
+					height: 100%;
+					overflow: hidden;
+				}
+				.fixBox {
+					width: 6.22rem;
+					display: flex;
+					justify-content: space-between;
+					position: absolute; // 这个定位关键
+					right: 0;
+				}
+
+				.img {
+					width: 4.28rem;
+					height: 2.58rem;
+					box-sizing: border-box;
+					color: #aa9fe0;
+					padding-left: 1rem;
+					padding-top: 0.7rem;
+					background-position: 50% 50%;
+					background-size: cover;
+					.title {
+						font-size: 0.29rem;
+					}
+					.increament {
+						font-size: 0.6rem;
+					}
+				}
+				.line {
+					width: 1.72rem;
+					height: 2px;
+					background-color: #436aad;
+					align-self: center;
+					margin-top: 1rem;
+				}
+			}
+			.box3 {
+				transform: scale(.9);
+				position: absolute;
+				top: 0.22rem;
+				right: -4.6rem;
+				width: 5.5rem;
+				height: 2.58rem;
+				.ofh {
+					position: absolute;
+					top: 0; // 用left、right来做
+					left: 0;
+					right: 5.5rem; // 高度影响overflow:hidden
+					height: 100%;
+					overflow: hidden;
+				}
+				.fixBox {
+					width: 5.5rem;
+					display: flex;
+					justify-content: space-between;
+					position: absolute; // 这个定位关键
+					left: 0;
+				}
+
+				.img {
+					width: 4.28rem;
+					height: 2.58rem;
+					box-sizing: border-box;
+					color: #aa9fe0;
+					padding-left: 1rem;
+					padding-top: 0.7rem;
+					background-position: 50% 50%;
+					background-size: cover;
+					.title {
+						font-size: 0.29rem;
+					}
+					.increament {
+						font-size: 0.6rem;
+					}
+				}
+				.line {
+					width: 0.92rem;
+					height: 2px;
+					background-color: #436aad;
+					align-self: center;
+					margin-top: 1rem;
+				}
+			}
+		}
+		.center {
+			position: absolute;
+			z-index: 10;
+		}
+		.text {
+			font-size: 0.26rem;
+			color: #aed9ff;
+			line-height: 0.26rem;
+		}
+		#countup {
+			font-size: 0.72rem;
+			line-height: 0.72rem;
+			color: #aed9ff;
+			margin-bottom: 0.33rem;
+		}
+	}
+}

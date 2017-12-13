@@ -1,0 +1,82 @@
+.wrap {
+	height: 100vh;
+	:global {
+		.layoutWrap {
+			position: absolute;
+			width: 100%;
+			bottom: 0.8rem;
+		}
+		.sumActivity {
+			color: #8ac7fe;
+			text-align: center;
+			.count {
+				font-size: 0.8rem;
+			}
+			.title {
+				font-size: 0.26rem;
+				margin-top: 0.1rem;
+			}
+		}
+		.tabs {
+			margin-top: 0.2rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			overflow: hidden;
+			.tab {
+				box-sizing: border-box;
+				width: 6.48rem;
+				height: 2.6rem;
+				text-align: center;
+				background-size: 100% 100%;
+			}
+			.tab:nth-of-type(1) {
+				color: #aaa0e1;
+				padding-top: 0.46rem;
+				width: 3rem;
+				height: 1.7rem;
+				margin-right: 1.7rem;
+				.title {
+					font-size: 0.2rem;
+					margin-bottom: 0.14rem;
+				}
+				.count {
+					font-size: 0.4rem;
+				}
+			}
+			.tab:nth-of-type(2) {
+				color: #7acae1;
+				padding-top: 0.58rem;
+				width: 4.28rem;
+				height: 2.4rem;
+				margin-right: 1.3rem;
+				.title {
+					font-size: 0.29rem;
+					margin-bottom: 0.18rem;
+				}
+				.count {
+					font-size: 0.59rem;
+				}
+			}
+			.tab:nth-of-type(3) {
+				color: #d1d6b6;
+				padding-top: 0.5rem;
+				height: 2rem;
+				width: 3.5rem;
+				.title {
+					font-size: 0.24rem;
+					margin-bottom: 0.14rem;
+				}
+				.count {
+					font-size: 0.48rem;
+				}
+			}
+		}
+		.chart {
+			margin: 0 auto;
+			width: 13.6rem;
+			height: 4rem;
+			margin-top: 0.2rem;
+		}
+	}
+}

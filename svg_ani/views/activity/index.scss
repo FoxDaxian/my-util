@@ -1,0 +1,52 @@
+.wrap {
+	height: 100vh;
+	:global {
+		.layoutWrap {
+			position: absolute;
+			width: 100%;
+			bottom: .8rem;
+		}
+		.sumActivity {
+			color: #8ac7fe;
+			text-align: center;
+			.count {
+				font-size: .8rem;
+			}
+			.title {
+				font-size: 0.26rem;
+				margin-top: 0.1rem;
+			}
+		}
+		.tabs {
+			margin-top: 0.2rem;
+			display: flex;
+			justify-content: center;
+			overflow: hidden;
+			.tab {
+				box-sizing: border-box;
+				padding-top: 0.58rem;
+				width: 6.48rem;
+				height: 2.4rem;
+				color: #cfd3b3;
+				text-align: center;
+				background-size: 100% 100%;
+				.title {
+					font-size: 0.29rem;
+					margin-bottom: 0.18rem;
+				}
+				.count {
+					font-size: 0.59rem;
+				}
+			}
+			.tab:nth-of-type(1) {
+				margin-right: 0.62rem;
+			}
+		}
+		.chart {
+			margin: 0 auto;
+			width: 13.6rem;
+			height: 4rem;
+			margin-top: 0.2rem;
+		}
+	}
+}

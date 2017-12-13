@@ -1,0 +1,50 @@
+.wrap {
+	height: 100vh;
+	display: flex;
+	:global {
+		.center {
+			overflow: hidden;
+			width: 15rem;
+			margin: auto;
+			display: flex;
+			flex-wrap: no-wrap;
+			justify-content: space-between;
+		}
+		.contents {
+			width: 3.4rem;
+			height: 4.2rem;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: 50% 50%;
+			color: #8fedfb;
+			box-sizing: border-box;
+			padding-left: 0.7rem;
+			padding-top: 0.56rem;
+		}
+		.aniWrap{
+			display: none;
+		}
+		.title{
+			font-size: 0.22rem;
+			box-sizing: border-box;
+			margin-bottom: 0.46rem;
+		}
+		.lists{
+			font-size: 0.24rem;
+		}
+		.list{
+			margin-bottom: 0.19rem;
+			display: flex;
+			height: 0.26rem;
+			.count{
+				width: 0.25rem;
+				background-color: #8fedfb;
+				text-align: center;
+				color: #000;
+			}
+			.text{
+				margin-left: 0.18rem;
+			}
+		}
+	}
+}
