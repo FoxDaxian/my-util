@@ -78,7 +78,7 @@ class App extends Component {
 		return (
 			<div className="App">
 				<div>
-					<p className="mainTitle">龙源统计数据平台</p>
+					<p className="mainTitle">随便一个标题</p>
 					<div className="dateWrap count">
 						<div className="time">
 							{this.state.hour}

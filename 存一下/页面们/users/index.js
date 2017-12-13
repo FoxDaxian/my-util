@@ -39,7 +39,7 @@ class Activity extends Component {
 				<div className="layoutWrap">
 					<div className="sumActivity">
 						<div className="count">0</div>
-						<div className="title">总活跃量</div>
+						<div className="title">活</div>
 					</div>
 					<div className="tabs">
 						<div
@@ -47,20 +47,20 @@ class Activity extends Component {
 							ref={el => (this.tab = el)}
 							style={{ backgroundImage: `url(${bg})` }}
 						>
-							<div className="title">年增</div>
+							<div className="title">年</div>
 							<div className="count">0</div>
 						</div>
 						<div
 							className="tab animated bounceInDown"
 							style={{ backgroundImage: `url(${bg})` }}
 						>
-							<div className="title">日增</div>
+							<div className="title">日</div>
 							<div className="count">0</div>
 						</div><div
 							className="tab animated bounceInDown"
 							style={{ backgroundImage: `url(${bg})` }}
 						>
-							<div className="title">月增</div>
+							<div className="title">月</div>
 							<div className="count">0</div>
 						</div>
 					</div>
