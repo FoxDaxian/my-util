@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100%;
+            height: 1px;
+            /* 利用渐变 */
+            background-image: linear-gradient(to right, #ccc 0%, #ccc 50%, transparent 50%);
+            /* 通过改变图片大小间接控制虚线长度 */
+            background-size: 8px 1px;
+            /* y轴不重复，x轴重复就可以达到虚线边框效果 */
+            background-repeat: repeat-x;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
