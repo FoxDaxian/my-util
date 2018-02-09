@@ -7,5 +7,5 @@ if (!shell.which('git')) {
 
 shell.exec('git status');
 shell.exec('git add .');
-shell.exec(`git commit -m '${yargs.m}'`);
+shell.exec(`git commit -m ${yargs.m}`);
 shell.exec('git push');
