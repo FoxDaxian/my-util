@@ -1,0 +1,4 @@
+git status
+git add .
+git commit -m 'Update: 测试发布'
+git push
