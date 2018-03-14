@@ -66,13 +66,15 @@ class Input extends Component {
         this.refs.input.focus();
     }
     bind(event) {
-        let value = event.target.value.trim();
+        let value = text;
+        value = value.replace(/([^\d\s]*)/g, '');
         this.other.forReqVal = value.replace(/ /g, '');
         if (this.other.forReqVal.length > 12) {
-            return;
+            this.other.forReqVal = value.replace(/ /g, '').substr(0, 12);
         }
 
-        if (this.other.lastValLen < value.length) {
+        if (this.other.lastValLen < value.length || this.other.isPaste) {
+            this.other.isPaste = false;
             value = this.other.forReqVal.replace(/(\d{4})/g, (...args) => {
                 return `${args[1]} `;
             });
@@ -90,6 +92,10 @@ class Input extends Component {
             },
             () => {
                 this.other.forReqVal = this.state.inputVal;
+				// 控制光标
+                setTimeout(() => {
+                    this.refs.input.setSelectionRange(20, 20);
+                }, 0);
             }
         );
     }
